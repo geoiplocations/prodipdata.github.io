@@ -1,57 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://prodipdata.github.io/</loc>
+    <loc>https://geoiplocations.com/</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/platform.html</loc>
+    <loc>https://geoiplocations.com/platform.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/coverage.html</loc>
+    <loc>https://geoiplocations.com/coverage.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/methodology.html</loc>
+    <loc>https://geoiplocations.com/methodology.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/downloads.html</loc>
+    <loc>https://geoiplocations.com/downloads.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/contact.html</loc>
+    <loc>https://geoiplocations.com/contact.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/licensing.html</loc>
+    <loc>https://geoiplocations.com/licensing.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/downloads-csv-2026-03.html</loc>
+    <loc>https://geoiplocations.com/downloads-csv-2026-03.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/downloads-parquet-2026-03.html</loc>
+    <loc>https://geoiplocations.com/downloads-parquet-2026-03.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/reference-bogons.html</loc>
+    <loc>https://geoiplocations.com/reference-bogons.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/reference-cidr.html</loc>
+    <loc>https://geoiplocations.com/reference-cidr.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/reference-ports.html</loc>
+    <loc>https://geoiplocations.com/reference-ports.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/reference-root-zone.html</loc>
+    <loc>https://geoiplocations.com/reference-root-zone.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/geoip-database.html</loc>
+    <loc>https://geoiplocations.com/geoip-database.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/ip-geolocation-data.html</loc>
+    <loc>https://geoiplocations.com/ip-geolocation-data.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/asn-data-by-country.html</loc>
+    <loc>https://geoiplocations.com/asn-data-by-country.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/geoip-csv-download.html</loc>
+    <loc>https://geoiplocations.com/geoip-csv-download.html</loc>
   </url>
   <url>
-    <loc>https://prodipdata.github.io/geoip-parquet-download.html</loc>
+    <loc>https://geoiplocations.com/geoip-parquet-download.html</loc>
   </url>
 </urlset>
+
