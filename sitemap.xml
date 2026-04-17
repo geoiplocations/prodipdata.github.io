@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://geoiplocations.com/</loc>
@@ -53,6 +53,12 @@
   </url>
   <url>
     <loc>https://geoiplocations.com/geoip-parquet-download.html</loc>
+  </url>
+  <url>
+    <loc>https://geoiplocations.com/releases/</loc>
+  </url>
+  <url>
+    <loc>https://geoiplocations.com/releases/2026-03/</loc>
   </url>
 </urlset>
 

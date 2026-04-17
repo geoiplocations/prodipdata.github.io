@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -36,7 +36,7 @@
     <div class="container">
       <div class="navbar glass">
         <a class="brand" href="index.html">
-          <div class="brand-mark">â—Ž</div>
+          <div class="brand-mark">&#9678;</div>
           <div>
             GeoIP Locations
             <small>Powered by ProdIPData</small>
@@ -74,7 +74,7 @@
           <p class="page-intro">
             This page summarizes the countries included in the current monthly publication. It shows the largest country footprints, the leading network in each country, and an interactive country-level map of how published coverage is distributed across regional registries.
           </p>
-          <p class="page-intro seo-links">From here you can open the <a href="downloads.html">monthly GeoIP downloads</a>, review the <a href="methodology.html">publication methodology</a>, or read the <a href="platform.html">ProdIPData platform overview</a> for additional context on country, ASN, and registry-level data.</p>
+          <p class="page-intro seo-links">From here you can open the <a href="downloads.html">monthly GeoIP downloads</a>, review the <a href="releases/2026-03/index.html">current release overview</a>, browse the <a href="releases/index.html">release archive</a>, review the <a href="methodology.html">publication methodology</a>, or read the <a href="platform.html">ProdIPData platform overview</a> for additional context on country, ASN, and registry-level data.</p>
         </div>
       </div>
     </section>
@@ -84,6 +84,33 @@
         <div class="metric-grid" data-metrics-target></div>
       </div>
     </section>
+
+<section class="section">
+  <div class="container story-grid">
+    <div class="split-panel glass content">
+      <h2>Coverage summary for release 2026-03</h2>
+      <p>
+        The current coverage view is designed to show where the published GeoIP footprint is concentrated by country and how those countries map back to their regional internet registry. The page combines map exploration with country-level concentration views so users can move from geography to network structure without leaving the website.
+      </p>
+      <ul>
+        <li>Use the map to identify registry context for each country in the current publication month.</li>
+        <li>Review the largest country footprints to understand where published IPv4 representation is most concentrated.</li>
+        <li>Use the concentration panels to see where one ASN dominates a country and where the footprint is spread across multiple networks.</li>
+      </ul>
+    </div>
+    <div class="split-panel glass content">
+      <h2>Where to go after the map</h2>
+      <p>
+        Coverage works best as part of a release flow. After reviewing the map and country tables, move to the <a href="releases/2026-03/index.html">current release page</a> for publication context, then open the <a href="downloads.html">download indexes</a> for package-level access. For processing notes and release handling, keep the <a href="methodology.html">methodology page</a> close at hand.
+      </p>
+      <ul>
+        <li><a href="releases/index.html">Release archive</a> for month-by-month navigation.</li>
+        <li><a href="releases/2026-03/index.html">Release 2026-03 overview</a> for context and links.</li>
+        <li><a href="downloads.html">GeoIP downloads hub</a> for CSV and Parquet package indexes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
     <section class="section">
       <div class="container">
@@ -140,27 +167,27 @@
             <div class="coverage-map-metrics">
               <div class="coverage-map-metric">
                 <span>Registry</span>
-                <strong data-country-map-rir>â€”</strong>
+                <strong data-country-map-rir>&mdash;</strong>
               </div>
               <div class="coverage-map-metric">
                 <span>Capital</span>
-                <strong data-country-map-capital>â€”</strong>
+                <strong data-country-map-capital>&mdash;</strong>
               </div>
               <div class="coverage-map-metric">
                 <span>ASNs</span>
-                <strong data-country-map-asns>â€”</strong>
+                <strong data-country-map-asns>&mdash;</strong>
               </div>
               <div class="coverage-map-metric">
                 <span>Published /24 prefixes</span>
-                <strong data-country-map-prefixes>â€”</strong>
+                <strong data-country-map-prefixes>&mdash;</strong>
               </div>
               <div class="coverage-map-metric">
                 <span>IPv4 est.</span>
-                <strong data-country-map-ipv4>â€”</strong>
+                <strong data-country-map-ipv4>&mdash;</strong>
               </div>
               <div class="coverage-map-metric">
                 <span>Lead ASN share</span>
-                <strong data-country-map-share>â€”</strong>
+                <strong data-country-map-share>&mdash;</strong>
               </div>
             </div>
             <h3 class="panel-subtitle">Leading network</h3>
@@ -229,7 +256,7 @@
 
   <footer class="site-footer">
     <div class="container site-footer-inner">
-      <div>Â© <span data-current-year></span> GeoIP Locations Â· ProdIPData</div>
+      <div>&copy; <span data-current-year></span> GeoIP Locations &middot; ProdIPData</div>
       <div><a href="licensing.html">Datasets and metadata: CC BY 4.0</a></div>
       <div>Engineered and published by the ProdIPData team.</div>
     </div>

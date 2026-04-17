@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -226,7 +226,7 @@
     <div class="container">
       <div class="navbar glass">
         <a class="brand" href="index.html">
-          <div class="brand-mark">â—Ž</div>
+          <div class="brand-mark">&#9678;</div>
           <div>
             GeoIP Locations
             <small>Powered by ProdIPData</small>
@@ -264,8 +264,10 @@
             Access current and upcoming ProdIPData release files. Ready packages open dedicated HTML indexes for CSV and Parquet downloads, including package links, access passwords, IPv4 counts, and snapshot metadata.
           </p>
           <div class="data-note">Unless otherwise stated, datasets and metadata published through GeoIP Locations are available under <a href="licensing.html">CC BY 4.0</a>. Commercial reuse is permitted with attribution.</div>
-          <p class="page-intro seo-links">Explore the <a href="coverage.html">country coverage summary</a>, review the <a href="methodology.html">monthly GeoIP publication methodology</a>, open the <a href="downloads-csv-2026-03.html">CSV release index</a>, inspect the <a href="downloads-parquet-2026-03.html">Parquet release index</a>, or browse the <a href="reference-cidr.html">CIDR reference</a>, <a href="reference-ports.html">ports catalog</a>, and <a href="reference-root-zone.html">root zone database</a>.</p>
+          <p class="page-intro seo-links">Explore the <a href="coverage.html">country coverage summary</a>, review the <a href="methodology.html">monthly GeoIP publication methodology</a>, open the <a href="releases/2026-03/index.html">current release overview</a>, browse the <a href="releases/index.html">release archive</a>, open the <a href="downloads-csv-2026-03.html">CSV release index</a>, inspect the <a href="downloads-parquet-2026-03.html">Parquet release index</a>, or browse the <a href="reference-cidr.html">CIDR reference</a>, <a href="reference-ports.html">ports catalog</a>, and <a href="reference-root-zone.html">root zone database</a>.</p>
           <div class="actions">
+            <a class="btn btn-primary" href="releases/2026-03/index.html">Current Release</a>
+            <a class="btn btn-secondary" href="releases/index.html">Release Archive</a>
           </div>
         </div>
       </div>
@@ -397,6 +399,31 @@
       </div>
     </section>
 
+<section class="section">
+  <div class="container story-grid">
+    <div class="split-panel glass content">
+      <h2>How to use the monthly release path</h2>
+      <p>
+        Wave 2 adds a cleaner release-oriented route for users who want context before opening package indexes. The archive explains which releases are available, and each release page connects the publication month to CSV and Parquet package indexes, methodology notes, and related coverage views.
+      </p>
+      <ul>
+        <li>Start with the <a href="releases/index.html">GeoIP monthly release archive</a> when the goal is month-by-month navigation.</li>
+        <li>Open the <a href="releases/2026-03/index.html">2026-03 release landing page</a> for the current published baseline.</li>
+        <li>Move into the <a href="downloads-csv-2026-03.html">CSV package index</a> or <a href="downloads-parquet-2026-03.html">Parquet package index</a> when you are ready to download files.</li>
+      </ul>
+    </div>
+    <div class="split-panel glass content">
+      <h2>When to use CSV, Parquet, or the archive</h2>
+      <ul>
+        <li>Use the archive when you want release context, publication history, and a stable entry point for navigation.</li>
+        <li>Use CSV when human-readable, row-oriented files are the easiest fit for review, SQL imports, or lightweight operational workflows.</li>
+        <li>Use Parquet when analytical processing, notebooks, batch jobs, or larger-scale downstream work benefit from a columnar format.</li>
+      </ul>
+      <p class="card-text">This structure makes the site easier to crawl and easier for users to understand: release archive first, release page second, package index third.</p>
+    </div>
+  </div>
+</section>
+
     <section class="section">
       <div class="container">
         <div class="section-head">
@@ -442,7 +469,7 @@
 
   <footer class="site-footer">
     <div class="container site-footer-inner">
-      <div>Â© <span data-current-year></span> GeoIP Locations Â· ProdIPData</div>
+      <div>&copy; <span data-current-year></span> GeoIP Locations &middot; ProdIPData</div>
       <div><a href="licensing.html">Datasets and metadata: CC BY 4.0</a></div>
       <div>Engineered and published by the ProdIPData team.</div>
     </div>

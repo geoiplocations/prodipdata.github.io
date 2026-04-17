@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const rawPage = document.body.dataset.page || '';
   const currentPage = rawPage === 'downloads-hub' ? 'downloads' : rawPage;
   const navPage = document.body.dataset.navPage || (currentPage.indexOf('reference-') === 0 ? 'downloads' : currentPage);
+  const assetRoot = document.body.dataset.assetRoot || '';
+  const assetPath = (path) => `${assetRoot}${path}`;
 
   document.querySelectorAll('[data-nav]').forEach(link => {
     if (link.dataset.nav === navPage) {
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   try {
-    const releases = await fetchJson('assets/data/releases.json');
+    const releases = await fetchJson(assetPath('assets/data/releases.json'));
     releaseMonth = document.body.dataset.releaseMonth || getReleaseMonth(releases);
     releaseYear = parseInt((releaseMonth || '2026-03').slice(0, 4), 10);
 
@@ -90,9 +92,9 @@ async function renderHomePage(context) {
   const countryNode = document.querySelector('[data-home-country-target]');
   const newAsnNode = document.querySelector('[data-home-new-asns-target]');
 
-  const overview = await fetchJson(`assets/data/overview-global-${context.releaseMonth}.json`);
-  const topAsns = await fetchJson(`assets/data/top-asns-global-${context.releaseMonth}.json`);
-  const newAsns = await fetchJson(`assets/data/new-added-asns-${context.releaseYear}.json`);
+  const overview = await fetchJson(assetPath(`assets/data/overview-global-${context.releaseMonth}.json`);
+  const topAsns = await fetchJson(assetPath(`assets/data/top-asns-global-${context.releaseMonth}.json`);
+  const newAsns = await fetchJson(assetPath(`assets/data/new-added-asns-${context.releaseYear}.json`);
 
   setText('[data-home-stat="countries"]', formatInteger(overview.totalCountriesRepresented));
   setText('[data-home-stat="asns"]', formatInteger(overview.totalAsns));
@@ -180,13 +182,13 @@ async function renderCoveragePage(context) {
   const rirMixNode = document.querySelector('[data-coverage-rir-target]');
   const coverageNoteNode = document.querySelector('[data-coverage-note-target]');
 
-  const countryProfiles = await fetchJson(`assets/data/country-profiles-${context.releaseMonth}.json`);
-  const concentration = await fetchJson(`assets/data/country-concentration-${context.releaseMonth}.json`);
-  const prefixesPerRir = await fetchJson(`assets/data/prefixes-per-rir-${context.releaseMonth}.json`);
-  const asnsPerRir = await fetchJson(`assets/data/asns-per-rir-${context.releaseMonth}.json`);
-  const asnTypesPerCountry = await fetchJson(`assets/data/asn-types-per-country-${context.releaseMonth}.json`);
-  const topAsnsByRir = await fetchJson(`assets/data/top-asns-by-rir-${context.releaseMonth}.json`);
-  const worldCountryMap = await fetchJson('assets/data/world-country-map.json');
+  const countryProfiles = await fetchJson(assetPath(`assets/data/country-profiles-${context.releaseMonth}.json`);
+  const concentration = await fetchJson(assetPath(`assets/data/country-concentration-${context.releaseMonth}.json`);
+  const prefixesPerRir = await fetchJson(assetPath(`assets/data/prefixes-per-rir-${context.releaseMonth}.json`);
+  const asnsPerRir = await fetchJson(assetPath(`assets/data/asns-per-rir-${context.releaseMonth}.json`);
+  const asnTypesPerCountry = await fetchJson(assetPath(`assets/data/asn-types-per-country-${context.releaseMonth}.json`);
+  const topAsnsByRir = await fetchJson(assetPath(`assets/data/top-asns-by-rir-${context.releaseMonth}.json`);
+  const worldCountryMap = await fetchJson(assetPath('assets/data/world-country-map.json');
 
   const concentrationMap = new Map(getItems(concentration).map(item => [String(item.iso2 || '').toUpperCase(), item]));
   const merged = getItems(countryProfiles).map(profile => {
@@ -1156,13 +1158,13 @@ async function renderDownloadsPage(context) {
   const summaryNode = document.querySelector('[data-release-summary-target]');
 
   const [overview, countryProfiles, rirProfiles, bogons, cidr, ports, rootZone] = await Promise.all([
-    fetchJson(`assets/data/overview-global-${context.releaseMonth}.json`),
-    fetchJson(`assets/data/country-profiles-${context.releaseMonth}.json`),
-    fetchJson(`assets/data/rir-profiles-${context.releaseMonth}.json`),
-    fetchJson(`assets/data/bogons-${context.releaseMonth}.json`),
-    fetchJson(`assets/data/cidr-${context.releaseMonth}.json`),
-    fetchJson(`assets/data/ports-${context.releaseMonth}.json`),
-    fetchJson(`assets/data/root-zone-database-${context.releaseMonth}.json`)
+    fetchJson(assetPath(`assets/data/overview-global-${context.releaseMonth}.json`),
+    fetchJson(assetPath(`assets/data/country-profiles-${context.releaseMonth}.json`),
+    fetchJson(assetPath(`assets/data/rir-profiles-${context.releaseMonth}.json`),
+    fetchJson(assetPath(`assets/data/bogons-${context.releaseMonth}.json`),
+    fetchJson(assetPath(`assets/data/cidr-${context.releaseMonth}.json`),
+    fetchJson(assetPath(`assets/data/ports-${context.releaseMonth}.json`),
+    fetchJson(assetPath(`assets/data/root-zone-database-${context.releaseMonth}.json`)
   ]);
 
   if (metricsNode) {
