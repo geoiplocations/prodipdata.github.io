@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async () => {
+﻿document.addEventListener('DOMContentLoaded', async () => {
   const rawPage = document.body.dataset.page || '';
   const currentPage = rawPage === 'downloads-hub' ? 'downloads' : rawPage;
   const navPage = document.body.dataset.navPage || (currentPage.indexOf('reference-') === 0 ? 'downloads' : currentPage);
@@ -1635,3 +1635,4 @@ function escapeHtml(value) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 }
+
