@@ -1,9 +1,15 @@
-﻿document.addEventListener('DOMContentLoaded', async () => {
+﻿function getAssetRoot() {
+  return document.body.dataset.assetRoot || '';
+}
+
+function assetPath(path) {
+  return `${getAssetRoot()}${path}`;
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
   const rawPage = document.body.dataset.page || '';
   const currentPage = rawPage === 'downloads-hub' ? 'downloads' : rawPage;
   const navPage = document.body.dataset.navPage || (currentPage.indexOf('reference-') === 0 ? 'downloads' : currentPage);
-  const assetRoot = document.body.dataset.assetRoot || '';
-  const assetPath = (path) => `${assetRoot}${path}`;
 
   document.querySelectorAll('[data-nav]').forEach(link => {
     if (link.dataset.nav === navPage) {
@@ -92,9 +98,9 @@ async function renderHomePage(context) {
   const countryNode = document.querySelector('[data-home-country-target]');
   const newAsnNode = document.querySelector('[data-home-new-asns-target]');
 
-  const overview = await fetchJson(assetPath(`assets/data/overview-global-${context.releaseMonth}.json`);
-  const topAsns = await fetchJson(assetPath(`assets/data/top-asns-global-${context.releaseMonth}.json`);
-  const newAsns = await fetchJson(assetPath(`assets/data/new-added-asns-${context.releaseYear}.json`);
+  const overview = await fetchJson(assetPath(`assets/data/overview-global-${context.releaseMonth}.json`));
+  const topAsns = await fetchJson(assetPath(`assets/data/top-asns-global-${context.releaseMonth}.json`));
+  const newAsns = await fetchJson(assetPath(`assets/data/new-added-asns-${context.releaseYear}.json`));
 
   setText('[data-home-stat="countries"]', formatInteger(overview.totalCountriesRepresented));
   setText('[data-home-stat="asns"]', formatInteger(overview.totalAsns));
@@ -182,13 +188,13 @@ async function renderCoveragePage(context) {
   const rirMixNode = document.querySelector('[data-coverage-rir-target]');
   const coverageNoteNode = document.querySelector('[data-coverage-note-target]');
 
-  const countryProfiles = await fetchJson(assetPath(`assets/data/country-profiles-${context.releaseMonth}.json`);
-  const concentration = await fetchJson(assetPath(`assets/data/country-concentration-${context.releaseMonth}.json`);
-  const prefixesPerRir = await fetchJson(assetPath(`assets/data/prefixes-per-rir-${context.releaseMonth}.json`);
-  const asnsPerRir = await fetchJson(assetPath(`assets/data/asns-per-rir-${context.releaseMonth}.json`);
-  const asnTypesPerCountry = await fetchJson(assetPath(`assets/data/asn-types-per-country-${context.releaseMonth}.json`);
-  const topAsnsByRir = await fetchJson(assetPath(`assets/data/top-asns-by-rir-${context.releaseMonth}.json`);
-  const worldCountryMap = await fetchJson(assetPath('assets/data/world-country-map.json');
+  const countryProfiles = await fetchJson(assetPath(`assets/data/country-profiles-${context.releaseMonth}.json`));
+  const concentration = await fetchJson(assetPath(`assets/data/country-concentration-${context.releaseMonth}.json`));
+  const prefixesPerRir = await fetchJson(assetPath(`assets/data/prefixes-per-rir-${context.releaseMonth}.json`));
+  const asnsPerRir = await fetchJson(assetPath(`assets/data/asns-per-rir-${context.releaseMonth}.json`));
+  const asnTypesPerCountry = await fetchJson(assetPath(`assets/data/asn-types-per-country-${context.releaseMonth}.json`));
+  const topAsnsByRir = await fetchJson(assetPath(`assets/data/top-asns-by-rir-${context.releaseMonth}.json`));
+  const worldCountryMap = await fetchJson(assetPath('assets/data/world-country-map.json'));
 
   const concentrationMap = new Map(getItems(concentration).map(item => [String(item.iso2 || '').toUpperCase(), item]));
   const merged = getItems(countryProfiles).map(profile => {
@@ -355,7 +361,6 @@ async function renderCoveragePage(context) {
       : 'Coverage notes will appear here when country data is available.';
   }
 }
-
 
 function renderCoverageMap(context) {
   const root = document.querySelector('[data-country-map-root]');
@@ -782,11 +787,12 @@ function renderCoverageMap(context) {
       return null;
     }
 
+    const pad = numericValue((options || {}).pad || 0);
     const padded = {
-      x: bounds.x - numericValue((options || {}).pad || 0),
-      y: bounds.y - numericValue((options || {}).pad || 0),
-      width: bounds.width + (numericValue((options || {}).pad || 0) * 2),
-      height: bounds.height + (numericValue((options || {}).pad || 0) * 2)
+      x: bounds.x - pad,
+      y: bounds.y - pad,
+      width: bounds.width + (pad * 2),
+      height: bounds.height + (pad * 2)
     };
 
     let minWidth = numericValue((options || {}).minWidth);
@@ -906,7 +912,6 @@ function renderCoverageMap(context) {
     tooltip.style.top = `${Math.max(12, top)}px`;
   }
 }
-
 
 function renderAsnMixCard(record, options) {
   const settings = options || {};
@@ -1033,7 +1038,6 @@ function formatAsnTypeLabel(value) {
   return labels[key] || String(value || '').replace(/[_-]+/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 }
 
-
 function buildCountryMapBackdrop() {
   const width = 1000;
   const height = 520;
@@ -1158,13 +1162,13 @@ async function renderDownloadsPage(context) {
   const summaryNode = document.querySelector('[data-release-summary-target]');
 
   const [overview, countryProfiles, rirProfiles, bogons, cidr, ports, rootZone] = await Promise.all([
-    fetchJson(assetPath(`assets/data/overview-global-${context.releaseMonth}.json`),
-    fetchJson(assetPath(`assets/data/country-profiles-${context.releaseMonth}.json`),
-    fetchJson(assetPath(`assets/data/rir-profiles-${context.releaseMonth}.json`),
-    fetchJson(assetPath(`assets/data/bogons-${context.releaseMonth}.json`),
-    fetchJson(assetPath(`assets/data/cidr-${context.releaseMonth}.json`),
-    fetchJson(assetPath(`assets/data/ports-${context.releaseMonth}.json`),
-    fetchJson(assetPath(`assets/data/root-zone-database-${context.releaseMonth}.json`)
+    fetchJson(assetPath(`assets/data/overview-global-${context.releaseMonth}.json`)),
+    fetchJson(assetPath(`assets/data/country-profiles-${context.releaseMonth}.json`)),
+    fetchJson(assetPath(`assets/data/rir-profiles-${context.releaseMonth}.json`)),
+    fetchJson(assetPath(`assets/data/bogons-${context.releaseMonth}.json`)),
+    fetchJson(assetPath(`assets/data/cidr-${context.releaseMonth}.json`)),
+    fetchJson(assetPath(`assets/data/ports-${context.releaseMonth}.json`)),
+    fetchJson(assetPath(`assets/data/root-zone-database-${context.releaseMonth}.json`))
   ]);
 
   if (metricsNode) {
@@ -1193,26 +1197,32 @@ async function renderDownloadsPage(context) {
   }
 
   if (referenceNode) {
-    const referenceItems = [
-      {
-        title: 'CIDR reference',
-        count: getItemCount(cidr),
-        description: 'CIDR notation dictionary intended for explanatory and educational use.',
-        pageHref: 'reference-cidr.html'
-      },
-      {
-        title: 'Ports reference',
-        count: getItemCount(ports),
-        description: 'Protocol and port mapping catalog for network operations context.',
-        pageHref: 'reference-ports.html'
-      },
-      {
-        title: 'Root zone database',
-        count: getItemCount(rootZone),
-        description: 'TLD-oriented reference material supporting internet namespace context.',
-        pageHref: 'reference-root-zone.html'
-      }
-    ];
+	const referenceItems = [
+  {
+    title: 'Bogons reference',
+    count: getItemCount(bogons),
+    description: 'Special-purpose and restricted IPv4 ranges for filtering, validation, and documentation workflows.',
+    pageHref: 'reference-bogons.html'
+  },
+  {
+    title: 'CIDR reference',
+    count: getItemCount(cidr),
+    description: 'CIDR notation dictionary intended for explanatory and educational use.',
+    pageHref: 'reference-cidr.html'
+  },
+	{
+    title: 'Ports reference',
+    count: getItemCount(ports),
+    description: 'Protocol and port mapping catalog for network operations context.',
+    pageHref: 'reference-ports.html'
+  },
+	{
+    title: 'Root zone database',
+    count: getItemCount(rootZone),
+    description: 'TLD-oriented reference material supporting internet namespace context.',
+    pageHref: 'reference-root-zone.html'
+  }
+	];
 
     referenceNode.innerHTML = referenceItems.map(item => `
       <div class="list-row list-row-actions">
@@ -1491,7 +1501,6 @@ async function fetchJson(path) {
   return response.json();
 }
 
-
 function getInlineReferencePayload() {
   const node = document.querySelector('script[data-reference-inline]');
   if (!node) {
@@ -1637,4 +1646,3 @@ function escapeHtml(value) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 }
-
