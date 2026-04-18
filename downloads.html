@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="assets/img/prodipdata-mark.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <script type="application/ld+json">
+  <script type="application/ld+json">
 {
     "@context":  "https://schema.org",
     "@type":  "BreadcrumbList",
@@ -51,6 +51,9 @@
         },
         {
           "@id": "https://geoiplocations.com/downloads-parquet-2026-03.html#dataset"
+        },
+        {
+          "@id": "https://geoiplocations.com/reference-bogons.html#dataset"
         },
         {
           "@id": "https://geoiplocations.com/reference-cidr.html#dataset"
@@ -124,6 +127,37 @@
         "monthly release",
         "2026-03"
       ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://geoiplocations.com/reference-bogons.html#dataset",
+      "name": "ProdIPData Bogons Reference Catalog 2026-03",
+      "description": "Special-purpose and restricted IPv4 ranges reference catalog published from the 2026-03 ProdIPData monthly reference feed.",
+      "url": "https://geoiplocations.com/reference-bogons.html",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": {
+        "@type": "Organization",
+        "name": "ProdIPData",
+        "url": "https://geoiplocations.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ProdIPData",
+        "url": "https://geoiplocations.com/"
+      },
+      "includedInDataCatalog": {
+        "@id": "https://geoiplocations.com/downloads.html#catalog"
+      },
+      "keywords": [
+        "bogons",
+        "special-purpose IPv4",
+        "restricted ranges",
+        "reference catalog",
+        "ProdIPData",
+        "2026-03"
+      ],
+      "dateModified": "2026-03-22T11:18:43Z"
     },
     {
       "@type": "Dataset",
@@ -264,7 +298,7 @@
             Access current and upcoming ProdIPData release files. Ready packages open dedicated HTML indexes for CSV and Parquet downloads, including package links, access passwords, IPv4 counts, and snapshot metadata.
           </p>
           <div class="data-note">Unless otherwise stated, datasets and metadata published through GeoIP Locations are available under <a href="licensing.html">CC BY 4.0</a>. Commercial reuse is permitted with attribution.</div>
-          <p class="page-intro seo-links">Explore the <a href="coverage.html">country coverage summary</a>, review the <a href="methodology.html">monthly GeoIP publication methodology</a>, open the <a href="releases/2026-03/index.html">current release overview</a>, browse the <a href="releases/index.html">release archive</a>, open the <a href="downloads-csv-2026-03.html">CSV release index</a>, inspect the <a href="downloads-parquet-2026-03.html">Parquet release index</a>, or browse the <a href="reference-cidr.html">CIDR reference</a>, <a href="reference-ports.html">ports catalog</a>, and <a href="reference-root-zone.html">root zone database</a>.</p>
+          <p class="page-intro seo-links">Explore the <a href="coverage.html">country coverage summary</a>, review the <a href="methodology.html">monthly GeoIP publication methodology</a>, open the <a href="releases/2026-03/index.html">current release overview</a>, browse the <a href="releases/index.html">release archive</a>, open the <a href="downloads-csv-2026-03.html">CSV release index</a>, inspect the <a href="downloads-parquet-2026-03.html">Parquet release index</a>, or browse the <a href="reference-bogons.html">Bogons reference</a>, <a href="reference-cidr.html">CIDR reference</a>, <a href="reference-ports.html">ports catalog</a>, and <a href="reference-root-zone.html">root zone database</a>.</p>
           <div class="actions">
             <a class="btn btn-primary" href="releases/2026-03/index.html">Current Release</a>
             <a class="btn btn-secondary" href="releases/index.html">Release Archive</a>
@@ -455,9 +489,10 @@
         <div class="split-panel glass">
           <div class="section-head">
             <div><h2>Published technical catalogs</h2></div>
-            <p>Technical reference catalogs remain available alongside the downloadable GeoIP files and open directly as dedicated HTML pages for CIDR, Ports, and Root Zone.</p>
+            <p>Technical reference catalogs remain available alongside the downloadable GeoIP files and open directly as dedicated HTML pages for Bogons, CIDR, Ports, and Root Zone.</p>
           </div>
           <div class="actions compact-actions">
+            <a class="btn btn-secondary" href="reference-bogons.html">Bogons</a>
             <a class="btn btn-secondary" href="reference-cidr.html">CIDR</a>
             <a class="btn btn-secondary" href="reference-ports.html">Ports</a>
             <a class="btn btn-secondary" href="reference-root-zone.html">Root zone</a>
@@ -477,4 +512,3 @@
   <script src="assets/js/site.js"></script>
 </body>
 </html>
-
