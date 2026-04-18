@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GeoIP Country Coverage Map by RIR and ASN | ProdIPData</title>
-  <meta name="description" content="Explore GeoIP country coverage, ASN distribution, and RIR-level views across the current ProdIPData IPv4 dataset release." />
+  <meta name="description" content="Review GeoIP country coverage by RIR and ASN, including concentration patterns, /24 footprint context, and current monthly release insights." />
   <link rel="canonical" href="https://geoiplocations.com/coverage.html" />
   <link rel="icon" type="image/png" href="assets/img/prodipdata-mark.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
@@ -29,6 +29,28 @@
                         ]
 }
   </script>
+  <meta property="og:url" content="https://geoiplocations.com/coverage.html" />
+  <script type="application/ld+json" data-wave3-schema="breadcrumb-coverage-html">
+{
+    "@context":  "https://schema.org",
+    "@type":  "BreadcrumbList",
+    "@id":  "https://geoiplocations.com/coverage.html#breadcrumb",
+    "itemListElement":  [
+                            {
+                                "@type":  "ListItem",
+                                "position":  1,
+                                "name":  "Home",
+                                "item":  "https://geoiplocations.com/"
+                            },
+                            {
+                                "@type":  "ListItem",
+                                "position":  2,
+                                "name":  "Coverage",
+                                "item":  "https://geoiplocations.com/coverage.html"
+                            }
+                        ]
+}
+</script>
 </head>
 <body data-page="coverage">
 
@@ -201,7 +223,7 @@
             <p class="card-text">Highlights the leading published ASN footprint in the currently selected registry.</p>
             <div class="download-list" data-country-map-rir-top-asn></div>
             <h3 class="panel-subtitle">ASN mix in selected country</h3>
-            <p class="card-text">Shows the structure of the selected countryâ€™s ASN portfolio.</p>
+            <p class="card-text">Shows the structure of the selected country’s ASN portfolio.</p>
             <div class="mix-card" data-country-map-country-mix></div>
             <div class="data-note" data-country-map-note>Click a country on the map to inspect its release profile.</div>
           </aside>
@@ -251,7 +273,36 @@
         </div>
       </div>
     </section>
-  </main>
+  
+<!-- WAVE3:coverage-crawlable-summary START -->
+<section class="section" data-wave3-block="coverage-crawlable-summary">
+  <div class="container">
+    <div class="split-panel glass content">
+      <h2>Coverage summary for search and review</h2>
+      <p>
+        This page summarizes the current GeoIP release from three angles: country footprint, registry distribution, and concentration by leading ASN. The map and coverage tables are interactive, but the key signal is simple: the current publication shows where ProdIPData has country-level representation, how that representation clusters by RIR, and which markets are more concentrated around a small number of dominant autonomous systems.
+      </p>
+      <p>
+        Review the country ranking table for the largest published footprints, compare the RIR-level mix to understand regional structure, and use the concentration indicators to identify where the leading ASN controls a larger share of the visible /24 footprint. This crawlable summary exists so the page communicates its analytical purpose even before client-side map interaction begins.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- WAVE3:coverage-crawlable-summary END -->
+
+<!-- WAVE4:core-discovery-links START -->
+<section class="section" data-wave4-block="discovery-links">
+  <div class="container">
+    <div class="split-panel glass content">
+      <h2>Explore deeper release and entity pages</h2>
+      <p>
+        The current release architecture now connects the monthly archive to selective country, registry, and ASN pages. Use the <a href="releases/index.html">monthly release archive</a> for time-based navigation, move into <a href="country/index.html">country profiles</a> for country-specific footprint context, review <a href="rir/index.html">RIR pages</a> for registry-level structure, and open <a href="asn/index.html">ASN profiles</a> for high-visibility network entities. For package access, continue through <a href="downloads.html">GeoIP CSV and Parquet downloads</a>, and for source quality and caveats, review <a href="methodology.html">GeoIP methodology and validation</a>.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- WAVE4:core-discovery-links END -->
+</main>
 
 
   <footer class="site-footer">
@@ -261,7 +312,7 @@
       <div>Engineered and published by the ProdIPData team.</div>
     </div>
   </footer>
-  <script src="assets/js/site.js"></script>
+  <script src="assets/js/site.js" defer></script>
 
 </body>
 </html>

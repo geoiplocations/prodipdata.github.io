@@ -1,4 +1,4 @@
-﻿function getAssetRoot() {
+function getAssetRoot() {
   return document.body.dataset.assetRoot || '';
 }
 

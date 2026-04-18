@@ -1,13 +1,73 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bogons Catalog | GeoIP Locations</title>
-  <meta name="description" content="Special-purpose network ranges published from the current monthly reference feed." />
+  <title>Bogon List and Special-Purpose IPv4 Reference | ProdIPData</title>
+  <meta name="description" content="Browse the ProdIPData bogons reference catalog for special-purpose and restricted IPv4 ranges published with the current monthly reference feed." />
   <link rel="canonical" href="https://geoiplocations.com/reference-bogons.html" />
   <link rel="icon" type="image/png" href="assets/img/prodipdata-mark.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta property="og:url" content="https://geoiplocations.com/reference-bogons.html" />
+  <script type="application/ld+json" data-wave3-schema="breadcrumb-reference-bogons-html">
+{
+    "@context":  "https://schema.org",
+    "@type":  "BreadcrumbList",
+    "@id":  "https://geoiplocations.com/reference-bogons.html#breadcrumb",
+    "itemListElement":  [
+                            {
+                                "@type":  "ListItem",
+                                "position":  1,
+                                "name":  "Home",
+                                "item":  "https://geoiplocations.com/"
+                            },
+                            {
+                                "@type":  "ListItem",
+                                "position":  2,
+                                "name":  "Downloads",
+                                "item":  "https://geoiplocations.com/downloads.html"
+                            },
+                            {
+                                "@type":  "ListItem",
+                                "position":  3,
+                                "name":  "Bogons",
+                                "item":  "https://geoiplocations.com/reference-bogons.html"
+                            }
+                        ]
+}
+</script>
+  <script type="application/ld+json" data-wave3-schema="dataset-reference-bogons-html">
+{
+    "@context":  "https://schema.org",
+    "@type":  "Dataset",
+    "@id":  "https://geoiplocations.com/reference-bogons.html#dataset",
+    "name":  "ProdIPData Bogons Reference Catalog 2026-03",
+    "description":  "Special-purpose and restricted IPv4 ranges reference catalog published by ProdIPData for the current monthly reference feed.",
+    "url":  "https://geoiplocations.com/reference-bogons.html",
+    "isAccessibleForFree":  true,
+    "license":  "https://creativecommons.org/licenses/by/4.0/",
+    "version":  "2026-03",
+    "temporalCoverage":  "2026-03/2026-03",
+    "keywords":  [
+                     "bogon list",
+                     "special-purpose IPv4",
+                     "restricted ranges",
+                     "reference catalog",
+                     "ProdIPData",
+                     "2026-03"
+                 ],
+    "creator":  {
+                    "@type":  "Organization",
+                    "name":  "ProdIPData",
+                    "url":  "https://geoiplocations.com/"
+                },
+    "publisher":  {
+                      "@type":  "Organization",
+                      "name":  "ProdIPData",
+                      "url":  "https://geoiplocations.com/"
+                  }
+}
+</script>
 </head>
 <body data-page="reference-bogons" data-release-month="2026-03">
 
@@ -15,7 +75,7 @@
     <div class="container">
       <div class="navbar glass">
         <a class="brand" href="index.html">
-          <div class="brand-mark">â—Ž</div>
+          <div class="brand-mark">◎</div>
           <div>
             GeoIP Locations
             <small>Powered by ProdIPData</small>
@@ -108,16 +168,32 @@
         </div>
       </div>
     </section>
-  </main>
+  
+<!-- WAVE3:reference-bogons-summary START -->
+<section class="section" data-wave3-block="reference-bogons-summary">
+  <div class="container">
+    <div class="split-panel glass content">
+      <h2>How to use the Bogons reference</h2>
+      <p>
+        This catalog summarizes special-purpose and restricted IPv4 ranges that are frequently needed for filtering, validation, and documentation workflows. The table is the primary browser surface, while the surrounding release ecosystem keeps the catalog tied to the current monthly publication model.
+      </p>
+      <p>
+        Use the searchable rows to confirm network ranges and descriptions, then move back to Downloads or the monthly release pages when you need related CSV or Parquet publication context. This summary provides plain-language meaning for a page that would otherwise be dominated by tabular reference content.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- WAVE3:reference-bogons-summary END -->
+</main>
 
   <footer class="site-footer">
     <div class="container site-footer-inner">
-      <div>Â© <span data-current-year></span> GeoIP Locations Â· ProdIPData</div>
+      <div>© <span data-current-year></span> GeoIP Locations · ProdIPData</div>
       <div><a href="licensing.html">Datasets and metadata: CC BY 4.0</a></div>
       <div>Engineered and published by the ProdIPData team.</div>
     </div>
   </footer>
-  <script src="assets/js/site.js"></script>
+  <script src="assets/js/site.js" defer></script>
 
 </body>
 </html>

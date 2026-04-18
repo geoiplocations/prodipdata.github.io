@@ -60,5 +60,14 @@
   <url>
     <loc>https://geoiplocations.com/releases/2026-03/</loc>
   </url>
+  <url>
+    <loc>https://geoiplocations.com/asn/</loc>
+  </url>
+  <url>
+    <loc>https://geoiplocations.com/country/</loc>
+  </url>
+  <url>
+    <loc>https://geoiplocations.com/rir/</loc>
+  </url>
 </urlset>
 

@@ -253,6 +253,7 @@
   ]
 }
   </script>
+  <meta property="og:url" content="https://geoiplocations.com/downloads.html" />
 </head>
 <body data-page="downloads" data-nav-page="downloads" data-release-month="2026-03">
 
@@ -500,7 +501,36 @@
         </div>
       </div>
     </section>
-  </main>
+  
+<!-- WAVE3:downloads-crawlable-summary START -->
+<section class="section" data-wave3-block="downloads-crawlable-summary">
+  <div class="container">
+    <div class="split-panel glass content">
+      <h2>What the current release path provides</h2>
+      <p>
+        The Downloads page is the central entry point for release-aware dataset access. It connects the current monthly publication to dedicated CSV and Parquet index pages, preserves the release archive for historical navigation, and keeps the technical reference catalogs available alongside the downloadable data estate.
+      </p>
+      <p>
+        Use the CSV index when you want row-oriented files for SQL imports or lightweight review, use the Parquet index when you want analytical processing and larger-scale downstream work, and use the technical catalogs when the immediate need is reference context such as Bogons, CIDR, ports, or root-zone terminology. This summary makes the release path understandable to search engines and human readers before they navigate deeper.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- WAVE3:downloads-crawlable-summary END -->
+
+<!-- WAVE4:core-discovery-links START -->
+<section class="section" data-wave4-block="discovery-links">
+  <div class="container">
+    <div class="split-panel glass content">
+      <h2>Explore deeper release and entity pages</h2>
+      <p>
+        The current release architecture now connects the monthly archive to selective country, registry, and ASN pages. Use the <a href="releases/index.html">monthly release archive</a> for time-based navigation, move into <a href="country/index.html">country profiles</a> for country-specific footprint context, review <a href="rir/index.html">RIR pages</a> for registry-level structure, and open <a href="asn/index.html">ASN profiles</a> for high-visibility network entities. For package access, continue through <a href="downloads.html">GeoIP CSV and Parquet downloads</a>, and for source quality and caveats, review <a href="methodology.html">GeoIP methodology and validation</a>.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- WAVE4:core-discovery-links END -->
+</main>
 
   <footer class="site-footer">
     <div class="container site-footer-inner">
@@ -509,6 +539,6 @@
       <div>Engineered and published by the ProdIPData team.</div>
     </div>
   </footer>
-  <script src="assets/js/site.js"></script>
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>

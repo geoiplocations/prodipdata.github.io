@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GeoIP Monthly Release Archive | ProdIPData</title>
-  <meta name="description" content="Browse the ProdIPData GeoIP monthly release archive, including the current publication month, release summaries, and links to CSV and Parquet package indexes." />
-  <link rel="canonical" href="https://geoiplocations.com/releases/" />
+  <meta name="description" content="Browse the ProdIPData monthly GeoIP release archive with release landing pages, CSV and Parquet access paths, and publication context." />
+  <link rel="canonical" href="https://geoiplocations.com/releases/index.html" />
   <link rel="icon" type="image/png" href="../assets/img/prodipdata-mark.png" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 
@@ -45,6 +45,28 @@
   }
 }
   </script>
+  <meta property="og:url" content="https://geoiplocations.com/releases/index.html" />
+  <script type="application/ld+json" data-wave3-schema="breadcrumb-releases-index-html">
+{
+    "@context":  "https://schema.org",
+    "@type":  "BreadcrumbList",
+    "@id":  "https://geoiplocations.com/releases/index.html#breadcrumb",
+    "itemListElement":  [
+                            {
+                                "@type":  "ListItem",
+                                "position":  1,
+                                "name":  "Home",
+                                "item":  "https://geoiplocations.com/"
+                            },
+                            {
+                                "@type":  "ListItem",
+                                "position":  2,
+                                "name":  "Releases",
+                                "item":  "https://geoiplocations.com/releases/index.html"
+                            }
+                        ]
+}
+</script>
 </head>
 <body data-page="release-archive" data-nav-page="downloads" data-asset-root="../">
   <header class="site-header">
@@ -174,7 +196,27 @@
         </div>
       </div>
     </section>
-  </main>
+  
+<!-- WAVE4:release-archive-expansion START -->
+<section class="section" data-wave4-block="release-archive-expansion">
+  <div class="container">
+    <div class="split-panel glass content">
+      <h2>Release archive expansion</h2>
+      <p>
+        The archive is the stable entry point for month-by-month navigation. It now sits above selective country, RIR, and ASN landing assets so each release can connect not just to file downloads, but also to the deeper entity pages that explain coverage, concentration, and release context.
+      </p>
+      <ul>
+        <li><a href="../downloads.html">GeoIP CSV and Parquet downloads</a></li>
+        <li><a href="../country/index.html">Country profiles</a></li>
+        <li><a href="../rir/index.html">RIR profiles</a></li>
+        <li><a href="../asn/index.html">ASN profiles</a></li>
+        <li><a href="../methodology.html">GeoIP methodology and validation</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- WAVE4:release-archive-expansion END -->
+</main>
 
   <footer class="site-footer">
     <div class="container site-footer-inner">
@@ -183,6 +225,6 @@
       <div>Engineered and published by the ProdIPData team.</div>
     </div>
   </footer>
-  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/site.js" defer></script>
 </body>
 </html>
