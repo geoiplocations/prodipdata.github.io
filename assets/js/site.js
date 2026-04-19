@@ -1,3 +1,37 @@
+const PRODIP_ANALYTICS_STREAMS = Object.freeze({
+  'qa.geoiplocations.com': 'G-ZXQH2QGDB6',
+  'geoiplocations.com': 'G-1DX52Q08X0',
+  'www.geoiplocations.com': 'G-1DX52Q08X0'
+});
+
+initializeAnalytics();
+
+function initializeAnalytics() {
+  if (typeof window === 'undefined' || window.PRODIP_ANALYTICS_INITIALIZED) {
+    return;
+  }
+
+  const hostname = String(window.location.hostname || '').toLowerCase();
+  const measurementId = PRODIP_ANALYTICS_STREAMS[hostname];
+
+  if (!measurementId) {
+    return;
+  }
+
+  window.PRODIP_ANALYTICS_INITIALIZED = true;
+  window.PRODIP_ANALYTICS_MEASUREMENT_ID = measurementId;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
+
+  const googleTag = document.createElement('script');
+  googleTag.async = true;
+  googleTag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+  document.head.appendChild(googleTag);
+
+  window.gtag('js', new Date());
+  window.gtag('config', measurementId);
+}
+
 function getAssetRoot() {
   return document.body.dataset.assetRoot || '';
 }
