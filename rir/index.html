@@ -36,7 +36,7 @@
 }
   </script>
 </head>
-<body data-page="standard" data-nav-page="coverage" data-release-month="2026-03">
+<body data-page="rir" data-nav-page="coverage" data-release-month="2026-03" data-asset-root="../">
   <header class="site-header">
     <div class="container">
       <div class="navbar glass">
@@ -87,14 +87,22 @@
           <p>
             These registry pages turn the current release into a more visible set of RIR-oriented assets, connecting country mix, prefix scale, and release context without relying on map interaction alone.
           </p>
+          <p class="card-text">
+            Each registry profile below summarizes country count, ASN scale, published prefix footprint, and the ASN-type mix that shapes the current monthly release.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="split-panel glass">
+      <div class="container metric-grid" data-rir-metrics-target></div>
+    </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="split-panel glass content">
+          <h2>Published RIR profiles in release 2026-03</h2>
+          <div data-rir-list-target></div>
         </div>
       </div>
     </section>

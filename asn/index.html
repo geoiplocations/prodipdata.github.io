@@ -36,7 +36,7 @@
 }
   </script>
 </head>
-<body data-page="standard" data-nav-page="coverage" data-release-month="2026-03">
+<body data-page="asn" data-nav-page="coverage" data-release-month="2026-03" data-asset-root="../">
   <header class="site-header">
     <div class="container">
       <div class="navbar glass">
@@ -87,14 +87,35 @@
           <p>
             These ASN pages are intentionally selective. They focus on the most visible current-release entities rather than expanding into a thin, mechanically generated page set.
           </p>
+          <p class="card-text">
+            The page below surfaces the current release footprint through representative ASN extremes and registry-level distribution rather than attempting a mechanically generated page for every autonomous system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container metric-grid" data-asn-metrics-target></div>
+    </section>
+
+    <section class="section">
+      <div class="container story-grid">
+        <div class="split-panel glass content">
+          <h2>Largest ASNs in the current release</h2>
+          <div data-asn-biggest-target></div>
+        </div>
+        <div class="split-panel glass content">
+          <h2>Smallest ASNs in the current release</h2>
+          <div data-asn-smallest-target></div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="split-panel glass">
-
+        <div class="split-panel glass content">
+          <h2>Release coverage by registry</h2>
+          <div data-asn-rir-target></div>
         </div>
       </div>
     </section>

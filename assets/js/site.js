@@ -78,6 +78,18 @@ document.addEventListener('DOMContentLoaded', async () => {
       await renderDownloadsPage({ releaseMonth, releaseYear });
     }
 
+    if (currentPage === 'release-detail') {
+      await renderReleaseDetailPage({ releaseMonth, releaseYear });
+    }
+
+    if (currentPage === 'asn') {
+      await renderAsnLandingPage({ releaseMonth, releaseYear });
+    }
+
+    if (currentPage === 'rir') {
+      await renderRirLandingPage({ releaseMonth, releaseYear });
+    }
+
     if (currentPage.indexOf('reference-') === 0) {
       await renderReferencePage({ releaseMonth, releaseYear, page: currentPage });
     }
@@ -1156,6 +1168,189 @@ function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
+async function renderReleaseDetailPage(context) {
+  const overview = await fetchJson(assetPath(`assets/data/overview-global-${context.releaseMonth}.json`));
+
+  setReleaseDetailStat('countries', formatInteger(overview.totalCountriesRepresented));
+  setReleaseDetailStat('asns', formatInteger(overview.totalAsns));
+  setReleaseDetailStat('prefixes', formatInteger(overview.totalPrefixes));
+  setReleaseDetailStat('ipv4', formatInteger(overview.totalIpv4));
+}
+
+async function renderAsnLandingPage(context) {
+  const metricsNode = document.querySelector('[data-asn-metrics-target]');
+  const biggestNode = document.querySelector('[data-asn-biggest-target]');
+  const smallestNode = document.querySelector('[data-asn-smallest-target]');
+  const rirNode = document.querySelector('[data-asn-rir-target]');
+
+  const [overview, topAsns] = await Promise.all([
+    fetchJson(assetPath(`assets/data/overview-global-${context.releaseMonth}.json`)),
+    fetchJson(assetPath(`assets/data/top-asns-global-${context.releaseMonth}.json`))
+  ]);
+
+  const biggest = sortByRank(topAsns.biggestASNs).slice(0, 5);
+  const smallest = sortByRank(topAsns.smallestASNs).slice(0, 5);
+  const topByRir = sortByRank(topAsns.topByRIR).slice(0, 5);
+
+  if (metricsNode) {
+    metricsNode.innerHTML = `
+      <div class="metric-card glass">
+        <div class="muted">Observed ASNs</div>
+        <div class="metric-value">${formatInteger(overview.totalAsns)}</div>
+        <div class="card-text">Distinct autonomous systems represented in the current published release.</div>
+      </div>
+      <div class="metric-card glass">
+        <div class="muted">Largest ASN profiles</div>
+        <div class="metric-value">${formatInteger(biggest.length)}</div>
+        <div class="card-text">Largest ASNs surfaced on this selective landing page.</div>
+      </div>
+      <div class="metric-card glass">
+        <div class="muted">Smallest ASN profiles</div>
+        <div class="metric-value">${formatInteger(smallest.length)}</div>
+        <div class="card-text">Smallest ASNs surfaced for contrast within the current release.</div>
+      </div>
+      <div class="metric-card glass">
+        <div class="muted">Registry groupings</div>
+        <div class="metric-value">${formatInteger(topByRir.length)}</div>
+        <div class="card-text">Registry-level ASN footprint buckets represented in the current ASN summary.</div>
+      </div>
+    `;
+  }
+
+  if (biggestNode) {
+    biggestNode.innerHTML = biggest.length
+      ? biggest.map(item => `
+        <div class="list-row">
+          <div>
+            <strong>${escapeHtml(item.asnName || `AS${item.asnId}`)}</strong>
+            <small>AS${formatInteger(item.asnId)} · ${escapeHtml(item.countryName || item.countryIso || 'Unknown')} · ${escapeHtml(formatAsnTypeLabel(item.asnType || 'unknown'))}</small>
+          </div>
+          <div class="list-metric">
+            <strong>${formatInteger(item.prefixCount)}</strong>
+            <small>/24 prefixes</small>
+          </div>
+        </div>
+      `).join('')
+      : renderSimpleEmptyState('Largest ASN view unavailable', 'No largest-ASN data is available for the selected release.');
+  }
+
+  if (smallestNode) {
+    smallestNode.innerHTML = smallest.length
+      ? smallest.map(item => `
+        <div class="list-row">
+          <div>
+            <strong>${escapeHtml(item.asnName || `AS${item.asnId}`)}</strong>
+            <small>AS${formatInteger(item.asnId)} · ${escapeHtml(item.countryName || item.countryIso || 'Unknown')} · ${escapeHtml(formatAsnTypeLabel(item.asnType || 'unknown'))}</small>
+          </div>
+          <div class="list-metric">
+            <strong>${formatInteger(item.prefixCount)}</strong>
+            <small>/24 prefixes</small>
+          </div>
+        </div>
+      `).join('')
+      : renderSimpleEmptyState('Smallest ASN view unavailable', 'No smallest-ASN data is available for the selected release.');
+  }
+
+  if (rirNode) {
+    rirNode.innerHTML = topByRir.length
+      ? topByRir.map(item => `
+        <div class="list-row">
+          <div>
+            <strong>${escapeHtml(formatRirName(item.rir || 'unknown'))}</strong>
+            <small>${formatInteger(item.asnCount)} ASNs represented in this summary bucket.</small>
+          </div>
+          <div class="list-metric">
+            <strong>${formatInteger(item.prefixCount)}</strong>
+            <small>${formatCompact(item.ipv4Count)} IPv4 est.</small>
+          </div>
+        </div>
+      `).join('')
+      : renderSimpleEmptyState('Registry ASN view unavailable', 'No registry-level ASN summary is available for the selected release.');
+  }
+}
+
+async function renderRirLandingPage(context) {
+  const metricsNode = document.querySelector('[data-rir-metrics-target]');
+  const listNode = document.querySelector('[data-rir-list-target]');
+
+  const items = sortRirProfiles(await fetchJson(assetPath(`assets/data/rir-profiles-${context.releaseMonth}.json`)));
+  const totalCountries = items.reduce((sum, item) => sum + numericValue(item.countryCount), 0);
+  const totalAsns = items.reduce((sum, item) => sum + numericValue(item.asnCount), 0);
+  const totalPrefixes = items.reduce((sum, item) => sum + numericValue(item.prefixCount), 0);
+  const totalIpv4 = items.reduce((sum, item) => sum + numericValue(item.ipv4Count), 0);
+
+  if (metricsNode) {
+    metricsNode.innerHTML = `
+      <div class="metric-card glass">
+        <div class="muted">Published RIR profiles</div>
+        <div class="metric-value">${formatInteger(items.length)}</div>
+        <div class="card-text">Registry profiles currently exposed through the monthly release.</div>
+      </div>
+      <div class="metric-card glass">
+        <div class="muted">Countries covered</div>
+        <div class="metric-value">${formatInteger(totalCountries)}</div>
+        <div class="card-text">Country assignments represented across the current published registry profiles.</div>
+      </div>
+      <div class="metric-card glass">
+        <div class="muted">Observed ASNs</div>
+        <div class="metric-value">${formatInteger(totalAsns)}</div>
+        <div class="card-text">Registry-level ASN footprint represented in the current release.</div>
+      </div>
+      <div class="metric-card glass">
+        <div class="muted">Published /24 footprint</div>
+        <div class="metric-value">${formatCompact(totalPrefixes)}</div>
+        <div class="card-text">Published prefix footprint represented across the visible registry profiles.</div>
+      </div>
+    `;
+  }
+
+  if (listNode) {
+    listNode.innerHTML = items.length
+      ? `
+        <div class="grid-2">
+          ${items.map(item => `
+            <article class="section-card glass">
+              <h3>${escapeHtml(formatRirName(item.rir || 'unknown'))}</h3>
+              <p class="card-text">${escapeHtml(item.website || 'Website unavailable')} · ${escapeHtml(item.whoisServer || 'Whois unavailable')}</p>
+              <div class="list-row">
+                <div>
+                  <strong>Countries covered</strong>
+                  <small>Country profiles represented in the current release</small>
+                </div>
+                <div class="list-metric">
+                  <strong>${formatInteger(item.countryCount)}</strong>
+                  <small>countries</small>
+                </div>
+              </div>
+              <div class="list-row">
+                <div>
+                  <strong>Observed ASNs</strong>
+                  <small>Registry-level ASN footprint in the current release</small>
+                </div>
+                <div class="list-metric">
+                  <strong>${formatInteger(item.asnCount)}</strong>
+                  <small>ASNs</small>
+                </div>
+              </div>
+              <div class="list-row">
+                <div>
+                  <strong>Published footprint</strong>
+                  <small>Prefix and IPv4 scale for the registry profile</small>
+                </div>
+                <div class="list-metric">
+                  <strong>${formatInteger(item.prefixCount)}</strong>
+                  <small>${formatCompact(item.ipv4Count)} IPv4</small>
+                </div>
+              </div>
+              ${renderRirTypeMixBlock(item)}
+            </article>
+          `).join('')}
+        </div>
+      `
+      : renderSimpleEmptyState('RIR profiles unavailable', 'No registry profiles are available for the selected release.');
+  }
+}
+
 async function renderDownloadsPage(context) {
   const metricsNode = document.querySelector('[data-download-metrics-target]');
   const referenceNode = document.querySelector('[data-reference-target]');
@@ -1499,6 +1694,98 @@ async function fetchJson(path) {
     throw new Error(`Failed to load ${path}: ${response.status}`);
   }
   return response.json();
+}
+
+function setReleaseDetailStat(key, value) {
+  const labels = {
+    countries: 'Countries represented',
+    asns: 'Observed ASNs',
+    prefixes: 'Published /24 footprint',
+    ipv4: 'Estimated IPv4 footprint'
+  };
+
+  const spanNode = document.querySelector(`[data-release-detail-stat="${key}"]`);
+  if (spanNode) {
+    spanNode.textContent = value;
+    return;
+  }
+
+  const label = labels[key];
+  if (!label) {
+    return;
+  }
+
+  const strongNode = Array.from(document.querySelectorAll('[data-wave4-block="release-intelligence"] li strong'))
+    .find(node => String(node.textContent || '').replace(/:\s*$/, '').trim() === label);
+
+  if (strongNode && strongNode.parentElement) {
+    strongNode.parentElement.innerHTML = `<strong>${escapeHtml(label)}:</strong> ${escapeHtml(value)}`;
+  }
+}
+
+function renderSimpleEmptyState(title, text) {
+  return `
+    <div class="list-row">
+      <div>
+        <strong>${escapeHtml(title)}</strong>
+        <small>${escapeHtml(text)}</small>
+      </div>
+    </div>
+  `;
+}
+
+function sortRirProfiles(items) {
+  const order = new Map([
+    ['afrinic', 1],
+    ['apnic', 2],
+    ['arin', 3],
+    ['lacnic', 4],
+    ['ripe', 5]
+  ]);
+
+  return getItems(items)
+    .slice()
+    .sort((a, b) => (order.get(String(a.rir || '').toLowerCase()) || 999) - (order.get(String(b.rir || '').toLowerCase()) || 999));
+}
+
+function renderRirTypeMixBlock(item) {
+  const mixRows = getItems(item && item.typeMix)
+    .map(entry => ({
+      key: String(entry.asnType || 'unknown').toLowerCase(),
+      label: formatAsnTypeLabel(entry.asnType || 'unknown'),
+      value: numericValue(entry.asnCount),
+      prefixCount: numericValue(entry.prefixCount),
+      ipv4Count: numericValue(entry.ipv4Count)
+    }))
+    .filter(entry => entry.value > 0)
+    .sort((a, b) => b.value - a.value);
+
+  if (!mixRows.length) {
+    return renderSimpleEmptyState('Type mix unavailable', 'ASN type composition is not available for this registry profile.');
+  }
+
+  const total = mixRows.reduce((sum, entry) => sum + entry.value, 0);
+  return `
+    <div class="mix-summary">
+      <strong>${escapeHtml(formatAsnTypeLabel(mixRows[0].key))} leads the published mix</strong>
+      <span>Based on ${formatInteger(total)} ASNs currently represented in ${escapeHtml(formatRirName(item.rir || 'unknown'))}.</span>
+    </div>
+    <div class="mix-stack">
+      ${mixRows.map(entry => {
+        const sharePercent = total > 0 ? (entry.value / total) * 100 : 0;
+        return `
+          <div class="mix-row">
+            <div class="mix-row-label">${escapeHtml(entry.label)}</div>
+            <div class="mix-bar"><span style="width:${sharePercent.toFixed(1)}%"></span></div>
+            <div class="mix-row-metric">
+              <strong>${sharePercent.toFixed(1)}%</strong>
+              <small>${formatInteger(entry.value)} ASNs</small>
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
 }
 
 function getInlineReferencePayload() {
