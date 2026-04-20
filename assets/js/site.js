@@ -33,7 +33,9 @@ function initializeAnalytics() {
 }
 
 const PRODIP_CLARITY_PROJECTS = Object.freeze({
-  'qa.geoiplocations.com': 'wej20e55tp'
+  'qa.geoiplocations.com': 'wej20e55tp',
+  'geoiplocations.com': 'weja58sdv1',
+  'www.geoiplocations.com': 'weja58sdv1'
 });
 
 initializeClarity();
