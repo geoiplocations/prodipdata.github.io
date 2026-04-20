@@ -1,5 +1,5 @@
 const PRODIP_ANALYTICS_STREAMS = Object.freeze({
-  'qa.geoiplocations.com': 'G-ZXQH2QGDB6',
+  'qa.geoiplocations.com': 'G-M860EQGN4W',
   'geoiplocations.com': 'G-1DX52Q08X0',
   'www.geoiplocations.com': 'G-1DX52Q08X0'
 });
