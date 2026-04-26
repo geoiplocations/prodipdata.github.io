@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const currentReleaseNode = document.querySelector('[data-current-release]');
   const releaseTargetNode = document.querySelector('[data-release-target]');
 
-  let releaseMonth = document.body.dataset.releaseMonth || '2026-03';
-  let releaseYear = parseInt((releaseMonth || '2026-03').slice(0, 4), 10);
+  let releaseMonth = document.body.dataset.releaseMonth || '2026-04';
+  let releaseYear = parseInt((releaseMonth || '2026-04').slice(0, 4), 10);
 
   if (currentReleaseNode && releaseMonth) {
     currentReleaseNode.textContent = releaseMonth;
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     const releases = await fetchJson(assetPath('assets/data/releases.json'));
     releaseMonth = document.body.dataset.releaseMonth || getReleaseMonth(releases);
-    releaseYear = parseInt((releaseMonth || '2026-03').slice(0, 4), 10);
+    releaseYear = parseInt((releaseMonth || '2026-04').slice(0, 4), 10);
 
     if (currentReleaseNode && releaseMonth) {
       currentReleaseNode.textContent = releaseMonth;
@@ -1871,7 +1871,7 @@ function getReleaseMonth(releases) {
   if (releases && typeof releases.current_release === 'string' && releases.current_release.length >= 7) {
     return releases.current_release;
   }
-  return '2026-03';
+  return '2026-04';
 }
 
 function getItems(value) {

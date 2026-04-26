@@ -22,10 +22,10 @@
     <loc>https://geoiplocations.com/licensing.html</loc>
   </url>
   <url>
-    <loc>https://geoiplocations.com/downloads-csv-2026-03.html</loc>
+    <loc>https://geoiplocations.com/downloads-csv-2026-04.html</loc>
   </url>
   <url>
-    <loc>https://geoiplocations.com/downloads-parquet-2026-03.html</loc>
+    <loc>https://geoiplocations.com/downloads-parquet-2026-04.html</loc>
   </url>
   <url>
     <loc>https://geoiplocations.com/reference-bogons.html</loc>
@@ -58,7 +58,7 @@
     <loc>https://geoiplocations.com/releases/</loc>
   </url>
   <url>
-    <loc>https://geoiplocations.com/releases/2026-03/</loc>
+    <loc>https://geoiplocations.com/releases/2026-04/</loc>
   </url>
   <url>
     <loc>https://geoiplocations.com/asn/</loc>
@@ -69,5 +69,8 @@
   <url>
     <loc>https://geoiplocations.com/rir/</loc>
   </url>
+
+  <url><loc>https://geoiplocations.com/downloads-mmdb-2026-04.html</loc></url>
+  <url><loc>https://geoiplocations.com/releases/2026-04/index.html</loc></url>
 </urlset>
 

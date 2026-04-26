@@ -1,0 +1,11 @@
+{
+    "snapshotMonth":  "2026-04",
+    "generatedOnUtc":  "2026-04-26T08:31:56.7113779Z",
+    "totalAsns":  128861,
+    "activeAsns":  77548,
+    "totalCountriesRepresented":  247,
+    "totalRirsRepresented":  6,
+    "totalPrefixes":  16777216,
+    "totalIpv4":  4294967296,
+    "source":  "ProdIP.iana.stp_WebSite_Build_Overview_Global"
+}

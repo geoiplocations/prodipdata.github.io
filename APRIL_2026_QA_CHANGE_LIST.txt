@@ -1,0 +1,29 @@
+April 2026 QA website release changes
+
+Files to copy/change:
+asn-data-by-country.html
+coverage.html
+downloads.html
+geoip-csv-download.html
+geoip-database.html
+geoip-parquet-download.html
+index.html
+methodology.html
+platform.html
+reference-bogons.html
+reference-cidr.html
+reference-ports.html
+reference-root-zone.html
+sitemap.xml
+submit-data-correction.html
+downloads-csv-2026-04.html
+downloads-parquet-2026-04.html
+downloads-mmdb-2026-04.html
+asn/index.html
+country/index.html
+releases/index.html
+rir/index.html
+releases/2026-04/index.html
+assets/data/coverage-sample.json
+assets/data/releases.json
+assets/js/site.js

@@ -1,5 +1,5 @@
 {
-  "current_release": "2026-03",
+  "current_release": "2026-04",
   "items": [
     {
       "title": "Country export catalog",
@@ -16,6 +16,12 @@
     {
       "title": "Parquet packages",
       "description": "Analytics-friendly monthly packages for DBeaver, DuckDB, and downstream workflows.",
+      "status": "Ready",
+      "statusClass": "success"
+    },
+    {
+      "title": "MMDB packages",
+      "description": "Compact MaxMind DB compatible packages for local lookup workflows and application integration.",
       "status": "Ready",
       "statusClass": "success"
     },

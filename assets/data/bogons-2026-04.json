@@ -1,0 +1,87 @@
+{
+    "snapshotMonth":  "2026-04",
+    "generatedUtc":  "2026-04-26T08:33:27Z",
+    "source":  "ProdIP.iana.stp_WebSite_Bogons",
+    "items":  [
+                  {
+                      "ip":  "0.0.0.0",
+                      "cidr":  8,
+                      "description":  "\"This\" network"
+                  },
+                  {
+                      "ip":  "10.0.0.0",
+                      "cidr":  8,
+                      "description":  "Private-use networks"
+                  },
+                  {
+                      "ip":  "100.64.0.0",
+                      "cidr":  10,
+                      "description":  "Carrier-grade NAT"
+                  },
+                  {
+                      "ip":  "127.0.0.0",
+                      "cidr":  8,
+                      "description":  "Loopback"
+                  },
+                  {
+                      "ip":  "127.0.53.53",
+                      "cidr":  32,
+                      "description":  "Name collision occurrence"
+                  },
+                  {
+                      "ip":  "169.254.0.0",
+                      "cidr":  16,
+                      "description":  "Link local"
+                  },
+                  {
+                      "ip":  "172.16.0.0",
+                      "cidr":  12,
+                      "description":  "Private-use networks"
+                  },
+                  {
+                      "ip":  "192.0.0.0",
+                      "cidr":  24,
+                      "description":  "IETF protocol assignments"
+                  },
+                  {
+                      "ip":  "192.0.2.0",
+                      "cidr":  24,
+                      "description":  "TEST-NET-1"
+                  },
+                  {
+                      "ip":  "192.168.0.0",
+                      "cidr":  16,
+                      "description":  "Private-use networks"
+                  },
+                  {
+                      "ip":  "198.18.0.0",
+                      "cidr":  15,
+                      "description":  "Network interconnect device benchmark testing"
+                  },
+                  {
+                      "ip":  "198.51.100.0",
+                      "cidr":  24,
+                      "description":  "TEST-NET-2"
+                  },
+                  {
+                      "ip":  "203.0.113.0",
+                      "cidr":  24,
+                      "description":  "TEST-NET-3"
+                  },
+                  {
+                      "ip":  "224.0.0.0",
+                      "cidr":  4,
+                      "description":  "Multicast"
+                  },
+                  {
+                      "ip":  "240.0.0.0",
+                      "cidr":  4,
+                      "description":  "Reserved for future use"
+                  },
+                  {
+                      "ip":  "255.255.255.255",
+                      "cidr":  32,
+                      "description":  "Limited broadcast"
+                  }
+              ]
+}

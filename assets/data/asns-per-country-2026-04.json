@@ -1,0 +1,1701 @@
+{
+    "snapshotMonth":  "2026-04",
+    "generatedUtc":  "2026-04-26T08:32:50Z",
+    "source":  "ProdIP.asn.stp_WebSite_Build_ASNs_Per_Country",
+    "items":  [
+                  {
+                      "iso2":  "US",
+                      "countryName":  "United States",
+                      "rir":  "arin",
+                      "asnCount":  32529,
+                      "activeAsnCount":  17897
+                  },
+                  {
+                      "iso2":  "BR",
+                      "countryName":  "Brazil",
+                      "rir":  "lacnic",
+                      "asnCount":  10196,
+                      "activeAsnCount":  7946
+                  },
+                  {
+                      "iso2":  "RU",
+                      "countryName":  "Russia",
+                      "rir":  "ripe",
+                      "asnCount":  6432,
+                      "activeAsnCount":  4912
+                  },
+                  {
+                      "iso2":  "CN",
+                      "countryName":  "China",
+                      "rir":  "apnic",
+                      "asnCount":  6257,
+                      "activeAsnCount":  591
+                  },
+                  {
+                      "iso2":  "IN",
+                      "countryName":  "India",
+                      "rir":  "apnic",
+                      "asnCount":  6169,
+                      "activeAsnCount":  2864
+                  },
+                  {
+                      "iso2":  "ID",
+                      "countryName":  "Indonesia",
+                      "rir":  "apnic",
+                      "asnCount":  3822,
+                      "activeAsnCount":  2752
+                  },
+                  {
+                      "iso2":  "GB",
+                      "countryName":  "United Kingdom",
+                      "rir":  "ripe",
+                      "asnCount":  3657,
+                      "activeAsnCount":  2048
+                  },
+                  {
+                      "iso2":  "AU",
+                      "countryName":  "Australia",
+                      "rir":  "apnic",
+                      "asnCount":  3585,
+                      "activeAsnCount":  1655
+                  },
+                  {
+                      "iso2":  "DE",
+                      "countryName":  "Germany",
+                      "rir":  "ripe",
+                      "asnCount":  3431,
+                      "activeAsnCount":  2246
+                  },
+                  {
+                      "iso2":  "PL",
+                      "countryName":  "Poland",
+                      "rir":  "ripe",
+                      "asnCount":  2703,
+                      "activeAsnCount":  2093
+                  },
+                  {
+                      "iso2":  "CA",
+                      "countryName":  "Canada",
+                      "rir":  "arin",
+                      "asnCount":  2534,
+                      "activeAsnCount":  1574
+                  },
+                  {
+                      "iso2":  "FR",
+                      "countryName":  "France",
+                      "rir":  "ripe",
+                      "asnCount":  2417,
+                      "activeAsnCount":  1400
+                  },
+                  {
+                      "iso2":  "UA",
+                      "countryName":  "Ukraine",
+                      "rir":  "ripe",
+                      "asnCount":  2220,
+                      "activeAsnCount":  1528
+                  },
+                  {
+                      "iso2":  "BD",
+                      "countryName":  "Bangladesh",
+                      "rir":  "apnic",
+                      "asnCount":  1991,
+                      "activeAsnCount":  1502
+                  },
+                  {
+                      "iso2":  "NL",
+                      "countryName":  "The Netherlands",
+                      "rir":  "ripe",
+                      "asnCount":  1742,
+                      "activeAsnCount":  1006
+                  },
+                  {
+                      "iso2":  "IT",
+                      "countryName":  "Italy",
+                      "rir":  "ripe",
+                      "asnCount":  1433,
+                      "activeAsnCount":  1071
+                  },
+                  {
+                      "iso2":  "HK",
+                      "countryName":  "Hong Kong",
+                      "rir":  "apnic",
+                      "asnCount":  1391,
+                      "activeAsnCount":  703
+                  },
+                  {
+                      "iso2":  "AR",
+                      "countryName":  "Argentina",
+                      "rir":  "lacnic",
+                      "asnCount":  1339,
+                      "activeAsnCount":  1059
+                  },
+                  {
+                      "iso2":  "ES",
+                      "countryName":  "Spain",
+                      "rir":  "ripe",
+                      "asnCount":  1326,
+                      "activeAsnCount":  958
+                  },
+                  {
+                      "iso2":  "RO",
+                      "countryName":  "Romania",
+                      "rir":  "ripe",
+                      "asnCount":  1303,
+                      "activeAsnCount":  909
+                  },
+                  {
+                      "iso2":  "JP",
+                      "countryName":  "Japan",
+                      "rir":  "apnic",
+                      "asnCount":  1290,
+                      "activeAsnCount":  727
+                  },
+                  {
+                      "iso2":  "KR",
+                      "countryName":  "South Korea",
+                      "rir":  "apnic",
+                      "asnCount":  1186,
+                      "activeAsnCount":  798
+                  },
+                  {
+                      "iso2":  "CH",
+                      "countryName":  "Switzerland",
+                      "rir":  "ripe",
+                      "asnCount":  1168,
+                      "activeAsnCount":  750
+                  },
+                  {
+                      "iso2":  "VN",
+                      "countryName":  "Vietnam",
+                      "rir":  "apnic",
+                      "asnCount":  1028,
+                      "activeAsnCount":  514
+                  },
+                  {
+                      "iso2":  "TR",
+                      "countryName":  "Türkiye",
+                      "rir":  "ripe",
+                      "asnCount":  1002,
+                      "activeAsnCount":  656
+                  },
+                  {
+                      "iso2":  "SE",
+                      "countryName":  "Sweden",
+                      "rir":  "ripe",
+                      "asnCount":  973,
+                      "activeAsnCount":  645
+                  },
+                  {
+                      "iso2":  "IR",
+                      "countryName":  "Iran",
+                      "rir":  "ripe",
+                      "asnCount":  913,
+                      "activeAsnCount":  545
+                  },
+                  {
+                      "iso2":  "ZA",
+                      "countryName":  "South Africa",
+                      "rir":  "afrinic",
+                      "asnCount":  901,
+                      "activeAsnCount":  637
+                  },
+                  {
+                      "iso2":  "BG",
+                      "countryName":  "Bulgaria",
+                      "rir":  "ripe",
+                      "asnCount":  831,
+                      "activeAsnCount":  663
+                  },
+                  {
+                      "iso2":  "AT",
+                      "countryName":  "Austria",
+                      "rir":  "ripe",
+                      "asnCount":  818,
+                      "activeAsnCount":  609
+                  },
+                  {
+                      "iso2":  "MX",
+                      "countryName":  "Mexico",
+                      "rir":  "lacnic",
+                      "asnCount":  776,
+                      "activeAsnCount":  467
+                  },
+                  {
+                      "iso2":  "CZ",
+                      "countryName":  "Czechia",
+                      "rir":  "ripe",
+                      "asnCount":  747,
+                      "activeAsnCount":  562
+                  },
+                  {
+                      "iso2":  "SG",
+                      "countryName":  "Singapore",
+                      "rir":  "apnic",
+                      "asnCount":  744,
+                      "activeAsnCount":  438
+                  },
+                  {
+                      "iso2":  "NZ",
+                      "countryName":  "New Zealand",
+                      "rir":  "apnic",
+                      "asnCount":  734,
+                      "activeAsnCount":  425
+                  },
+                  {
+                      "iso2":  "UY",
+                      "countryName":  "Uruguay",
+                      "rir":  "lacnic",
+                      "asnCount":  706,
+                      "activeAsnCount":  30
+                  },
+                  {
+                      "iso2":  "PH",
+                      "countryName":  "Philippines",
+                      "rir":  "apnic",
+                      "asnCount":  701,
+                      "activeAsnCount":  452
+                  },
+                  {
+                      "iso2":  "TH",
+                      "countryName":  "Thailand",
+                      "rir":  "apnic",
+                      "asnCount":  664,
+                      "activeAsnCount":  453
+                  },
+                  {
+                      "iso2":  "CO",
+                      "countryName":  "Colombia",
+                      "rir":  "lacnic",
+                      "asnCount":  543,
+                      "activeAsnCount":  324
+                  },
+                  {
+                      "iso2":  "DK",
+                      "countryName":  "Denmark",
+                      "rir":  "ripe",
+                      "asnCount":  507,
+                      "activeAsnCount":  325
+                  },
+                  {
+                      "iso2":  "TW",
+                      "countryName":  "Taiwan",
+                      "rir":  "apnic",
+                      "asnCount":  481,
+                      "activeAsnCount":  240
+                  },
+                  {
+                      "iso2":  "MU",
+                      "countryName":  "Mauritius",
+                      "rir":  "afrinic",
+                      "asnCount":  479,
+                      "activeAsnCount":  60
+                  },
+                  {
+                      "iso2":  "CL",
+                      "countryName":  "Chile",
+                      "rir":  "lacnic",
+                      "asnCount":  439,
+                      "activeAsnCount":  313
+                  },
+                  {
+                      "iso2":  "BE",
+                      "countryName":  "Belgium",
+                      "rir":  "ripe",
+                      "asnCount":  432,
+                      "activeAsnCount":  269
+                  },
+                  {
+                      "iso2":  "PK",
+                      "countryName":  "Pakistan",
+                      "rir":  "apnic",
+                      "asnCount":  431,
+                      "activeAsnCount":  296
+                  },
+                  {
+                      "iso2":  "NO",
+                      "countryName":  "Norway",
+                      "rir":  "ripe",
+                      "asnCount":  429,
+                      "activeAsnCount":  280
+                  },
+                  {
+                      "iso2":  "FI",
+                      "countryName":  "Finland",
+                      "rir":  "ripe",
+                      "asnCount":  418,
+                      "activeAsnCount":  289
+                  },
+                  {
+                      "iso2":  "IL",
+                      "countryName":  "Israel",
+                      "rir":  "ripe",
+                      "asnCount":  418,
+                      "activeAsnCount":  305
+                  },
+                  {
+                      "iso2":  "MY",
+                      "countryName":  "Malaysia",
+                      "rir":  "apnic",
+                      "asnCount":  406,
+                      "activeAsnCount":  260
+                  },
+                  {
+                      "iso2":  "XX",
+                      "countryName":  "Unknown",
+                      "rir":  null,
+                      "asnCount":  383,
+                      "activeAsnCount":  52
+                  },
+                  {
+                      "iso2":  "HU",
+                      "countryName":  "Hungary",
+                      "rir":  "ripe",
+                      "asnCount":  344,
+                      "activeAsnCount":  234
+                  },
+                  {
+                      "iso2":  "LV",
+                      "countryName":  "Latvia",
+                      "rir":  "ripe",
+                      "asnCount":  341,
+                      "activeAsnCount":  235
+                  },
+                  {
+                      "iso2":  "IE",
+                      "countryName":  "Ireland",
+                      "rir":  "ripe",
+                      "asnCount":  337,
+                      "activeAsnCount":  196
+                  },
+                  {
+                      "iso2":  "NG",
+                      "countryName":  "Nigeria",
+                      "rir":  "afrinic",
+                      "asnCount":  319,
+                      "activeAsnCount":  222
+                  },
+                  {
+                      "iso2":  "SI",
+                      "countryName":  "Slovenia",
+                      "rir":  "ripe",
+                      "asnCount":  316,
+                      "activeAsnCount":  258
+                  },
+                  {
+                      "iso2":  "GR",
+                      "countryName":  "Greece",
+                      "rir":  "ripe",
+                      "asnCount":  288,
+                      "activeAsnCount":  221
+                  },
+                  {
+                      "iso2":  "EC",
+                      "countryName":  "Ecuador",
+                      "rir":  "lacnic",
+                      "asnCount":  268,
+                      "activeAsnCount":  196
+                  },
+                  {
+                      "iso2":  "VE",
+                      "countryName":  "Venezuela",
+                      "rir":  "lacnic",
+                      "asnCount":  263,
+                      "activeAsnCount":  188
+                  },
+                  {
+                      "iso2":  "KE",
+                      "countryName":  "Kenya",
+                      "rir":  "afrinic",
+                      "asnCount":  250,
+                      "activeAsnCount":  193
+                  },
+                  {
+                      "iso2":  "PE",
+                      "countryName":  "Peru",
+                      "rir":  "lacnic",
+                      "asnCount":  248,
+                      "activeAsnCount":  166
+                  },
+                  {
+                      "iso2":  "KZ",
+                      "countryName":  "Kazakhstan",
+                      "rir":  "ripe",
+                      "asnCount":  243,
+                      "activeAsnCount":  196
+                  },
+                  {
+                      "iso2":  "EE",
+                      "countryName":  "Estonia",
+                      "rir":  "ripe",
+                      "asnCount":  237,
+                      "activeAsnCount":  162
+                  },
+                  {
+                      "iso2":  "SK",
+                      "countryName":  "Slovakia",
+                      "rir":  "ripe",
+                      "asnCount":  237,
+                      "activeAsnCount":  190
+                  },
+                  {
+                      "iso2":  "IQ",
+                      "countryName":  "Iraq",
+                      "rir":  "ripe",
+                      "asnCount":  231,
+                      "activeAsnCount":  152
+                  },
+                  {
+                      "iso2":  "LT",
+                      "countryName":  "Lithuania",
+                      "rir":  "ripe",
+                      "asnCount":  231,
+                      "activeAsnCount":  172
+                  },
+                  {
+                      "iso2":  "MD",
+                      "countryName":  "Moldova",
+                      "rir":  "ripe",
+                      "asnCount":  224,
+                      "activeAsnCount":  119
+                  },
+                  {
+                      "iso2":  "SA",
+                      "countryName":  "Saudi Arabia",
+                      "rir":  "ripe",
+                      "asnCount":  217,
+                      "activeAsnCount":  163
+                  },
+                  {
+                      "iso2":  "DO",
+                      "countryName":  "Dominican Republic",
+                      "rir":  "lacnic",
+                      "asnCount":  216,
+                      "activeAsnCount":  174
+                  },
+                  {
+                      "iso2":  "RS",
+                      "countryName":  "Serbia",
+                      "rir":  "ripe",
+                      "asnCount":  212,
+                      "activeAsnCount":  157
+                  },
+                  {
+                      "iso2":  "NP",
+                      "countryName":  "Nepal",
+                      "rir":  "apnic",
+                      "asnCount":  206,
+                      "activeAsnCount":  143
+                  },
+                  {
+                      "iso2":  "LB",
+                      "countryName":  "Lebanon",
+                      "rir":  "ripe",
+                      "asnCount":  190,
+                      "activeAsnCount":  144
+                  },
+                  {
+                      "iso2":  "HR",
+                      "countryName":  "Croatia",
+                      "rir":  "ripe",
+                      "asnCount":  188,
+                      "activeAsnCount":  141
+                  },
+                  {
+                      "iso2":  "AE",
+                      "countryName":  "United Arab Emirates",
+                      "rir":  "ripe",
+                      "asnCount":  184,
+                      "activeAsnCount":  119
+                  },
+                  {
+                      "iso2":  "CY",
+                      "countryName":  "Cyprus",
+                      "rir":  "ripe",
+                      "asnCount":  177,
+                      "activeAsnCount":  120
+                  },
+                  {
+                      "iso2":  "GE",
+                      "countryName":  "Georgia",
+                      "rir":  "ripe",
+                      "asnCount":  173,
+                      "activeAsnCount":  137
+                  },
+                  {
+                      "iso2":  "MM",
+                      "countryName":  "Myanmar",
+                      "rir":  "apnic",
+                      "asnCount":  172,
+                      "activeAsnCount":  130
+                  },
+                  {
+                      "iso2":  "PT",
+                      "countryName":  "Portugal",
+                      "rir":  "ripe",
+                      "asnCount":  171,
+                      "activeAsnCount":  121
+                  },
+                  {
+                      "iso2":  "PA",
+                      "countryName":  "Panama",
+                      "rir":  "lacnic",
+                      "asnCount":  160,
+                      "activeAsnCount":  92
+                  },
+                  {
+                      "iso2":  "KH",
+                      "countryName":  "Cambodia",
+                      "rir":  "apnic",
+                      "asnCount":  152,
+                      "activeAsnCount":  98
+                  },
+                  {
+                      "iso2":  "AM",
+                      "countryName":  "Armenia",
+                      "rir":  "ripe",
+                      "asnCount":  144,
+                      "activeAsnCount":  112
+                  },
+                  {
+                      "iso2":  "LU",
+                      "countryName":  "Luxembourg",
+                      "rir":  "ripe",
+                      "asnCount":  144,
+                      "activeAsnCount":  101
+                  },
+                  {
+                      "iso2":  "AL",
+                      "countryName":  "Albania",
+                      "rir":  "ripe",
+                      "asnCount":  135,
+                      "activeAsnCount":  124
+                  },
+                  {
+                      "iso2":  "GH",
+                      "countryName":  "Ghana",
+                      "rir":  "afrinic",
+                      "asnCount":  134,
+                      "activeAsnCount":  94
+                  },
+                  {
+                      "iso2":  "BY",
+                      "countryName":  "Belarus",
+                      "rir":  "ripe",
+                      "asnCount":  133,
+                      "activeAsnCount":  107
+                  },
+                  {
+                      "iso2":  "CR",
+                      "countryName":  "Costa Rica",
+                      "rir":  "lacnic",
+                      "asnCount":  127,
+                      "activeAsnCount":  80
+                  },
+                  {
+                      "iso2":  "UZ",
+                      "countryName":  "Uzbekistan",
+                      "rir":  "ripe",
+                      "asnCount":  126,
+                      "activeAsnCount":  98
+                  },
+                  {
+                      "iso2":  "HN",
+                      "countryName":  "Honduras",
+                      "rir":  "lacnic",
+                      "asnCount":  125,
+                      "activeAsnCount":  90
+                  },
+                  {
+                      "iso2":  "TZ",
+                      "countryName":  "Tanzania",
+                      "rir":  "afrinic",
+                      "asnCount":  125,
+                      "activeAsnCount":  98
+                  },
+                  {
+                      "iso2":  "PR",
+                      "countryName":  "Puerto Rico",
+                      "rir":  "arin",
+                      "asnCount":  124,
+                      "activeAsnCount":  96
+                  },
+                  {
+                      "iso2":  "PY",
+                      "countryName":  "Paraguay",
+                      "rir":  "lacnic",
+                      "asnCount":  113,
+                      "activeAsnCount":  87
+                  },
+                  {
+                      "iso2":  "AZ",
+                      "countryName":  "Azerbaijan",
+                      "rir":  "ripe",
+                      "asnCount":  108,
+                      "activeAsnCount":  85
+                  },
+                  {
+                      "iso2":  "EG",
+                      "countryName":  "Egypt",
+                      "rir":  "afrinic",
+                      "asnCount":  105,
+                      "activeAsnCount":  70
+                  },
+                  {
+                      "iso2":  "SC",
+                      "countryName":  "Seychelles",
+                      "rir":  "afrinic",
+                      "asnCount":  103,
+                      "activeAsnCount":  57
+                  },
+                  {
+                      "iso2":  "IS",
+                      "countryName":  "Iceland",
+                      "rir":  "ripe",
+                      "asnCount":  99,
+                      "activeAsnCount":  70
+                  },
+                  {
+                      "iso2":  "GT",
+                      "countryName":  "Guatemala",
+                      "rir":  "lacnic",
+                      "asnCount":  94,
+                      "activeAsnCount":  56
+                  },
+                  {
+                      "iso2":  "KW",
+                      "countryName":  "Kuwait",
+                      "rir":  "ripe",
+                      "asnCount":  90,
+                      "activeAsnCount":  74
+                  },
+                  {
+                      "iso2":  "AO",
+                      "countryName":  "Angola",
+                      "rir":  "afrinic",
+                      "asnCount":  86,
+                      "activeAsnCount":  63
+                  },
+                  {
+                      "iso2":  "AF",
+                      "countryName":  "Afghanistan",
+                      "rir":  "apnic",
+                      "asnCount":  79,
+                      "activeAsnCount":  62
+                  },
+                  {
+                      "iso2":  "MK",
+                      "countryName":  "North Macedonia",
+                      "rir":  "ripe",
+                      "asnCount":  72,
+                      "activeAsnCount":  61
+                  },
+                  {
+                      "iso2":  "MN",
+                      "countryName":  "Mongolia",
+                      "rir":  "apnic",
+                      "asnCount":  71,
+                      "activeAsnCount":  49
+                  },
+                  {
+                      "iso2":  "KG",
+                      "countryName":  "Kyrgyzstan",
+                      "rir":  "ripe",
+                      "asnCount":  70,
+                      "activeAsnCount":  56
+                  },
+                  {
+                      "iso2":  "BO",
+                      "countryName":  "Bolivia",
+                      "rir":  "lacnic",
+                      "asnCount":  68,
+                      "activeAsnCount":  54
+                  },
+                  {
+                      "iso2":  "UG",
+                      "countryName":  "Uganda",
+                      "rir":  "afrinic",
+                      "asnCount":  67,
+                      "activeAsnCount":  49
+                  },
+                  {
+                      "iso2":  "PS",
+                      "countryName":  "Palestine",
+                      "rir":  "ripe",
+                      "asnCount":  66,
+                      "activeAsnCount":  35
+                  },
+                  {
+                      "iso2":  "BA",
+                      "countryName":  "Bosnia and Herzegovina",
+                      "rir":  "ripe",
+                      "asnCount":  63,
+                      "activeAsnCount":  47
+                  },
+                  {
+                      "iso2":  "MT",
+                      "countryName":  "Malta",
+                      "rir":  "ripe",
+                      "asnCount":  59,
+                      "activeAsnCount":  40
+                  },
+                  {
+                      "iso2":  "JO",
+                      "countryName":  "Jordan",
+                      "rir":  "ripe",
+                      "asnCount":  56,
+                      "activeAsnCount":  48
+                  },
+                  {
+                      "iso2":  "SV",
+                      "countryName":  "El Salvador",
+                      "rir":  "lacnic",
+                      "asnCount":  56,
+                      "activeAsnCount":  40
+                  },
+                  {
+                      "iso2":  "CD",
+                      "countryName":  "DR Congo",
+                      "rir":  "afrinic",
+                      "asnCount":  54,
+                      "activeAsnCount":  30
+                  },
+                  {
+                      "iso2":  "VG",
+                      "countryName":  "British Virgin Islands",
+                      "rir":  "arin",
+                      "asnCount":  50,
+                      "activeAsnCount":  37
+                  },
+                  {
+                      "iso2":  "LA",
+                      "countryName":  "Laos",
+                      "rir":  "apnic",
+                      "asnCount":  44,
+                      "activeAsnCount":  28
+                  },
+                  {
+                      "iso2":  "PG",
+                      "countryName":  "Papua New Guinea",
+                      "rir":  "apnic",
+                      "asnCount":  43,
+                      "activeAsnCount":  30
+                  },
+                  {
+                      "iso2":  "BT",
+                      "countryName":  "Bhutan",
+                      "rir":  "apnic",
+                      "asnCount":  39,
+                      "activeAsnCount":  24
+                  },
+                  {
+                      "iso2":  "BZ",
+                      "countryName":  "Belize",
+                      "rir":  "lacnic",
+                      "asnCount":  38,
+                      "activeAsnCount":  21
+                  },
+                  {
+                      "iso2":  "BW",
+                      "countryName":  "Botswana",
+                      "rir":  "afrinic",
+                      "asnCount":  37,
+                      "activeAsnCount":  27
+                  },
+                  {
+                      "iso2":  "CM",
+                      "countryName":  "Cameroon",
+                      "rir":  "afrinic",
+                      "asnCount":  37,
+                      "activeAsnCount":  18
+                  },
+                  {
+                      "iso2":  "TJ",
+                      "countryName":  "Tajikistan",
+                      "rir":  "ripe",
+                      "asnCount":  37,
+                      "activeAsnCount":  33
+                  },
+                  {
+                      "iso2":  "CW",
+                      "countryName":  "Curaçao",
+                      "rir":  "lacnic",
+                      "asnCount":  36,
+                      "activeAsnCount":  14
+                  },
+                  {
+                      "iso2":  "MA",
+                      "countryName":  "Morocco",
+                      "rir":  "afrinic",
+                      "asnCount":  36,
+                      "activeAsnCount":  26
+                  },
+                  {
+                      "iso2":  "ZW",
+                      "countryName":  "Zimbabwe",
+                      "rir":  "afrinic",
+                      "asnCount":  36,
+                      "activeAsnCount":  28
+                  },
+                  {
+                      "iso2":  "MW",
+                      "countryName":  "Malawi",
+                      "rir":  "afrinic",
+                      "asnCount":  35,
+                      "activeAsnCount":  25
+                  },
+                  {
+                      "iso2":  "MZ",
+                      "countryName":  "Mozambique",
+                      "rir":  "afrinic",
+                      "asnCount":  35,
+                      "activeAsnCount":  28
+                  },
+                  {
+                      "iso2":  "BF",
+                      "countryName":  "Burkina Faso",
+                      "rir":  "afrinic",
+                      "asnCount":  34,
+                      "activeAsnCount":  26
+                  },
+                  {
+                      "iso2":  "LY",
+                      "countryName":  "Libya",
+                      "rir":  "afrinic",
+                      "asnCount":  34,
+                      "activeAsnCount":  23
+                  },
+                  {
+                      "iso2":  "ME",
+                      "countryName":  "Montenegro",
+                      "rir":  "ripe",
+                      "asnCount":  34,
+                      "activeAsnCount":  23
+                  },
+                  {
+                      "iso2":  "NI",
+                      "countryName":  "Nicaragua",
+                      "rir":  "lacnic",
+                      "asnCount":  34,
+                      "activeAsnCount":  25
+                  },
+                  {
+                      "iso2":  "RW",
+                      "countryName":  "Rwanda",
+                      "rir":  "afrinic",
+                      "asnCount":  34,
+                      "activeAsnCount":  19
+                  },
+                  {
+                      "iso2":  "LK",
+                      "countryName":  "Sri Lanka",
+                      "rir":  "apnic",
+                      "asnCount":  32,
+                      "activeAsnCount":  20
+                  },
+                  {
+                      "iso2":  "CI",
+                      "countryName":  "Ivory Coast",
+                      "rir":  "afrinic",
+                      "asnCount":  31,
+                      "activeAsnCount":  16
+                  },
+                  {
+                      "iso2":  "IM",
+                      "countryName":  "Isle of Man",
+                      "rir":  "ripe",
+                      "asnCount":  31,
+                      "activeAsnCount":  16
+                  },
+                  {
+                      "iso2":  "TN",
+                      "countryName":  "Tunisia",
+                      "rir":  "afrinic",
+                      "asnCount":  30,
+                      "activeAsnCount":  25
+                  },
+                  {
+                      "iso2":  "LI",
+                      "countryName":  "Liechtenstein",
+                      "rir":  "ripe",
+                      "asnCount":  29,
+                      "activeAsnCount":  24
+                  },
+                  {
+                      "iso2":  "GI",
+                      "countryName":  "Gibraltar",
+                      "rir":  "ripe",
+                      "asnCount":  27,
+                      "activeAsnCount":  19
+                  },
+                  {
+                      "iso2":  "QA",
+                      "countryName":  "Qatar",
+                      "rir":  "ripe",
+                      "asnCount":  27,
+                      "activeAsnCount":  16
+                  },
+                  {
+                      "iso2":  "SS",
+                      "countryName":  "South Sudan",
+                      "rir":  "afrinic",
+                      "asnCount":  27,
+                      "activeAsnCount":  19
+                  },
+                  {
+                      "iso2":  "ZM",
+                      "countryName":  "Zambia",
+                      "rir":  "afrinic",
+                      "asnCount":  27,
+                      "activeAsnCount":  19
+                  },
+                  {
+                      "iso2":  "BH",
+                      "countryName":  "Bahrain",
+                      "rir":  "ripe",
+                      "asnCount":  26,
+                      "activeAsnCount":  18
+                  },
+                  {
+                      "iso2":  "BJ",
+                      "countryName":  "Benin",
+                      "rir":  "afrinic",
+                      "asnCount":  25,
+                      "activeAsnCount":  16
+                  },
+                  {
+                      "iso2":  "BM",
+                      "countryName":  "Bermuda",
+                      "rir":  "arin",
+                      "asnCount":  25,
+                      "activeAsnCount":  15
+                  },
+                  {
+                      "iso2":  "OM",
+                      "countryName":  "Oman",
+                      "rir":  "ripe",
+                      "asnCount":  24,
+                      "activeAsnCount":  14
+                  },
+                  {
+                      "iso2":  "SO",
+                      "countryName":  "Somalia",
+                      "rir":  "afrinic",
+                      "asnCount":  24,
+                      "activeAsnCount":  20
+                  },
+                  {
+                      "iso2":  "SL",
+                      "countryName":  "Sierra Leone",
+                      "rir":  "afrinic",
+                      "asnCount":  22,
+                      "activeAsnCount":  15
+                  },
+                  {
+                      "iso2":  "FJ",
+                      "countryName":  "Fiji",
+                      "rir":  "apnic",
+                      "asnCount":  21,
+                      "activeAsnCount":  14
+                  },
+                  {
+                      "iso2":  "GN",
+                      "countryName":  "Guinea",
+                      "rir":  "afrinic",
+                      "asnCount":  21,
+                      "activeAsnCount":  15
+                  },
+                  {
+                      "iso2":  "SN",
+                      "countryName":  "Senegal",
+                      "rir":  "afrinic",
+                      "asnCount":  21,
+                      "activeAsnCount":  12
+                  },
+                  {
+                      "iso2":  "TD",
+                      "countryName":  "Chad",
+                      "rir":  "afrinic",
+                      "asnCount":  20,
+                      "activeAsnCount":  10
+                  },
+                  {
+                      "iso2":  "AG",
+                      "countryName":  "Antigua and Barbuda",
+                      "rir":  "arin",
+                      "asnCount":  19,
+                      "activeAsnCount":  9
+                  },
+                  {
+                      "iso2":  "LR",
+                      "countryName":  "Liberia",
+                      "rir":  "afrinic",
+                      "asnCount":  19,
+                      "activeAsnCount":  14
+                  },
+                  {
+                      "iso2":  "NC",
+                      "countryName":  "New Caledonia",
+                      "rir":  "apnic",
+                      "asnCount":  19,
+                      "activeAsnCount":  14
+                  },
+                  {
+                      "iso2":  "DZ",
+                      "countryName":  "Algeria",
+                      "rir":  "afrinic",
+                      "asnCount":  18,
+                      "activeAsnCount":  10
+                  },
+                  {
+                      "iso2":  "GA",
+                      "countryName":  "Gabon",
+                      "rir":  "afrinic",
+                      "asnCount":  18,
+                      "activeAsnCount":  8
+                  },
+                  {
+                      "iso2":  "KY",
+                      "countryName":  "Cayman Islands",
+                      "rir":  "arin",
+                      "asnCount":  18,
+                      "activeAsnCount":  10
+                  },
+                  {
+                      "iso2":  "MV",
+                      "countryName":  "Maldives",
+                      "rir":  "apnic",
+                      "asnCount":  18,
+                      "activeAsnCount":  14
+                  },
+                  {
+                      "iso2":  "NA",
+                      "countryName":  "Namibia",
+                      "rir":  "afrinic",
+                      "asnCount":  18,
+                      "activeAsnCount":  13
+                  },
+                  {
+                      "iso2":  "MO",
+                      "countryName":  "Macao",
+                      "rir":  "apnic",
+                      "asnCount":  17,
+                      "activeAsnCount":  10
+                  },
+                  {
+                      "iso2":  "TT",
+                      "countryName":  "Trinidad and Tobago",
+                      "rir":  "lacnic",
+                      "asnCount":  17,
+                      "activeAsnCount":  15
+                  },
+                  {
+                      "iso2":  "TL",
+                      "countryName":  "Timor-Leste",
+                      "rir":  "apnic",
+                      "asnCount":  16,
+                      "activeAsnCount":  10
+                  },
+                  {
+                      "iso2":  "BS",
+                      "countryName":  "Bahamas",
+                      "rir":  "arin",
+                      "asnCount":  15,
+                      "activeAsnCount":  10
+                  },
+                  {
+                      "iso2":  "CG",
+                      "countryName":  "Congo Republic",
+                      "rir":  "afrinic",
+                      "asnCount":  15,
+                      "activeAsnCount":  5
+                  },
+                  {
+                      "iso2":  "JM",
+                      "countryName":  "Jamaica",
+                      "rir":  "arin",
+                      "asnCount":  15,
+                      "activeAsnCount":  9
+                  },
+                  {
+                      "iso2":  "HT",
+                      "countryName":  "Haiti",
+                      "rir":  "lacnic",
+                      "asnCount":  14,
+                      "activeAsnCount":  6
+                  },
+                  {
+                      "iso2":  "SD",
+                      "countryName":  "Sudan",
+                      "rir":  "afrinic",
+                      "asnCount":  14,
+                      "activeAsnCount":  9
+                  },
+                  {
+                      "iso2":  "SZ",
+                      "countryName":  "Eswatini",
+                      "rir":  "afrinic",
+                      "asnCount":  14,
+                      "activeAsnCount":  10
+                  },
+                  {
+                      "iso2":  "VU",
+                      "countryName":  "Vanuatu",
+                      "rir":  "apnic",
+                      "asnCount":  14,
+                      "activeAsnCount":  11
+                  },
+                  {
+                      "iso2":  "GG",
+                      "countryName":  "Guernsey and Alderney",
+                      "rir":  "ripe",
+                      "asnCount":  13,
+                      "activeAsnCount":  6
+                  },
+                  {
+                      "iso2":  "SM",
+                      "countryName":  "San Marino",
+                      "rir":  "ripe",
+                      "asnCount":  13,
+                      "activeAsnCount":  8
+                  },
+                  {
+                      "iso2":  "VI",
+                      "countryName":  "U.S. Virgin Islands",
+                      "rir":  "arin",
+                      "asnCount":  13,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "GM",
+                      "countryName":  "The Gambia",
+                      "rir":  "afrinic",
+                      "asnCount":  12,
+                      "activeAsnCount":  10
+                  },
+                  {
+                      "iso2":  "JE",
+                      "countryName":  "Jersey",
+                      "rir":  "ripe",
+                      "asnCount":  12,
+                      "activeAsnCount":  8
+                  },
+                  {
+                      "iso2":  "ML",
+                      "countryName":  "Mali",
+                      "rir":  "afrinic",
+                      "asnCount":  12,
+                      "activeAsnCount":  5
+                  },
+                  {
+                      "iso2":  "BI",
+                      "countryName":  "Burundi",
+                      "rir":  "afrinic",
+                      "asnCount":  11,
+                      "activeAsnCount":  8
+                  },
+                  {
+                      "iso2":  "CV",
+                      "countryName":  "Cabo Verde",
+                      "rir":  "afrinic",
+                      "asnCount":  11,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "GD",
+                      "countryName":  "Grenada",
+                      "rir":  "arin",
+                      "asnCount":  11,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "GP",
+                      "countryName":  "Guadeloupe",
+                      "rir":  "arin",
+                      "asnCount":  11,
+                      "activeAsnCount":  5
+                  },
+                  {
+                      "iso2":  "MG",
+                      "countryName":  "Madagascar",
+                      "rir":  "afrinic",
+                      "asnCount":  11,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "SB",
+                      "countryName":  "Solomon Islands",
+                      "rir":  "apnic",
+                      "asnCount":  11,
+                      "activeAsnCount":  10
+                  },
+                  {
+                      "iso2":  "BB",
+                      "countryName":  "Barbados",
+                      "rir":  "arin",
+                      "asnCount":  10,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "BN",
+                      "countryName":  "Brunei",
+                      "rir":  "apnic",
+                      "asnCount":  10,
+                      "activeAsnCount":  6
+                  },
+                  {
+                      "iso2":  "ET",
+                      "countryName":  "Ethiopia",
+                      "rir":  "afrinic",
+                      "asnCount":  10,
+                      "activeAsnCount":  6
+                  },
+                  {
+                      "iso2":  "GU",
+                      "countryName":  "Guam",
+                      "rir":  "apnic",
+                      "asnCount":  10,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "LS",
+                      "countryName":  "Lesotho",
+                      "rir":  "afrinic",
+                      "asnCount":  10,
+                      "activeAsnCount":  6
+                  },
+                  {
+                      "iso2":  "MR",
+                      "countryName":  "Mauritania",
+                      "rir":  "afrinic",
+                      "asnCount":  10,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "NE",
+                      "countryName":  "Niger",
+                      "rir":  "afrinic",
+                      "asnCount":  10,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "TG",
+                      "countryName":  "Togo",
+                      "rir":  "afrinic",
+                      "asnCount":  10,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "WS",
+                      "countryName":  "Samoa",
+                      "rir":  "apnic",
+                      "asnCount":  10,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "FO",
+                      "countryName":  "Faroe Islands",
+                      "rir":  "ripe",
+                      "asnCount":  9,
+                      "activeAsnCount":  4
+                  },
+                  {
+                      "iso2":  "GQ",
+                      "countryName":  "Equatorial Guinea",
+                      "rir":  "afrinic",
+                      "asnCount":  9,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "MH",
+                      "countryName":  "Marshall Islands",
+                      "rir":  "apnic",
+                      "asnCount":  9,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "SY",
+                      "countryName":  "Syria",
+                      "rir":  "ripe",
+                      "asnCount":  9,
+                      "activeAsnCount":  5
+                  },
+                  {
+                      "iso2":  "DM",
+                      "countryName":  "Dominica",
+                      "rir":  "arin",
+                      "asnCount":  8,
+                      "activeAsnCount":  4
+                  },
+                  {
+                      "iso2":  "RE",
+                      "countryName":  "Réunion",
+                      "rir":  "afrinic",
+                      "asnCount":  8,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "TM",
+                      "countryName":  "Turkmenistan",
+                      "rir":  "ripe",
+                      "asnCount":  8,
+                      "activeAsnCount":  7
+                  },
+                  {
+                      "iso2":  "CU",
+                      "countryName":  "Cuba",
+                      "rir":  "lacnic",
+                      "asnCount":  7,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "GF",
+                      "countryName":  "French Guiana",
+                      "rir":  "lacnic",
+                      "asnCount":  7,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "GY",
+                      "countryName":  "Guyana",
+                      "rir":  "lacnic",
+                      "asnCount":  7,
+                      "activeAsnCount":  5
+                  },
+                  {
+                      "iso2":  "LC",
+                      "countryName":  "Saint Lucia",
+                      "rir":  "arin",
+                      "asnCount":  7,
+                      "activeAsnCount":  5
+                  },
+                  {
+                      "iso2":  "MQ",
+                      "countryName":  "Martinique",
+                      "rir":  "arin",
+                      "asnCount":  7,
+                      "activeAsnCount":  6
+                  },
+                  {
+                      "iso2":  "SR",
+                      "countryName":  "Suriname",
+                      "rir":  "lacnic",
+                      "asnCount":  7,
+                      "activeAsnCount":  5
+                  },
+                  {
+                      "iso2":  "AI",
+                      "countryName":  "Anguilla",
+                      "rir":  "arin",
+                      "asnCount":  6,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "FM",
+                      "countryName":  "Micronesia",
+                      "rir":  "apnic",
+                      "asnCount":  6,
+                      "activeAsnCount":  5
+                  },
+                  {
+                      "iso2":  "KI",
+                      "countryName":  "Kiribati",
+                      "rir":  "apnic",
+                      "asnCount":  6,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "MF",
+                      "countryName":  "Saint Martin",
+                      "rir":  "arin",
+                      "asnCount":  6,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "PF",
+                      "countryName":  "French Polynesia",
+                      "rir":  "apnic",
+                      "asnCount":  6,
+                      "activeAsnCount":  4
+                  },
+                  {
+                      "iso2":  "YE",
+                      "countryName":  "Yemen",
+                      "rir":  "ripe",
+                      "asnCount":  6,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "DJ",
+                      "countryName":  "Djibouti",
+                      "rir":  "afrinic",
+                      "asnCount":  5,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "IA",
+                      "countryName":  "Iana",
+                      "rir":  "iana",
+                      "asnCount":  5,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "KN",
+                      "countryName":  "St Kitts and Nevis",
+                      "rir":  "arin",
+                      "asnCount":  5,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "NR",
+                      "countryName":  "Nauru",
+                      "rir":  "apnic",
+                      "asnCount":  5,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "TO",
+                      "countryName":  "Tonga",
+                      "rir":  "apnic",
+                      "asnCount":  5,
+                      "activeAsnCount":  4
+                  },
+                  {
+                      "iso2":  "VC",
+                      "countryName":  "St Vincent and Grenadines",
+                      "rir":  "arin",
+                      "asnCount":  5,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "AD",
+                      "countryName":  "Andorra",
+                      "rir":  "ripe",
+                      "asnCount":  4,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "AW",
+                      "countryName":  "Aruba",
+                      "rir":  "lacnic",
+                      "asnCount":  4,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "CF",
+                      "countryName":  "Central African Republic",
+                      "rir":  "afrinic",
+                      "asnCount":  4,
+                      "activeAsnCount":  4
+                  },
+                  {
+                      "iso2":  "MC",
+                      "countryName":  "Monaco",
+                      "rir":  "ripe",
+                      "asnCount":  4,
+                      "activeAsnCount":  4
+                  },
+                  {
+                      "iso2":  "PW",
+                      "countryName":  "Palau",
+                      "rir":  "apnic",
+                      "asnCount":  4,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "SX",
+                      "countryName":  "Sint Maarten",
+                      "rir":  "lacnic",
+                      "asnCount":  4,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "TV",
+                      "countryName":  "Tuvalu",
+                      "rir":  "apnic",
+                      "asnCount":  4,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "BL",
+                      "countryName":  "Saint Barthélemy",
+                      "rir":  "arin",
+                      "asnCount":  3,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "BQ",
+                      "countryName":  "Bonaire, Sint Eustatius, and Saba",
+                      "rir":  "lacnic",
+                      "asnCount":  3,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "KM",
+                      "countryName":  "Comoros",
+                      "rir":  "afrinic",
+                      "asnCount":  3,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "NU",
+                      "countryName":  "Niue",
+                      "rir":  "apnic",
+                      "asnCount":  3,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "TK",
+                      "countryName":  "Tokelau",
+                      "rir":  "apnic",
+                      "asnCount":  3,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "VA",
+                      "countryName":  "Vatican City",
+                      "rir":  "ripe",
+                      "asnCount":  3,
+                      "activeAsnCount":  3
+                  },
+                  {
+                      "iso2":  "AS",
+                      "countryName":  "American Samoa",
+                      "rir":  "apnic",
+                      "asnCount":  2,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "CK",
+                      "countryName":  "Cook Islands",
+                      "rir":  "apnic",
+                      "asnCount":  2,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "FK",
+                      "countryName":  "Falkland Islands",
+                      "rir":  "lacnic",
+                      "asnCount":  2,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "GW",
+                      "countryName":  "Guinea-Bissau",
+                      "rir":  "afrinic",
+                      "asnCount":  2,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "NF",
+                      "countryName":  "Norfolk Island",
+                      "rir":  "apnic",
+                      "asnCount":  2,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "ST",
+                      "countryName":  "São Tomé and Príncipe",
+                      "rir":  "afrinic",
+                      "asnCount":  2,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "TC",
+                      "countryName":  "Turks and Caicos Islands",
+                      "rir":  "arin",
+                      "asnCount":  2,
+                      "activeAsnCount":  2
+                  },
+                  {
+                      "iso2":  "AQ",
+                      "countryName":  "Antarctica",
+                      "rir":  "arin",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "AX",
+                      "countryName":  "Åland",
+                      "rir":  "ripe",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "CX",
+                      "countryName":  "Christmas Island",
+                      "rir":  "apnic",
+                      "asnCount":  1,
+                      "activeAsnCount":  0
+                  },
+                  {
+                      "iso2":  "ER",
+                      "countryName":  "Eritrea",
+                      "rir":  "afrinic",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "GL",
+                      "countryName":  "Greenland",
+                      "rir":  "ripe",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "GS",
+                      "countryName":  "South Georgia and South Sandwich Islands",
+                      "rir":  "lacnic",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "IO",
+                      "countryName":  "British Indian Ocean Territory",
+                      "rir":  "apnic",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "KP",
+                      "countryName":  "North Korea",
+                      "rir":  "apnic",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "MP",
+                      "countryName":  "Northern Mariana Islands",
+                      "rir":  "apnic",
+                      "asnCount":  1,
+                      "activeAsnCount":  0
+                  },
+                  {
+                      "iso2":  "MS",
+                      "countryName":  "Montserrat",
+                      "rir":  "arin",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "PM",
+                      "countryName":  "Saint Pierre and Miquelon",
+                      "rir":  "arin",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "WF",
+                      "countryName":  "Wallis and Futuna",
+                      "rir":  "apnic",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  },
+                  {
+                      "iso2":  "YT",
+                      "countryName":  "Mayotte",
+                      "rir":  "afrinic",
+                      "asnCount":  1,
+                      "activeAsnCount":  1
+                  }
+              ]
+}
