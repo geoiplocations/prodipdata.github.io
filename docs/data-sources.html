@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data sources and methodology inputs | GeoIP Locations</title>
+<meta name="description" content="Authoritative data sources used by GeoIP Locations and ProdIPData to build monthly IPv4 datasets.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="navbar glass">
+<a class="brand" href="../index.html">
+<div class="brand-mark">&#9678;</div>
+<div>GeoIP Locations<small>Powered by ProdIPData</small></div>
+</a>
+<nav class="nav-links">
+<a href="../platform.html">Platform</a>
+<a href="../coverage.html">Coverage</a>
+<a href="../methodology.html">Methodology</a>
+<a href="../downloads.html">Downloads</a>
+<a href="../docs.html">Documentation</a>
+<a href="../news.html">News</a>
+<a href="../contact.html">Contact</a>
+</nav>
+</div>
+</div>
+</header>
+
+<main>
+<section class="hero slim">
+<div class="container">
+<div class="eyebrow">Documentation</div>
+<h1>Data sources and methodology inputs</h1>
+<p class="hero-copy">All datasets used by ProdIPData are sourced from publicly available, authoritative internet and geographic data providers and are processed into a unified monthly release.</p>
+<p class="hero-copy">ProdIPData aggregates multiple authoritative public datasets and applies normalization, reconciliation, and classification layers to produce a consistent monthly IPv4 dataset.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container prose">
+
+<h2>Authoritative registries</h2>
+<p>Regional Internet Registries provide the foundation for IP allocation and ownership boundaries.</p>
+<ul>
+<li>RIPE NCC</li>
+<li>ARIN</li>
+<li>APNIC</li>
+<li>LACNIC</li>
+<li>AFRINIC</li>
+</ul>
+
+<h2>Routing intelligence</h2>
+<p>BGP data reflects actual routing on the internet and enables ASN to prefix relationships.</p>
+<ul>
+<li>RIPE RIS</li>
+<li>RouteViews</li>
+</ul>
+
+<h2>Geolocation reference</h2>
+<p>GeoNames provides hierarchical geographic data including cities, regions, countries, and timezones.</p>
+
+<h2>Standardization</h2>
+<ul>
+<li>ISO country codes</li>
+<li>IANA registries and RIR definitions</li>
+</ul>
+
+<h2>DNS and internet structure</h2>
+<ul>
+<li>IANA Root Zone Database</li>
+</ul>
+
+<h2>Special datasets</h2>
+<ul>
+<li>Bogon IP ranges, including publicly available bogon reference material such as Team Cymru bogon feeds.</li>
+</ul>
+
+<h2>ProdIPData processing layer</h2>
+<p>The final dataset is not a direct copy of any single source. It is the result of:</p>
+<ul>
+<li>Cross-source reconciliation</li>
+<li>ASN enrichment and classification</li>
+<li>Geolocation normalization</li>
+<li>Consistency enforcement across monthly snapshots</li>
+</ul>
+
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<strong>GeoIP Locations</strong>
+<p>Transparent, monthly IPv4 geolocation releases.</p>
+</div>
+<div>
+<span>Documentation</span>
+<a href="../docs.html">Documentation home</a>
+<a href="data-sources.html">Data sources</a>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
