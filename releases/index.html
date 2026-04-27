@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GeoIP Monthly Release Archive | ProdIPData</title>
-  <meta name="description" content="Browse the ProdIPData monthly GeoIP release archive with release landing pages, CSV, Parquet, and MMDB access paths, and publication context." />
+  <meta name="description" content="Browse the ProdIPData monthly GeoIP release archive, including current, archived, and planned release paths for CSV, Parquet, and MMDB package indexes." />
   <link rel="canonical" href="https://geoiplocations.com/releases/index.html" />
   <link rel="icon" type="image/png" href="../assets/img/prodipdata-mark.png" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
@@ -13,6 +13,7 @@
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "@id": "https://geoiplocations.com/releases/index.html#breadcrumb",
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -23,8 +24,8 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Releases",
-      "item": "https://geoiplocations.com/releases/"
+      "name": "Release Archive",
+      "item": "https://geoiplocations.com/releases/index.html"
     }
   ]
 }
@@ -34,39 +35,32 @@
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "@id": "https://geoiplocations.com/releases/#page",
+  "@id": "https://geoiplocations.com/releases/index.html#page",
   "name": "ProdIPData GeoIP Monthly Release Archive",
-  "description": "Archive page for ProdIPData monthly GeoIP releases with links to release summaries and package indexes.",
-  "url": "https://geoiplocations.com/releases/",
+  "description": "Archive page for ProdIPData monthly GeoIP releases with current, historical, and planned release navigation.",
+  "url": "https://geoiplocations.com/releases/index.html",
   "isPartOf": {
     "@type": "WebSite",
     "name": "GeoIP Locations",
     "url": "https://geoiplocations.com/"
-  }
+  },
+  "about": [
+    {
+      "@type": "Dataset",
+      "name": "ProdIPData GeoIP Monthly Release 2026-04",
+      "version": "2026-04",
+      "url": "https://geoiplocations.com/releases/2026-04/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "ProdIPData GeoIP Monthly Release 2026-03",
+      "version": "2026-03",
+      "url": "https://geoiplocations.com/releases/2026-03/index.html"
+    }
+  ]
 }
   </script>
   <meta property="og:url" content="https://geoiplocations.com/releases/index.html" />
-  <script type="application/ld+json" data-wave3-schema="breadcrumb-releases-index-html">
-{
-    "@context":  "https://schema.org",
-    "@type":  "BreadcrumbList",
-    "@id":  "https://geoiplocations.com/releases/index.html#breadcrumb",
-    "itemListElement":  [
-                            {
-                                "@type":  "ListItem",
-                                "position":  1,
-                                "name":  "Home",
-                                "item":  "https://geoiplocations.com/"
-                            },
-                            {
-                                "@type":  "ListItem",
-                                "position":  2,
-                                "name":  "Releases",
-                                "item":  "https://geoiplocations.com/releases/index.html"
-                            }
-                        ]
-}
-</script>
 </head>
 <body data-page="release-archive" data-nav-page="downloads" data-asset-root="../">
   <header class="site-header">
@@ -89,7 +83,7 @@
           <a href="../contact.html" data-nav="contact">Contact</a>
         </nav>
         <div class="header-cta">
-          <a class="btn btn-secondary" href="index.html">Release Archive</a>
+          <a class="btn btn-secondary" href="../downloads.html">Download Hub</a>
         </div>
         <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
       </div>
@@ -98,8 +92,8 @@
         <a href="../coverage.html" data-nav="coverage">Coverage</a>
         <a href="../methodology.html" data-nav="methodology">Methodology</a>
         <a href="../downloads.html" data-nav="downloads">Downloads</a>
-          <a href="../docs.html" data-nav="docs">Documentation</a>
-          <a href="../news.html" data-nav="news">News</a>
+        <a href="../docs.html" data-nav="docs">Documentation</a>
+        <a href="../news.html" data-nav="news">News</a>
         <a href="../contact.html" data-nav="contact">Contact</a>
       </nav>
     </div>
@@ -109,15 +103,18 @@
     <section class="page-hero">
       <div class="container">
         <div class="page-panel glass">
-          <div class="eyebrow page-kicker">Releases</div>
+          <div class="eyebrow page-kicker">Release Archive</div>
           <h1>GeoIP monthly release archive.</h1>
           <p class="page-intro">
-            This archive brings the ProdIPData monthly publication model into one place. Use it to see which releases are live, which release is current, and where each month connects to CSV, Parquet, and MMDB package indexes, coverage views, and methodology notes.
+            Use this archive as the stable month-by-month control plane for ProdIPData releases. The website remains the catalog and navigation layer; the permanent release artifacts remain in the ProdIP_Files repository under versioned release folders.
           </p>
-          <p class="page-intro seo-links">Start with the <a href="2026-04/index.html">current release overview</a>, jump to the <a href="../downloads.html">download hub</a>, inspect the <a href="../coverage.html">coverage page</a>, or review the <a href="../methodology.html">monthly publication methodology</a>.</p>
+          <p class="page-intro seo-links">
+            Current release: <a href="2026-04/index.html">2026-04</a>. Archived release: <a href="2026-03/index.html">2026-03</a>. Package files remain stored under GitHub release paths such as <span class="warning-text">Export/release_2026-03/CSV/</span> and <span class="warning-text">Export/release_2026-03/PARQUET/</span>.
+          </p>
           <div class="actions">
-            <a class="btn btn-primary" href="2026-04/index.html">Open Release 2026-04</a>
-            <a class="btn btn-secondary" href="../downloads.html">Review Downloads</a>
+            <a class="btn btn-primary" href="2026-04/index.html">Open Current Release</a>
+            <a class="btn btn-secondary" href="2026-03/index.html">Open March 2026 Archive</a>
+            <a class="btn btn-secondary" href="../assets/data/releases-archive.json">Archive Manifest</a>
           </div>
         </div>
       </div>
@@ -126,16 +123,16 @@
     <section class="section">
       <div class="container grid-3">
         <article class="section-card glass">
-          <h3>Release-first navigation</h3>
-          <p class="card-text">Each monthly release page acts as a central checkpoint between methodology, coverage, and format-specific download indexes.</p>
+          <h3>Current release</h3>
+          <p class="card-text">Release 2026-04 is the active public baseline and exposes CSV, Parquet, and MMDB package indexes.</p>
         </article>
         <article class="section-card glass">
-          <h3>Stable release references</h3>
-          <p class="card-text">Month-specific pages create durable entry points for links, citations, and future release-by-release comparison.</p>
+          <h3>Archived release</h3>
+          <p class="card-text">Release 2026-03 is preserved as the first historical entry with CSV and Parquet package indexes. MMDB was not published for March.</p>
         </article>
         <article class="section-card glass">
-          <h3>Current release baseline</h3>
-          <p class="card-text">The current published baseline remains release 2026-04 until the next month is prepared and published.</p>
+          <h3>Permanent storage model</h3>
+          <p class="card-text">Release files remain in ProdIP_Files. The site records links, package indexes, visible passwords, snapshot months, and storage paths.</p>
         </article>
       </div>
     </section>
@@ -147,15 +144,63 @@
             <div class="release-card-head">
               <div>
                 <div class="release-title">Release 2026-04</div>
-                <p class="release-note">Current public GeoIP release. Use the release page for context, then move into the CSV, Parquet, and MMDB package indexes for file-level access.</p>
+                <p class="release-note">Current public GeoIP release. Use the release page for context, then move into CSV, Parquet, or MMDB package indexes for file-level access.</p>
               </div>
               <span class="badge success">Current</span>
             </div>
+            <div class="release-formats">
+              <div class="release-format-card">
+                <div class="status-row"><h3>CSV files</h3><span class="badge success">246 rows</span></div>
+                <p class="card-text">Storage path: <span class="warning-text">Export/release_2026-04/CSV/</span></p>
+                <div class="actions compact-actions"><a class="btn btn-secondary" href="../downloads-csv-2026-04.html">CSV index</a></div>
+              </div>
+              <div class="release-format-card">
+                <div class="status-row"><h3>Parquet files</h3><span class="badge success">241 rows</span></div>
+                <p class="card-text">Storage path: <span class="warning-text">Export/release_2026-04/PARQUET/</span></p>
+                <div class="actions compact-actions"><a class="btn btn-secondary" href="../downloads-parquet-2026-04.html">Parquet index</a></div>
+              </div>
+              <div class="release-format-card">
+                <div class="status-row"><h3>MMDB files</h3><span class="badge success">241 rows</span></div>
+                <p class="card-text">Storage path: <span class="warning-text">Export/release_2026-04/MMDB/</span></p>
+                <div class="actions compact-actions"><a class="btn btn-secondary" href="../downloads-mmdb-2026-04.html">MMDB index</a></div>
+              </div>
+            </div>
             <div class="actions compact-actions">
               <a class="btn btn-primary" href="2026-04/index.html">Release overview</a>
-              <a class="btn btn-secondary" href="../downloads-csv-2026-04.html">CSV index</a>
-              <a class="btn btn-secondary" href="../downloads-parquet-2026-04.html">Parquet index</a>
-              <a class="btn btn-secondary" href="../downloads-mmdb-2026-04.html">MMDB index</a>
+              <a class="btn btn-secondary" href="../downloads.html">Download hub</a>
+            </div>
+          </article>
+
+          <article class="release-card glass">
+            <div class="release-card-head">
+              <div>
+                <div class="release-title">Release 2026-03</div>
+                <p class="release-note">Archived public GeoIP release recovered from the PROD catalog. CSV and Parquet remain available through their original GitHub-backed package indexes. MMDB was not published for this release.</p>
+              </div>
+              <span class="badge info">Archived</span>
+            </div>
+            <div class="release-formats">
+              <div class="release-format-card">
+                <div class="status-row"><h3>CSV files</h3><span class="badge success">242 rows</span></div>
+                <p class="card-text">Storage path: <span class="warning-text">Export/release_2026-03/CSV/</span></p>
+                <p class="card-text">The CSV index displays the file link, per-package password, IPv4 count, and snapshot month.</p>
+                <div class="actions compact-actions"><a class="btn btn-secondary" href="../downloads-csv-2026-03.html">CSV index</a></div>
+              </div>
+              <div class="release-format-card">
+                <div class="status-row"><h3>Parquet files</h3><span class="badge success">246 rows</span></div>
+                <p class="card-text">Storage path: <span class="warning-text">Export/release_2026-03/PARQUET/</span></p>
+                <p class="card-text">The Parquet index displays the file link, per-package password, IPv4 count, and snapshot month.</p>
+                <div class="actions compact-actions"><a class="btn btn-secondary" href="../downloads-parquet-2026-03.html">Parquet index</a></div>
+              </div>
+              <div class="release-format-card pending">
+                <div class="status-row"><h3>MMDB files</h3><span class="badge warning">Not published</span></div>
+                <p class="card-text">No March 2026 MMDB package index exists. MMDB starts with the later publication workflow.</p>
+                <div class="actions compact-actions"><span class="btn btn-secondary disabled">No March MMDB</span></div>
+              </div>
+            </div>
+            <div class="actions compact-actions">
+              <a class="btn btn-primary" href="2026-03/index.html">Release overview</a>
+              <a class="btn btn-secondary" href="../assets/data/release-2026-03-package-inventory.json">Machine-readable March inventory</a>
             </div>
           </article>
 
@@ -163,13 +208,23 @@
             <div class="release-card-head">
               <div>
                 <div class="release-title">Release 2026-05</div>
-                <p class="release-note">Planned next monthly publication. This archive entry reserves the navigation path that will become the next release landing page when publication is complete.</p>
+                <p class="release-note">Planned next monthly publication. This reserved archive entry keeps the release model explicit before the files are published.</p>
               </div>
               <span class="badge warning">Planned</span>
             </div>
-            <div class="actions compact-actions">
-              <a class="btn btn-secondary" href="../downloads.html">Monitor Downloads</a>
-              <a class="btn btn-secondary" href="../methodology.html">Methodology</a>
+            <div class="release-formats">
+              <div class="release-format-card pending">
+                <div class="status-row"><h3>CSV files</h3><span class="badge warning">Pending</span></div>
+                <p class="card-text">Reserved storage path: <span class="warning-text">Export/release_2026-05/CSV/</span></p>
+              </div>
+              <div class="release-format-card pending">
+                <div class="status-row"><h3>Parquet files</h3><span class="badge warning">Pending</span></div>
+                <p class="card-text">Reserved storage path: <span class="warning-text">Export/release_2026-05/PARQUET/</span></p>
+              </div>
+              <div class="release-format-card pending">
+                <div class="status-row"><h3>MMDB files</h3><span class="badge warning">Pending</span></div>
+                <p class="card-text">Reserved storage path: <span class="warning-text">Export/release_2026-05/MMDB/</span></p>
+              </div>
             </div>
           </article>
         </div>
@@ -177,51 +232,123 @@
     </section>
 
     <section class="section">
+      <div class="container">
+        <div class="package-table-shell glass">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Historic package register</div>
+              <h2>Release artifact paths and password locations.</h2>
+            </div>
+            <p>Use this table as the executive release register. Open the format-specific index pages for the full country/scope-level package rows, visible passwords, IPv4 counts, and GitHub file links.</p>
+          </div>
+          <div class="package-table-wrap">
+            <table class="package-table">
+              <thead>
+                <tr>
+                  <th>Release</th>
+                  <th>Status</th>
+                  <th>Format</th>
+                  <th>Package rows</th>
+                  <th>Index</th>
+                  <th>Storage path</th>
+                  <th>Password location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>2026-04</strong></td>
+                  <td><span class="badge success">Current</span></td>
+                  <td>CSV</td>
+                  <td>246</td>
+                  <td><a href="../downloads-csv-2026-04.html">Open CSV index</a></td>
+                  <td class="mono">Export/release_2026-04/CSV/</td>
+                  <td>Per-package rows in CSV index.</td>
+                </tr>
+                <tr>
+                  <td><strong>2026-04</strong></td>
+                  <td><span class="badge success">Current</span></td>
+                  <td>Parquet</td>
+                  <td>241</td>
+                  <td><a href="../downloads-parquet-2026-04.html">Open Parquet index</a></td>
+                  <td class="mono">Export/release_2026-04/PARQUET/</td>
+                  <td>Per-package rows in Parquet index.</td>
+                </tr>
+                <tr>
+                  <td><strong>2026-04</strong></td>
+                  <td><span class="badge success">Current</span></td>
+                  <td>MMDB</td>
+                  <td>241</td>
+                  <td><a href="../downloads-mmdb-2026-04.html">Open MMDB index</a></td>
+                  <td class="mono">Export/release_2026-04/MMDB/</td>
+                  <td>Per-package rows in MMDB index.</td>
+                </tr>
+                <tr>
+                  <td><strong>2026-03</strong></td>
+                  <td><span class="badge info">Archived</span></td>
+                  <td>CSV</td>
+                  <td>242</td>
+                  <td><a href="../downloads-csv-2026-03.html">Open CSV index</a></td>
+                  <td class="mono">Export/release_2026-03/CSV/</td>
+                  <td>Per-package rows in CSV index and March inventory JSON.</td>
+                </tr>
+                <tr>
+                  <td><strong>2026-03</strong></td>
+                  <td><span class="badge info">Archived</span></td>
+                  <td>Parquet</td>
+                  <td>246</td>
+                  <td><a href="../downloads-parquet-2026-03.html">Open Parquet index</a></td>
+                  <td class="mono">Export/release_2026-03/PARQUET/</td>
+                  <td>Per-package rows in Parquet index and March inventory JSON.</td>
+                </tr>
+                <tr>
+                  <td><strong>2026-03</strong></td>
+                  <td><span class="badge info">Archived</span></td>
+                  <td>MMDB</td>
+                  <td>0</td>
+                  <td>Not available</td>
+                  <td class="mono">Not published</td>
+                  <td>Not applicable; March 2026 had no MMDB package release.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="actions compact-actions">
+            <a class="btn btn-secondary" href="../assets/data/releases-archive.json">Open archive manifest JSON</a>
+            <a class="btn btn-secondary" href="../assets/data/release-2026-03-package-inventory.json">Open March package inventory JSON</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container story-grid">
         <div class="split-panel glass content">
-          <h2>What each release page should answer</h2>
+          <h2>Governance rule for old releases</h2>
+          <p>
+            Old monthly folders should be treated as immutable public artifacts. New releases should add new folders under ProdIP_Files instead of replacing or renaming earlier release folders.
+          </p>
           <ul>
-            <li>Which publication month is represented and whether it is current, planned, or historical.</li>
-            <li>What files are included and where the CSV, Parquet, and MMDB package indexes live.</li>
-            <li>How the release connects to coverage, methodology, and supporting technical catalogs.</li>
-            <li>What limitations or publication notes matter before the files are reused downstream.</li>
+            <li>Keep March 2026 under <span class="warning-text">Export/release_2026-03/</span>.</li>
+            <li>Publish April 2026 under <span class="warning-text">Export/release_2026-04/</span>.</li>
+            <li>Add future months under their own <span class="warning-text">release_YYYY-MM</span> folder.</li>
           </ul>
         </div>
         <div class="split-panel glass content">
           <h2>Where to go next</h2>
           <p>
-            Archive pages work best when they connect to the deeper pages that answer the next question. Use the current release page when you need month-specific context, then move into Downloads or Coverage depending on whether the next question is about file access or analytical interpretation.
+            Start at the release archive when the question is month-based. Open a release page for context, then open a package index when the question becomes file-level.
           </p>
           <ul>
             <li><a href="2026-04/index.html">Release 2026-04 overview</a></li>
+            <li><a href="2026-03/index.html">Release 2026-03 overview</a></li>
             <li><a href="../downloads.html">GeoIP downloads hub</a></li>
-            <li><a href="../coverage.html">Country coverage map by RIR</a></li>
-            <li><a href="../platform.html">ProdIPData platform overview</a></li>
+            <li><a href="../docs/accuracy-limitations.html">Accuracy &amp; limitations</a></li>
+            <li><a href="../docs/how-to-use-this-data.html">How to use this data</a></li>
           </ul>
         </div>
       </div>
     </section>
-  
-<!-- WAVE4:release-archive-expansion START -->
-<section class="section" data-wave4-block="release-archive-expansion">
-  <div class="container">
-    <div class="split-panel glass content">
-      <h2>Release archive expansion</h2>
-      <p>
-        The archive is the stable entry point for month-by-month navigation. It now sits above selective country, RIR, and ASN landing assets so each release can connect not just to file downloads, but also to the deeper entity pages that explain coverage, concentration, and release context.
-      </p>
-      <ul>
-        <li><a href="../downloads.html">GeoIP CSV, Parquet, and MMDB downloads</a></li>
-        <li><a href="../country/index.html">Country profiles</a></li>
-        <li><a href="../rir/index.html">RIR profiles</a></li>
-        <li><a href="../asn/index.html">ASN profiles</a></li>
-        <li><a href="../methodology.html">GeoIP methodology and validation</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-<!-- WAVE4:release-archive-expansion END -->
-</main>
+  </main>
 
   <footer class="site-footer">
     <div class="container site-footer-inner">
@@ -233,4 +360,3 @@
   <script src="../assets/js/site.js" defer></script>
 </body>
 </html>
-

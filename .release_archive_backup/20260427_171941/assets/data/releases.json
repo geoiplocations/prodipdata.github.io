@@ -38,10 +38,10 @@
       "statusClass": "info"
     },
     {
-      "title": "Release archive",
-      "description": "Month-by-month release archive with current, archived, and planned release navigation.",
-      "status": "Ready",
-      "statusClass": "success"
+      "title": "Release history",
+      "description": "Reserved area for future month-by-month release archive navigation.",
+      "status": "Planned",
+      "statusClass": "info"
     }
   ]
 }

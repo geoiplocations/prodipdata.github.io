@@ -1,0 +1,107 @@
+{
+  "currentRelease": "2026-04",
+  "generatedOn": "2026-04-27",
+  "storageRepository": "https://github.com/ProdIPData/ProdIP_Files",
+  "repositoryBranch": "main",
+  "governanceNote": "Monthly release artifacts are stored permanently under ProdIP_Files/Export/release_YYYY-MM/. The website repository is the catalog/navigation layer.",
+  "releases": [
+    {
+      "releaseMonth": "2026-04",
+      "status": "current",
+      "releasePage": "/releases/2026-04/index.html",
+      "snapshotMonth": "2026-04",
+      "formats": [
+        {
+          "format": "CSV",
+          "status": "available",
+          "packageRows": 246,
+          "indexPage": "/downloads-csv-2026-04.html",
+          "storagePath": "Export/release_2026-04/CSV/",
+          "passwordLocation": "Per-package password shown in the CSV index table."
+        },
+        {
+          "format": "Parquet",
+          "status": "available",
+          "packageRows": 241,
+          "indexPage": "/downloads-parquet-2026-04.html",
+          "storagePath": "Export/release_2026-04/PARQUET/",
+          "passwordLocation": "Per-package password shown in the Parquet index table."
+        },
+        {
+          "format": "MMDB",
+          "status": "available",
+          "packageRows": 241,
+          "indexPage": "/downloads-mmdb-2026-04.html",
+          "storagePath": "Export/release_2026-04/MMDB/",
+          "passwordLocation": "Per-package password shown in the MMDB index table."
+        }
+      ]
+    },
+    {
+      "releaseMonth": "2026-03",
+      "status": "archived",
+      "releasePage": "/releases/2026-03/index.html",
+      "snapshotMonth": "2026-03",
+      "source": "Recovered from the PROD website catalog and package indexes.",
+      "formats": [
+        {
+          "format": "CSV",
+          "status": "available",
+          "packageRows": 242,
+          "indexPage": "/downloads-csv-2026-03.html",
+          "storagePath": "Export/release_2026-03/CSV/",
+          "passwordLocation": "Per-package password shown in the CSV index table and machine-readable inventory."
+        },
+        {
+          "format": "Parquet",
+          "status": "available",
+          "packageRows": 246,
+          "indexPage": "/downloads-parquet-2026-03.html",
+          "storagePath": "Export/release_2026-03/PARQUET/",
+          "passwordLocation": "Per-package password shown in the Parquet index table and machine-readable inventory."
+        },
+        {
+          "format": "MMDB",
+          "status": "not_published",
+          "packageRows": 0,
+          "indexPage": null,
+          "storagePath": null,
+          "passwordLocation": "Not applicable. MMDB was not published for release 2026-03."
+        }
+      ],
+      "machineReadableInventory": "/assets/data/release-2026-03-package-inventory.json"
+    },
+    {
+      "releaseMonth": "2026-05",
+      "status": "planned",
+      "releasePage": null,
+      "snapshotMonth": "2026-05",
+      "formats": [
+        {
+          "format": "CSV",
+          "status": "planned",
+          "packageRows": 0,
+          "indexPage": null,
+          "storagePath": "Export/release_2026-05/CSV/",
+          "passwordLocation": "Available after publication."
+        },
+        {
+          "format": "Parquet",
+          "status": "planned",
+          "packageRows": 0,
+          "indexPage": null,
+          "storagePath": "Export/release_2026-05/PARQUET/",
+          "passwordLocation": "Available after publication."
+        },
+        {
+          "format": "MMDB",
+          "status": "planned",
+          "packageRows": 0,
+          "indexPage": null,
+          "storagePath": "Export/release_2026-05/MMDB/",
+          "passwordLocation": "Available after publication."
+        }
+      ]
+    }
+  ]
+}
