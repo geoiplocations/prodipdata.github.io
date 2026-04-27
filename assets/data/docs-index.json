@@ -1,0 +1,141 @@
+[
+  {
+    "category": "Methodology",
+    "icon": "🧭",
+    "title": "Geolocation precision",
+    "summary": "Understand country, region, city, coordinate, and accuracy-radius interpretation.",
+    "url": "docs/geolocation-precision.html",
+    "tags": [
+      "geolocation",
+      "precision",
+      "accuracy",
+      "coordinates"
+    ]
+  },
+  {
+    "category": "Methodology",
+    "icon": "🛰️",
+    "title": "ASN classification",
+    "summary": "Review how ASN context and network-type labels are normalized in the release files.",
+    "url": "docs/asn-classification.html",
+    "tags": [
+      "asn",
+      "network type",
+      "classification"
+    ]
+  },
+  {
+    "category": "Methodology",
+    "icon": "⚖️",
+    "title": "Source conflict resolution",
+    "summary": "Understand how conflicting public source signals are reconciled into deterministic outputs.",
+    "url": "docs/source-conflict-resolution.html",
+    "tags": [
+      "conflict",
+      "reconciliation",
+      "sources"
+    ]
+  },
+  {
+    "category": "Methodology",
+    "icon": "🧪",
+    "title": "Deep dive",
+    "summary": "Review how registry, routing, geographic, and reference inputs become a monthly release.",
+    "url": "docs/methodology-deep-dive.html",
+    "tags": [
+      "methodology",
+      "pipeline",
+      "monthly release"
+    ]
+  },
+  {
+    "category": "Sources",
+    "icon": "🌐",
+    "title": "Data sources",
+    "summary": "Review all authoritative datasets used to build the ProdIPData monthly releases.",
+    "url": "docs/data-sources.html",
+    "tags": [
+      "sources",
+      "rir",
+      "bgp",
+      "geonames"
+    ]
+  },
+  {
+    "category": "Reference",
+    "icon": "📘",
+    "title": "Schema reference",
+    "summary": "Review every standard release field with CSV type, Parquet type, MMDB representation, and notes.",
+    "url": "docs/schema.html",
+    "tags": [
+      "schema",
+      "fields",
+      "csv",
+      "parquet",
+      "mmdb"
+    ]
+  },
+  {
+    "category": "Comparison",
+    "icon": "📊",
+    "title": "Format comparison",
+    "summary": "Choose between CSV, Parquet, and MMDB based on your operational workflow.",
+    "url": "docs/format-comparison.html",
+    "tags": [
+      "format",
+      "comparison",
+      "csv",
+      "parquet",
+      "mmdb"
+    ]
+  },
+  {
+    "category": "Workflow",
+    "icon": "🔐",
+    "title": "Download workflow",
+    "summary": "Understand monthly release paths, passwords, country packages, and ALL release assets.",
+    "url": "docs/download-workflow.html",
+    "tags": [
+      "download",
+      "password",
+      "release",
+      "all"
+    ]
+  },
+  {
+    "category": "Formats",
+    "icon": "📄",
+    "title": "Using CSV files",
+    "summary": "Use CSV for simple exchange, inspection, and broad compatibility.",
+    "url": "docs/using-csv.html",
+    "tags": [
+      "csv",
+      "exchange",
+      "inspection"
+    ]
+  },
+  {
+    "category": "Formats",
+    "icon": "🧱",
+    "title": "Using Parquet files",
+    "summary": "Use Parquet for typed columnar analytics and data engineering workflows.",
+    "url": "docs/using-parquet.html",
+    "tags": [
+      "parquet",
+      "analytics",
+      "columnar"
+    ]
+  },
+  {
+    "category": "Formats",
+    "icon": "⚡",
+    "title": "Using MMDB files",
+    "summary": "Use MMDB for fast local IP lookup and application integration.",
+    "url": "docs/using-mmdb.html",
+    "tags": [
+      "mmdb",
+      "lookup",
+      "application"
+    ]
+  }
+]
