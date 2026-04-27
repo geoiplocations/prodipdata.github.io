@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Documentation | GeoIP Locations</title>
+  <meta name="description" content="Technical documentation for GeoIP Locations release file formats and usage.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://geoiplocations.com/docs.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="docs" data-release-month="2026-04">
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar glass">
+        <a class="brand" href="index.html">
+          <div class="brand-mark">&#9678;</div>
+          <div>
+            GeoIP Locations
+            <small>Powered by ProdIPData</small>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="platform.html" data-nav="platform">Platform</a>
+          <a href="coverage.html" data-nav="coverage">Coverage</a>
+          <a href="methodology.html" data-nav="methodology">Methodology</a>
+          <a href="downloads.html" data-nav="downloads">Downloads</a>
+          <a href="docs.html" data-nav="docs">Documentation</a>
+          <a href="news.html" data-nav="news">News</a>
+          <a href="contact.html" data-nav="contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a class="btn btn-secondary" href="downloads.html">Monthly Release</a>
+        </div>
+        <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+      </div>
+      <nav class="mobile-nav glass" data-mobile-nav>
+        <a href="platform.html" data-nav="platform">Platform</a>
+        <a href="coverage.html" data-nav="coverage">Coverage</a>
+        <a href="methodology.html" data-nav="methodology">Methodology</a>
+        <a href="downloads.html" data-nav="downloads">Downloads</a>
+        <a href="docs.html" data-nav="docs">Documentation</a>
+        <a href="news.html" data-nav="news">News</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero slim">
+      <div class="container">
+        <div class="eyebrow">Documentation</div>
+        <h1>GeoIP Locations documentation</h1>
+        <p class="hero-copy">
+          Technical notes for the monthly IPv4 geolocation release files, supported file formats, and recommended usage patterns.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="card-grid">
+          <article class="feature-card">
+            <span class="badge">Schema</span>
+            <h3>Data types used in release files</h3>
+            <p>Understand the CSV, Parquet, and MMDB publication formats and how their data models relate.</p>
+            <a class="text-link" href="docs/data-types.html">Open article</a>
+          </article>
+          <article class="feature-card">
+            <span class="badge">Analytics</span>
+            <h3>Parquet file format</h3>
+            <p>Learn why Parquet is used for columnar analytics, batch processing, and data engineering workflows.</p>
+            <a class="text-link" href="docs/parquet.html">Open article</a>
+          </article>
+          <article class="feature-card">
+            <span class="badge">Lookup</span>
+            <h3>MMDB file format</h3>
+            <p>Learn how MMDB supports local IP lookup workflows and application integration.</p>
+            <a class="text-link" href="docs/mmdb.html">Open article</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>GeoIP Locations</strong>
+        <p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+      </div>
+      <div>
+        <span>Documentation</span>
+        <a href="docs.html">Documentation home</a>
+        <a href="docs/data-types.html">Data types</a>
+        <a href="docs/parquet.html">Parquet</a>
+        <a href="docs/mmdb.html">MMDB</a>
+      </div>
+      <div>
+        <span>Release</span>
+        <a href="downloads.html">Monthly downloads</a>
+        <a href="news.html">News</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

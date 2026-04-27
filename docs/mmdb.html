@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MMDB file format | GeoIP Locations</title>
+  <meta name="description" content="Detailed documentation for MMDB files in GeoIP Locations monthly releases.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://geoiplocations.com/docs/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="docs" data-release-month="2026-04">
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar glass">
+        <a class="brand" href="../index.html">
+          <div class="brand-mark">&#9678;</div>
+          <div>
+            GeoIP Locations
+            <small>Powered by ProdIPData</small>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="../platform.html" data-nav="platform">Platform</a>
+          <a href="../coverage.html" data-nav="coverage">Coverage</a>
+          <a href="../methodology.html" data-nav="methodology">Methodology</a>
+          <a href="../downloads.html" data-nav="downloads">Downloads</a>
+          <a href="../docs.html" data-nav="docs">Documentation</a>
+          <a href="../news.html" data-nav="news">News</a>
+          <a href="../contact.html" data-nav="contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a class="btn btn-secondary" href="../downloads.html">Monthly Release</a>
+        </div>
+        <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+      </div>
+      <nav class="mobile-nav glass" data-mobile-nav>
+        <a href="../platform.html" data-nav="platform">Platform</a>
+        <a href="../coverage.html" data-nav="coverage">Coverage</a>
+        <a href="../methodology.html" data-nav="methodology">Methodology</a>
+        <a href="../downloads.html" data-nav="downloads">Downloads</a>
+        <a href="../docs.html" data-nav="docs">Documentation</a>
+        <a href="../news.html" data-nav="news">News</a>
+        <a href="../contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero slim">
+      <div class="container">
+        <div class="eyebrow">Documentation</div>
+        <h1>MMDB file format</h1>
+        <p class="hero-copy">MMDB is the lookup-oriented file format in the GeoIP Locations monthly release catalog.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container prose">
+        <h2>What MMDB is</h2>
+        <p>MMDB is the MaxMind DB file format. It is designed for fast local lookup of an IP address into an associated data record.</p>
+
+        <h2>Why it is useful</h2>
+        <p>MMDB is useful when an application, service, or local process needs to answer a lookup question quickly: given this IP address, which geolocation or network record applies?</p>
+
+        <h2>How GeoIP Locations uses it</h2>
+        <p>GeoIP Locations publishes MMDB packages as a compact lookup database companion to CSV and Parquet. The MMDB format is not intended to replace analytical tables; it is intended for application lookup workflows.</p>
+
+        <h2>When to choose MMDB</h2>
+        <p>Choose MMDB when you need offline IP lookup, application integration, local enrichment, or a MaxMind-compatible database workflow.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>GeoIP Locations</strong>
+        <p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+      </div>
+      <div>
+        <span>Documentation</span>
+        <a href="../docs.html">Documentation home</a>
+        <a href="../docs/data-types.html">Data types</a>
+        <a href="../docs/parquet.html">Parquet</a>
+        <a href="../docs/mmdb.html">MMDB</a>
+      </div>
+      <div>
+        <span>Release</span>
+        <a href="../downloads.html">Monthly downloads</a>
+        <a href="../news.html">News</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

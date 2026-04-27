@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Data types used in release files | GeoIP Locations</title>
+  <meta name="description" content="Documentation for CSV, Parquet, and MMDB data formats used by GeoIP Locations.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://geoiplocations.com/docs/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="docs" data-release-month="2026-04">
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar glass">
+        <a class="brand" href="../index.html">
+          <div class="brand-mark">&#9678;</div>
+          <div>
+            GeoIP Locations
+            <small>Powered by ProdIPData</small>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="../platform.html" data-nav="platform">Platform</a>
+          <a href="../coverage.html" data-nav="coverage">Coverage</a>
+          <a href="../methodology.html" data-nav="methodology">Methodology</a>
+          <a href="../downloads.html" data-nav="downloads">Downloads</a>
+          <a href="../docs.html" data-nav="docs">Documentation</a>
+          <a href="../news.html" data-nav="news">News</a>
+          <a href="../contact.html" data-nav="contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a class="btn btn-secondary" href="../downloads.html">Monthly Release</a>
+        </div>
+        <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+      </div>
+      <nav class="mobile-nav glass" data-mobile-nav>
+        <a href="../platform.html" data-nav="platform">Platform</a>
+        <a href="../coverage.html" data-nav="coverage">Coverage</a>
+        <a href="../methodology.html" data-nav="methodology">Methodology</a>
+        <a href="../downloads.html" data-nav="downloads">Downloads</a>
+        <a href="../docs.html" data-nav="docs">Documentation</a>
+        <a href="../news.html" data-nav="news">News</a>
+        <a href="../contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero slim">
+      <div class="container">
+        <div class="eyebrow">Documentation</div>
+        <h1>Data types used in release files</h1>
+        <p class="hero-copy">GeoIP Locations publishes monthly datasets in CSV, Parquet, and MMDB formats.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container prose">
+        <h2>Format overview</h2>
+        <p><strong>CSV</strong> is a text-based tabular format designed for simple exchange and inspection.</p>
+        <p><strong>Parquet</strong> is a columnar analytics format designed for efficient querying and batch processing.</p>
+        <p><strong>MMDB</strong> is an IP lookup database format designed for fast local IP-to-record resolution.</p>
+
+        <h2>Schema alignment</h2>
+        <p>For normal country, ALL, EDU, and GOV scopes, CSV and Parquet use the same flat release schema. MMDB carries the same release concept and comparable attribution fields, but it is not a flat table. It stores lookup records attached to IP networks.</p>
+        <p><strong>Important exception:</strong> BOG packages use a reduced schema because bogon records do not represent normal geolocation rows.</p>
+
+        <h2>Standard fields</h2>
+        <p>The standard flat schema includes network, network_from, network_to, prefix_length, country, region, city, latitude, longitude, timezone, ASN, ASN type, network type, company name, RIR, and snapshot month fields.</p>
+
+        <h2>Recommended usage</h2>
+        <p>Use CSV for simple download and inspection, Parquet for analytics workflows, and MMDB for local lookup services or applications.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>GeoIP Locations</strong>
+        <p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+      </div>
+      <div>
+        <span>Documentation</span>
+        <a href="../docs.html">Documentation home</a>
+        <a href="../docs/data-types.html">Data types</a>
+        <a href="../docs/parquet.html">Parquet</a>
+        <a href="../docs/mmdb.html">MMDB</a>
+      </div>
+      <div>
+        <span>Release</span>
+        <a href="../downloads.html">Monthly downloads</a>
+        <a href="../news.html">News</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
