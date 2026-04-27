@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How to use GeoIP data with SQL and DuckDB | GeoIP Locations</title>
+  <meta name="description" content="Practical SQL Server and DuckDB examples for loading, querying, joining, and aggregating ProdIPData GeoIP CSV and Parquet release files.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://geoiplocations.com/docs/how-to-use-this-data.html">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "headline": "How to use GeoIP data with SQL and DuckDB",
+        "description": "Implementation examples for SQL Server and DuckDB workflows using ProdIPData GeoIP monthly release files.",
+        "author": {
+          "@type": "Organization",
+          "name": "ProdIPData",
+          "url": "https://geoiplocations.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ProdIPData",
+          "url": "https://geoiplocations.com/"
+        },
+        "mainEntityOfPage": "https://geoiplocations.com/docs/how-to-use-this-data.html",
+        "dateModified": "2026-04-27",
+        "proficiencyLevel": "Beginner to intermediate"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Documentation",
+            "item": "https://geoiplocations.com/docs.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "How to use this data",
+            "item": "https://geoiplocations.com/docs/how-to-use-this-data.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="docs" data-nav-page="docs" data-asset-root="../">
+<header class="site-header">
+  <div class="container">
+    <div class="navbar glass">
+      <a class="brand" href="../index.html">
+        <div class="brand-mark">&#9678;</div>
+        <div>
+          GeoIP Locations
+          <small>Powered by ProdIPData</small>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../platform.html" data-nav="platform">Platform</a>
+        <a href="../coverage.html" data-nav="coverage">Coverage</a>
+        <a href="../methodology.html" data-nav="methodology">Methodology</a>
+        <a href="../downloads.html" data-nav="downloads">Downloads</a>
+        <a href="../docs.html" data-nav="docs">Documentation</a>
+        <a href="../news.html" data-nav="news">News</a>
+        <a href="../contact.html" data-nav="contact">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-secondary" href="../downloads.html">Monthly Release</a>
+      </div>
+      <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+    </div>
+    <nav class="mobile-nav glass" data-mobile-nav>
+      <a href="../platform.html" data-nav="platform">Platform</a>
+      <a href="../coverage.html" data-nav="coverage">Coverage</a>
+      <a href="../methodology.html" data-nav="methodology">Methodology</a>
+      <a href="../downloads.html" data-nav="downloads">Downloads</a>
+      <a href="../docs.html" data-nav="docs">Documentation</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-panel glass">
+        <div class="eyebrow page-kicker">Documentation</div>
+        <h1>How to use this data</h1>
+        <p class="page-intro">
+          Use ProdIPData releases as local, versioned GeoIP intelligence. The core workflow is straightforward: choose a release month, load CSV or Parquet files, preserve the snapshot month, and query by numeric IPv4 prefix.
+        </p>
+        <div class="data-note">
+          These examples assume the public release layout with monthly folders, ISO-scoped packages, and a numeric <code>prefix</code> column representing the first IPv4 address in a /24 block.
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="../downloads.html">Open downloads</a>
+          <a class="btn btn-secondary" href="accuracy-limitations.html">Accuracy and limitations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Operating model</div>
+          <h2>Choose the right format first</h2>
+        </div>
+        <p>
+          CSV is the most universal integration format. Parquet is the better default for analytical processing, notebooks, DuckDB, and columnar warehouse-style workflows.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="section-card glass">
+          <h3>CSV</h3>
+          <p class="card-text">Use CSV for SQL Server bulk imports, operational review, simple ETL flows, and teams that prefer transparent row-oriented files.</p>
+        </article>
+        <article class="section-card glass">
+          <h3>Parquet</h3>
+          <p class="card-text">Use Parquet for DuckDB, analytics pipelines, notebooks, fast column scans, and large release-level aggregations.</p>
+        </article>
+        <article class="section-card glass">
+          <h3>MMDB</h3>
+          <p class="card-text">Use MMDB when the application needs embedded lookup behavior rather than tabular analytics or warehouse-style joins.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container story-grid">
+      <article class="split-panel glass content">
+        <h2>Core lookup concept</h2>
+        <p>
+          Convert the dotted IPv4 address to a numeric integer, then locate the row where the address falls inside the published prefix range.
+        </p>
+        <pre><code>-- Conceptual lookup model
+ip_integer &gt;= prefix
+AND ip_integer &lt; prefix + 256</code></pre>
+        <p>
+          This model works because a /24 row covers 256 addresses. For example, the row starting at 134744064 covers the range 8.8.8.0 through 8.8.8.255.
+        </p>
+      </article>
+
+      <article class="split-panel glass content">
+        <h2>Recommended table practices</h2>
+        <ul>
+          <li>Keep <code>snapshot_month</code> in every table, index, export, and downstream view.</li>
+          <li>Use <code>BIGINT</code> for numeric IPv4 values to keep arithmetic clear and portable.</li>
+          <li>Index <code>prefix</code>, <code>iso</code>, <code>asn</code>, and <code>snapshot_month</code> according to query pattern.</li>
+          <li>Load one release into a staging table before promoting it to a production lookup table.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">SQL Server</div>
+          <h2>Load and query CSV release files</h2>
+        </div>
+        <p>
+          SQL Server is a strong fit when the dataset becomes part of existing reporting, reconciliation, or production-enrichment workflows.
+        </p>
+      </div>
+
+      <div class="split-panel glass content">
+        <h3>1. Create a landing table</h3>
+        <pre><code>CREATE TABLE dbo.ProdIP_Prefix_Attributes
+(
+    prefix          BIGINT        NOT NULL,
+    city            NVARCHAR(200) NULL,
+    region_state    NVARCHAR(200) NULL,
+    country         NVARCHAR(200) NULL,
+    iso             CHAR(2)       NULL,
+    latitude        DECIMAL(9,6)  NULL,
+    longitude       DECIMAL(9,6)  NULL,
+    timezone        NVARCHAR(128) NULL,
+    asn             NVARCHAR(300) NULL,
+    company         NVARCHAR(300) NULL,
+    host            NVARCHAR(300) NULL,
+    snapshot_month  CHAR(7)       NOT NULL
+);
+
+CREATE INDEX IX_ProdIP_Prefix_Attributes_Prefix
+ON dbo.ProdIP_Prefix_Attributes(prefix);
+
+CREATE INDEX IX_ProdIP_Prefix_Attributes_Snapshot_Iso
+ON dbo.ProdIP_Prefix_Attributes(snapshot_month, iso);</code></pre>
+
+        <h3>2. Bulk load a decompressed CSV file</h3>
+        <p>
+          If the downloaded CSV is compressed, unzip and decompress it first, then point <code>BULK INSERT</code> to the plain CSV path.
+        </p>
+        <pre><code>BULK INSERT dbo.ProdIP_Prefix_Attributes
+FROM 'D:\SCRAP\Export\CSV\release_2026-03\iso=US\prefix_attributes_2026-03_iso-US_part-0001-of-0001.csv'
+WITH
+(
+    FORMAT = 'CSV',
+    FIRSTROW = 2,
+    FIELDQUOTE = '"',
+    CODEPAGE = '65001',
+    TABLOCK
+);</code></pre>
+
+        <h3>3. Convert dotted IPv4 to integer</h3>
+        <pre><code>CREATE OR ALTER FUNCTION dbo.IPv4ToBigInt
+(
+    @ip VARCHAR(15)
+)
+RETURNS BIGINT
+AS
+BEGIN
+    DECLARE
+        @a BIGINT = TRY_CONVERT(BIGINT, PARSENAME(@ip, 4)),
+        @b BIGINT = TRY_CONVERT(BIGINT, PARSENAME(@ip, 3)),
+        @c BIGINT = TRY_CONVERT(BIGINT, PARSENAME(@ip, 2)),
+        @d BIGINT = TRY_CONVERT(BIGINT, PARSENAME(@ip, 1));
+
+    IF @a IS NULL OR @b IS NULL OR @c IS NULL OR @d IS NULL
+       OR @a NOT BETWEEN 0 AND 255
+       OR @b NOT BETWEEN 0 AND 255
+       OR @c NOT BETWEEN 0 AND 255
+       OR @d NOT BETWEEN 0 AND 255
+    BEGIN
+        RETURN NULL;
+    END;
+
+    RETURN (@a * 16777216) + (@b * 65536) + (@c * 256) + @d;
+END;
+GO</code></pre>
+
+        <h3>4. Lookup one IP address</h3>
+        <pre><code>DECLARE @ip BIGINT = dbo.IPv4ToBigInt('8.8.8.8');
+
+SELECT TOP (1)
+    prefix,
+    city,
+    region_state,
+    country,
+    iso,
+    latitude,
+    longitude,
+    timezone,
+    asn,
+    company,
+    host,
+    snapshot_month
+FROM dbo.ProdIP_Prefix_Attributes
+WHERE snapshot_month = '2026-03'
+  AND @ip &gt;= prefix
+  AND @ip &lt; prefix + 256
+ORDER BY prefix DESC;</code></pre>
+
+        <h3>5. Aggregate country coverage</h3>
+        <pre><code>SELECT
+    iso,
+    country,
+    COUNT_BIG(*) AS prefix_count,
+    COUNT_BIG(*) * 256 AS ipv4_count,
+    COUNT(DISTINCT asn) AS observed_asn_count
+FROM dbo.ProdIP_Prefix_Attributes
+WHERE snapshot_month = '2026-03'
+GROUP BY iso, country
+ORDER BY ipv4_count DESC;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">DuckDB</div>
+          <h2>Analyze Parquet release files locally</h2>
+        </div>
+        <p>
+          DuckDB is excellent for local analysis because it can query Parquet directly without a separate database server or import cycle.
+        </p>
+      </div>
+
+      <div class="split-panel glass content">
+        <h3>1. Create a view over Parquet files</h3>
+        <pre><code>CREATE OR REPLACE VIEW prodip_release AS
+SELECT *
+FROM read_parquet('D:/SCRAP/Export/PARQUET/release_2026-03/iso=*/prefix_attributes_2026-03_iso-*.parquet');</code></pre>
+
+        <h3>2. Lookup one IP address</h3>
+        <pre><code>WITH ip_input AS (
+    SELECT
+        CAST(split_part(ip, '.', 1) AS UBIGINT) * 16777216 +
+        CAST(split_part(ip, '.', 2) AS UBIGINT) * 65536 +
+        CAST(split_part(ip, '.', 3) AS UBIGINT) * 256 +
+        CAST(split_part(ip, '.', 4) AS UBIGINT) AS ip_int
+    FROM (VALUES ('8.8.8.8')) AS v(ip)
+)
+SELECT
+    r.prefix,
+    r.city,
+    r.region_state,
+    r.country,
+    r.iso,
+    r.latitude,
+    r.longitude,
+    r.timezone,
+    r.asn,
+    r.company,
+    r.host,
+    r.snapshot_month
+FROM prodip_release r
+CROSS JOIN ip_input q
+WHERE q.ip_int &gt;= r.prefix
+  AND q.ip_int &lt; r.prefix + 256
+LIMIT 1;</code></pre>
+
+        <h3>3. Build a country summary</h3>
+        <pre><code>SELECT
+    iso,
+    country,
+    COUNT(*) AS prefix_count,
+    COUNT(*) * 256 AS ipv4_count,
+    COUNT(DISTINCT asn) AS observed_asn_count
+FROM prodip_release
+GROUP BY iso, country
+ORDER BY ipv4_count DESC;</code></pre>
+
+        <h3>4. Identify large ASN footprints</h3>
+        <pre><code>SELECT
+    asn,
+    COUNT(*) AS prefix_count,
+    COUNT(*) * 256 AS ipv4_count,
+    COUNT(DISTINCT iso) AS country_count
+FROM prodip_release
+WHERE asn IS NOT NULL
+  AND asn &lt;&gt; 'n/a'
+GROUP BY asn
+ORDER BY prefix_count DESC
+LIMIT 50;</code></pre>
+
+        <h3>5. Query CSV directly when needed</h3>
+        <pre><code>SELECT *
+FROM read_csv_auto(
+    'D:/SCRAP/Export/CSV/release_2026-03/iso=US/*.csv.gz',
+    header = true
+)
+LIMIT 10;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container story-grid">
+      <article class="split-panel glass content">
+        <h2>Common join pattern</h2>
+        <p>
+          The cleanest integration pattern is to enrich your internal event table with a computed numeric IPv4 column, then join to the release table by range.
+        </p>
+        <pre><code>SELECT
+    e.event_id,
+    e.ip_address,
+    g.country,
+    g.iso,
+    g.city,
+    g.asn,
+    g.company,
+    g.snapshot_month
+FROM dbo.Events e
+JOIN dbo.ProdIP_Prefix_Attributes g
+  ON e.ip_integer &gt;= g.prefix
+ AND e.ip_integer &lt; g.prefix + 256
+WHERE g.snapshot_month = '2026-03';</code></pre>
+      </article>
+
+      <article class="split-panel glass content">
+        <h2>Production rollout checklist</h2>
+        <ul>
+          <li>Download a specific release month and archive the original files.</li>
+          <li>Load into staging and validate row counts before promotion.</li>
+          <li>Preserve release month in table names, partitions, or metadata.</li>
+          <li>Run sample lookups for known infrastructure IPs.</li>
+          <li>Publish an internal data contract that explains the accuracy limits.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>&copy; <span data-current-year></span> GeoIP Locations &middot; ProdIPData</div>
+    <div><a href="../licensing.html">Datasets and metadata: CC BY 4.0</a></div>
+    <div>Engineered and published by the ProdIPData team.</div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

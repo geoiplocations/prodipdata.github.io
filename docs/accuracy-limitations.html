@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GeoIP accuracy and limitations | GeoIP Locations</title>
+  <meta name="description" content="Understand the practical accuracy limits of ProdIPData GeoIP country, region, city, coordinates, ASN context, host fields, and monthly IPv4 release files.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://geoiplocations.com/docs/accuracy-limitations.html">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "headline": "GeoIP accuracy and limitations",
+        "description": "Practical guidance for interpreting country, region, city, coordinate, accuracy-radius, ASN, hostname, and monthly snapshot fields in ProdIPData releases.",
+        "author": {
+          "@type": "Organization",
+          "name": "ProdIPData",
+          "url": "https://geoiplocations.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ProdIPData",
+          "url": "https://geoiplocations.com/"
+        },
+        "mainEntityOfPage": "https://geoiplocations.com/docs/accuracy-limitations.html",
+        "dateModified": "2026-04-27"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Documentation",
+            "item": "https://geoiplocations.com/docs.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Accuracy and limitations",
+            "item": "https://geoiplocations.com/docs/accuracy-limitations.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="docs" data-nav-page="docs" data-asset-root="../">
+<header class="site-header">
+  <div class="container">
+    <div class="navbar glass">
+      <a class="brand" href="../index.html">
+        <div class="brand-mark">&#9678;</div>
+        <div>
+          GeoIP Locations
+          <small>Powered by ProdIPData</small>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../platform.html" data-nav="platform">Platform</a>
+        <a href="../coverage.html" data-nav="coverage">Coverage</a>
+        <a href="../methodology.html" data-nav="methodology">Methodology</a>
+        <a href="../downloads.html" data-nav="downloads">Downloads</a>
+        <a href="../docs.html" data-nav="docs">Documentation</a>
+        <a href="../news.html" data-nav="news">News</a>
+        <a href="../contact.html" data-nav="contact">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-secondary" href="../downloads.html">Monthly Release</a>
+      </div>
+      <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+    </div>
+    <nav class="mobile-nav glass" data-mobile-nav>
+      <a href="../platform.html" data-nav="platform">Platform</a>
+      <a href="../coverage.html" data-nav="coverage">Coverage</a>
+      <a href="../methodology.html" data-nav="methodology">Methodology</a>
+      <a href="../downloads.html" data-nav="downloads">Downloads</a>
+      <a href="../docs.html" data-nav="docs">Documentation</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-panel glass">
+        <div class="eyebrow page-kicker">Documentation</div>
+        <h1>Accuracy and limitations</h1>
+        <p class="page-intro">
+          GeoIP Locations publishes monthly, deterministic IPv4 datasets. The files are designed for analytics, enrichment, reporting, and research, not for per-request identity proof or real-time location guarantees.
+        </p>
+        <div class="data-note">
+          Treat every location value as a data signal with confidence boundaries. Country-level signals are typically more stable than region, city, coordinate, hostname, or company-level context.
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="../downloads.html">Open downloads</a>
+          <a class="btn btn-secondary" href="how-to-use-this-data.html">How to use this data</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container story-grid">
+      <article class="split-panel glass content">
+        <h2>What the dataset represents</h2>
+        <p>
+          The public release files describe observed and normalized IPv4 network attributes at publication time. The primary operating unit is the IPv4 prefix row, commonly a /24 block where one row represents 256 IPv4 addresses.
+        </p>
+        <p>
+          A row should be interpreted as the best release-time attribution for that network block, not as an assertion that every individual address in the block maps to the same physical device, end user, building, or business entity.
+        </p>
+      </article>
+
+      <article class="split-panel glass content">
+        <h2>What the dataset does not represent</h2>
+        <p>
+          The dataset is not a real-time lookup API, not a user identity system, not a device location feed, and not a compliance decision engine by itself.
+        </p>
+        <p>
+          It should not be the sole basis for blocking access, approving financial activity, proving residence, determining legal jurisdiction, or making high-impact operational decisions without additional validation.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Interpretation model</div>
+          <h2>Field-level precision guide</h2>
+        </div>
+        <p>
+          Different fields carry different accuracy expectations. The strongest implementation pattern is to design downstream systems around confidence tiers instead of treating every column as equally precise.
+        </p>
+      </div>
+
+      <div class="split-panel glass content">
+        <table>
+          <thead>
+            <tr>
+              <th>Field area</th>
+              <th>Recommended interpretation</th>
+              <th>Operational guidance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Country / ISO</td>
+              <td>Best release-time country signal for the network block.</td>
+              <td>Suitable for country-level analytics, coverage maps, and broad segmentation.</td>
+            </tr>
+            <tr>
+              <td>Region / state</td>
+              <td>Administrative-area signal with more variance than country.</td>
+              <td>Use for directional reporting, not strict entitlement or compliance decisions.</td>
+            </tr>
+            <tr>
+              <td>City</td>
+              <td>City-level approximation derived from normalized public signals.</td>
+              <td>Useful for density and market analysis; validate before operational enforcement.</td>
+            </tr>
+            <tr>
+              <td>Latitude / longitude</td>
+              <td>Coordinate associated with the resolved place, not the exact endpoint.</td>
+              <td>Display at low zoom levels; avoid implying building-level or household-level precision.</td>
+            </tr>
+            <tr>
+              <td>Accuracy radius</td>
+              <td>Expected uncertainty zone around the coordinate where available.</td>
+              <td>Use it to communicate uncertainty and to suppress over-precise map rendering.</td>
+            </tr>
+            <tr>
+              <td>ASN / company</td>
+              <td>Network ownership or routing context, not the end user's employer or identity.</td>
+              <td>Best for network intelligence, ISP/cloud classification, and ASN-level aggregation.</td>
+            </tr>
+            <tr>
+              <td>Hostname</td>
+              <td>Reference or enrichment signal that can change independently from routing.</td>
+              <td>Treat as supplemental; do not require it to be present or current for every row.</td>
+            </tr>
+            <tr>
+              <td>Snapshot month</td>
+              <td>Release version for repeatable analysis.</td>
+              <td>Always preserve this column in downstream tables and reports.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container story-grid">
+      <article class="split-panel glass content">
+        <h2>Country, region, and city confidence</h2>
+        <p>
+          Country is the most resilient geographic layer because it has the broadest boundary and the strongest external signal density. Region and city are narrower and therefore more vulnerable to routing changes, ISP aggregation, mobile-network behavior, cloud infrastructure placement, and source disagreement.
+        </p>
+        <p>
+          In dashboards, country-level metrics should be treated as strategic indicators. City-level metrics should be positioned as approximate distribution signals unless a downstream workflow adds independent validation.
+        </p>
+      </article>
+
+      <article class="split-panel glass content">
+        <h2>Coordinates and map rendering</h2>
+        <p>
+          Coordinates are intended to make geography analyzable and visual, not to reveal exact endpoint locations. A coordinate usually represents a resolved city, region, or reference point tied to the normalized location label.
+        </p>
+        <p>
+          When mapping, avoid over-zoomed pins that suggest rooftop precision. The better user experience is aggregated visualization: country shading, regional clustering, or city-level circles with a visible uncertainty narrative.
+        </p>
+      </article>
+
+      <article class="split-panel glass content">
+        <h2>ASN and RIR context</h2>
+        <p>
+          ASN data describes network and registry context. It is especially valuable for understanding infrastructure footprint, cloud concentration, ISP presence, education/government networks, hosting exposure, and routing-derived attribution.
+        </p>
+        <p>
+          RIR attribution should be read as registry context, not geolocation. A network can be registered in one registry context while serving traffic or appearing geographically in another country.
+        </p>
+      </article>
+
+      <article class="split-panel glass content">
+        <h2>Monthly release drift</h2>
+        <p>
+          Monthly files are intentionally versioned. Differences between months can reflect real routing changes, registry updates, source corrections, normalization changes, or conflict-resolution improvements.
+        </p>
+        <p>
+          Downstream systems should store the snapshot month, compare like-for-like releases, and avoid mixing multiple months in the same production lookup table unless the workflow explicitly needs historical analysis.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split-panel glass content">
+        <h2>Recommended governance position</h2>
+        <p>
+          The strongest public contract is simple: ProdIPData publishes reproducible monthly IPv4 intelligence for analysis and enrichment. The dataset should be used as an evidence layer, not as a single-source authority for sensitive, identity-level, or enforcement-only decisions.
+        </p>
+        <ul>
+          <li>Use country and ASN fields for high-confidence aggregation and market-level analysis.</li>
+          <li>Use city, coordinate, hostname, and company fields as contextual enrichment with visible uncertainty.</li>
+          <li>Preserve snapshot month and source release lineage in every downstream warehouse table.</li>
+          <li>Review unusually high-impact decisions with additional internal, contractual, or operational data.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div>&copy; <span data-current-year></span> GeoIP Locations &middot; ProdIPData</div>
+    <div><a href="../licensing.html">Datasets and metadata: CC BY 4.0</a></div>
+    <div>Engineered and published by the ProdIPData team.</div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
