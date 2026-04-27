@@ -1,0 +1,30 @@
+[
+  {
+    "date": "2026-04-26",
+    "category": "Release",
+    "title": "April 2026 release is ready",
+    "summary": "The April 2026 monthly release is now available with refreshed CSV, Parquet, and MMDB package indexes.",
+    "link": "downloads.html"
+  },
+  {
+    "date": "2026-04-26",
+    "category": "Data format",
+    "title": "MMDB packages added",
+    "summary": "GeoIP Locations now publishes MMDB packages alongside CSV and Parquet for monthly IPv4 geolocation releases.",
+    "link": "downloads-mmdb-2026-04.html"
+  },
+  {
+    "date": "2026-04-26",
+    "category": "Release delivery",
+    "title": "Large ALL packages published as release assets",
+    "summary": "The ALL scope packages for CSV, Parquet, and MMDB are delivered through GitHub Release assets while country packages remain available through the release folder.",
+    "link": "https://github.com/ProdIPData/ProdIP_Files/releases/tag/prodip-2026-04"
+  },
+  {
+    "date": "2026-04-26",
+    "category": "Catalog",
+    "title": "Download catalog expanded to three formats",
+    "summary": "The monthly release catalog now separates CSV, Parquet, and MMDB package indexes so users can choose the format that best fits their workflow.",
+    "link": "downloads.html"
+  }
+]

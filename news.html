@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>News | GeoIP Locations</title>
+  <meta name="description" content="News, release notes, feature updates, and product announcements from GeoIP Locations by ProdIPData.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://geoiplocations.com/news.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "GeoIP Locations News",
+  "description": "News, release notes, feature updates, and product announcements from GeoIP Locations by ProdIPData.",
+  "url": "https://geoiplocations.com/news.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ProdIPData",
+    "url": "https://geoiplocations.com/"
+  }
+}
+  </script>
+</head>
+<body data-page="news" data-release-month="2026-04">
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar glass">
+        <a class="brand" href="index.html">
+          <div class="brand-mark">&#9678;</div>
+          <div>
+            GeoIP Locations
+            <small>Powered by ProdIPData</small>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="platform.html" data-nav="platform">Platform</a>
+          <a href="coverage.html" data-nav="coverage">Coverage</a>
+          <a href="methodology.html" data-nav="methodology">Methodology</a>
+          <a href="downloads.html" data-nav="downloads">Downloads</a>
+          <a href="news.html" data-nav="news">News</a>
+          <a href="contact.html" data-nav="contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a class="btn btn-secondary" href="downloads.html">Monthly Release</a>
+        </div>
+        <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+      </div>
+      <nav class="mobile-nav glass" data-mobile-nav>
+        <a href="platform.html" data-nav="platform">Platform</a>
+        <a href="coverage.html" data-nav="coverage">Coverage</a>
+        <a href="methodology.html" data-nav="methodology">Methodology</a>
+        <a href="downloads.html" data-nav="downloads">Downloads</a>
+        <a href="news.html" data-nav="news">News</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero slim">
+      <div class="container">
+        <div class="eyebrow">Product updates</div>
+        <h1>News</h1>
+        <p class="hero-copy">
+          Release announcements, new dataset formats, catalog improvements, and important updates from GeoIP Locations.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Latest updates</span>
+            <h2>Release and feature news</h2>
+          </div>
+          <p>Follow changes to monthly releases, download formats, data products, and publication workflows.</p>
+        </div>
+
+        <div class="card-grid" id="news-list">
+          <article class="feature-card">
+            <span class="badge">Loading</span>
+            <h3>Loading news items...</h3>
+            <p>Fetching the latest GeoIP Locations updates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>GeoIP Locations</strong>
+        <p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+      </div>
+      <div>
+        <span>Release</span>
+        <a href="downloads.html">Monthly downloads</a>
+        <a href="news.html">News</a>
+      </div>
+      <div>
+        <span>Reference</span>
+        <a href="methodology.html">Methodology</a>
+        <a href="coverage.html">Coverage</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+  <script>
+    (async function renderNews() {
+      const target = document.getElementById('news-list');
+      if (!target) return;
+
+      function escapeHtml(value) {
+        return String(value || '').replace(/[&<>"']/g, function(ch) {
+          return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch];
+        });
+      }
+
+      function formatDate(value) {
+        const d = new Date(value + 'T00:00:00Z');
+        if (Number.isNaN(d.getTime())) return value || '';
+        return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+      }
+
+      try {
+        const response = await fetch('assets/data/news.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Unable to load news.json');
+        const items = await response.json();
+
+        if (!Array.isArray(items) || items.length === 0) {
+          target.innerHTML = '<article class="feature-card"><span class="badge">No updates</span><h3>No news items published yet</h3><p>News items will appear here when published.</p></article>';
+          return;
+        }
+
+        target.innerHTML = items.map(function(item) {
+          const link = item.link ? '<a class="text-link" href="' + escapeHtml(item.link) + '">Read more</a>' : '';
+          return `
+            <article class="feature-card">
+              <span class="badge">${escapeHtml(item.category || 'Update')}</span>
+              <p class="muted">${escapeHtml(formatDate(item.date))}</p>
+              <h3>${escapeHtml(item.title)}</h3>
+              <p>${escapeHtml(item.summary)}</p>
+              ${link}
+            </article>
+          `;
+        }).join('');
+      } catch (err) {
+        target.innerHTML = '<article class="feature-card"><span class="badge">Unavailable</span><h3>News feed unavailable</h3><p>The news feed could not be loaded. Please try again later.</p></article>';
+      }
+    })();
+  </script>
+</body>
+</html>
