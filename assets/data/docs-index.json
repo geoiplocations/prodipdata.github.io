@@ -63,6 +63,21 @@
   },
   {
     "category": "Reference",
+    "icon": "⚠️",
+    "title": "Accuracy & limitations",
+    "summary": "Understand how to interpret country, region, city, coordinate, ASN, hostname, and monthly snapshot precision.",
+    "url": "docs/accuracy-limitations.html",
+    "tags": [
+      "accuracy",
+      "limitations",
+      "precision",
+      "asn",
+      "hostname",
+      "snapshot"
+    ]
+  },
+  {
+    "category": "Reference",
     "icon": "📘",
     "title": "Schema reference",
     "summary": "Review every standard release field with CSV type, Parquet type, MMDB representation, and notes.",
@@ -100,6 +115,21 @@
       "password",
       "release",
       "all"
+    ]
+  },
+  {
+    "category": "Workflow",
+    "icon": "🧰",
+    "title": "How to use this data",
+    "summary": "Use the monthly GeoIP release files with practical SQL Server and DuckDB examples for lookup, joins, and analytics.",
+    "url": "docs/how-to-use-this-data.html",
+    "tags": [
+      "sql server",
+      "duckdb",
+      "lookup",
+      "joins",
+      "analytics",
+      "examples"
     ]
   },
   {
