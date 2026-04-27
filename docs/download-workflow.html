@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Download workflow | GeoIP Locations Documentation</title>
+  <meta name="description" content="Documentation for GeoIP Locations monthly release download workflow.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://geoiplocations.com/docs/download-workflow.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="docs" data-release-month="2026-04">
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar glass">
+        <a class="brand" href="../index.html">
+          <div class="brand-mark">&#9678;</div>
+          <div>
+            GeoIP Locations
+            <small>Powered by ProdIPData</small>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="../platform.html" data-nav="platform">Platform</a>
+          <a href="../coverage.html" data-nav="coverage">Coverage</a>
+          <a href="../methodology.html" data-nav="methodology">Methodology</a>
+          <a href="../downloads.html" data-nav="downloads">Downloads</a>
+          <a href="../docs.html" data-nav="docs">Documentation</a>
+          <a href="../news.html" data-nav="news">News</a>
+          <a href="../contact.html" data-nav="contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a class="btn btn-secondary" href="../downloads.html">Monthly Release</a>
+        </div>
+        <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+      </div>
+      <nav class="mobile-nav glass" data-mobile-nav>
+        <a href="../platform.html" data-nav="platform">Platform</a>
+        <a href="../coverage.html" data-nav="coverage">Coverage</a>
+        <a href="../methodology.html" data-nav="methodology">Methodology</a>
+        <a href="../downloads.html" data-nav="downloads">Downloads</a>
+        <a href="../docs.html" data-nav="docs">Documentation</a>
+        <a href="../news.html" data-nav="news">News</a>
+        <a href="../contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero slim">
+      <div class="container">
+        <div class="eyebrow">Documentation</div>
+        <h1>Download workflow</h1>
+        <p class="hero-copy">How monthly release files, passwords, and large ALL packages are published.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container prose">
+        <h2>Monthly release model</h2>
+        <p>GeoIP Locations publishes monthly releases identified by <code>YYYY-MM</code>. Each release includes package indexes for CSV, Parquet, and MMDB.</p>
+        <h2>Package passwords</h2>
+        <p>Each package index shows the access password associated with that package and format. CSV, Parquet, and MMDB can have different passwords.</p>
+        <h2>Country packages</h2>
+        <p>Country packages are published in the repository release folder using the pattern <code>Export/release_YYYY-MM/FORMAT/iso=XX.zip</code>.</p>
+        <h2>ALL packages</h2>
+        <p>The ALL scope files can be larger than standard repository limits. For that reason, the ALL packages are published as GitHub Release assets while the country packages remain available through the release folder.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>GeoIP Locations</strong>
+        <p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+      </div>
+      <div>
+        <span>Documentation</span>
+        <a href="../docs.html">Documentation home</a>
+        <a href="../docs/schema.html">Schema reference</a>
+        <a href="../docs/format-comparison.html">Format comparison</a>
+        <a href="../docs/download-workflow.html">Download workflow</a>
+      </div>
+      <div>
+        <span>Formats</span>
+        <a href="../docs/using-csv.html">CSV</a>
+        <a href="../docs/using-parquet.html">Parquet</a>
+        <a href="../docs/using-mmdb.html">MMDB</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Format comparison | GeoIP Locations Documentation</title>
+  <meta name="description" content="Compare CSV, Parquet, and MMDB formats for GeoIP Locations releases.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://geoiplocations.com/docs/format-comparison.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="docs" data-release-month="2026-04">
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar glass">
+        <a class="brand" href="../index.html">
+          <div class="brand-mark">&#9678;</div>
+          <div>
+            GeoIP Locations
+            <small>Powered by ProdIPData</small>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="../platform.html" data-nav="platform">Platform</a>
+          <a href="../coverage.html" data-nav="coverage">Coverage</a>
+          <a href="../methodology.html" data-nav="methodology">Methodology</a>
+          <a href="../downloads.html" data-nav="downloads">Downloads</a>
+          <a href="../docs.html" data-nav="docs">Documentation</a>
+          <a href="../news.html" data-nav="news">News</a>
+          <a href="../contact.html" data-nav="contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a class="btn btn-secondary" href="../downloads.html">Monthly Release</a>
+        </div>
+        <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+      </div>
+      <nav class="mobile-nav glass" data-mobile-nav>
+        <a href="../platform.html" data-nav="platform">Platform</a>
+        <a href="../coverage.html" data-nav="coverage">Coverage</a>
+        <a href="../methodology.html" data-nav="methodology">Methodology</a>
+        <a href="../downloads.html" data-nav="downloads">Downloads</a>
+        <a href="../docs.html" data-nav="docs">Documentation</a>
+        <a href="../news.html" data-nav="news">News</a>
+        <a href="../contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero slim">
+      <div class="container">
+        <div class="eyebrow">Documentation</div>
+        <h1>Format comparison</h1>
+        <p class="hero-copy">Choose the right GeoIP Locations file format for your workflow.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container prose">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Format</th><th>Best for</th><th>Strength</th><th>Limitation</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>CSV</td><td>Inspection and exchange</td><td>Universal compatibility</td><td>No native types; larger for analytics</td></tr>
+              <tr><td>Parquet</td><td>Analytics and data engineering</td><td>Typed, compressed, columnar</td><td>Requires Parquet-aware tools</td></tr>
+              <tr><td>MMDB</td><td>Application lookup</td><td>Fast local IP-to-record lookup</td><td>Not designed for table analytics</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Recommended decision</h2>
+        <p>Use CSV when you need maximum compatibility, Parquet when you need analytics, and MMDB when you need application lookup.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>GeoIP Locations</strong>
+        <p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+      </div>
+      <div>
+        <span>Documentation</span>
+        <a href="../docs.html">Documentation home</a>
+        <a href="../docs/schema.html">Schema reference</a>
+        <a href="../docs/format-comparison.html">Format comparison</a>
+        <a href="../docs/download-workflow.html">Download workflow</a>
+      </div>
+      <div>
+        <span>Formats</span>
+        <a href="../docs/using-csv.html">CSV</a>
+        <a href="../docs/using-parquet.html">Parquet</a>
+        <a href="../docs/using-mmdb.html">MMDB</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

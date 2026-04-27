@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Schema reference | GeoIP Locations Documentation</title>
+  <meta name="description" content="Field-level reference for GeoIP Locations release files.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://geoiplocations.com/docs/schema-reference.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="docs" data-release-month="2026-04">
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar glass">
+        <a class="brand" href="../index.html">
+          <div class="brand-mark">&#9678;</div>
+          <div>
+            GeoIP Locations
+            <small>Powered by ProdIPData</small>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="../platform.html" data-nav="platform">Platform</a>
+          <a href="../coverage.html" data-nav="coverage">Coverage</a>
+          <a href="../methodology.html" data-nav="methodology">Methodology</a>
+          <a href="../downloads.html" data-nav="downloads">Downloads</a>
+          <a href="../docs.html" data-nav="docs">Documentation</a>
+          <a href="../news.html" data-nav="news">News</a>
+          <a href="../contact.html" data-nav="contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a class="btn btn-secondary" href="../downloads.html">Monthly Release</a>
+        </div>
+        <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+      </div>
+      <nav class="mobile-nav glass" data-mobile-nav>
+        <a href="../platform.html" data-nav="platform">Platform</a>
+        <a href="../coverage.html" data-nav="coverage">Coverage</a>
+        <a href="../methodology.html" data-nav="methodology">Methodology</a>
+        <a href="../downloads.html" data-nav="downloads">Downloads</a>
+        <a href="../docs.html" data-nav="docs">Documentation</a>
+        <a href="../news.html" data-nav="news">News</a>
+        <a href="../contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero slim">
+      <div class="container">
+        <div class="eyebrow">Documentation</div>
+        <h1>Schema reference</h1>
+        <p class="hero-copy">Field-level reference for the standard GeoIP Locations monthly release schema.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container prose">
+        <h2>Scope</h2>
+        <p>CSV and Parquet use the same flat schema for normal country, ALL, EDU, and GOV release scopes. MMDB carries comparable attribution fields but stores them as IP lookup records rather than a flat table.</p>
+        <p><strong>Exception:</strong> BOG packages use a reduced schema because bogon ranges do not represent standard geolocation rows.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Description</th>
+                <th>CSV type</th>
+                <th>Parquet type</th>
+                <th>MMDB representation</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+<tr><td><code>network</code></td><td>CIDR network for the /24 prefix or consolidated lookup network.</td><td>string</td><td>string</td><td>network key / record key</td><td>Primary network identifier.</td></tr>
+<tr><td><code>network_from</code></td><td>Integer representation of the first IPv4 address in the /24.</td><td>integer</td><td>int64</td><td>not always exposed as a flat field</td><td>Useful for sorting and range joins.</td></tr>
+<tr><td><code>network_to</code></td><td>Integer representation of the last IPv4 address in the /24.</td><td>integer</td><td>int64</td><td>not always exposed as a flat field</td><td>Normally network_from + 255 for /24 rows.</td></tr>
+<tr><td><code>prefix_length</code></td><td>CIDR prefix length.</td><td>integer</td><td>int8</td><td>network prefix length</td><td>Usually 24 in flat exports.</td></tr>
+<tr><td><code>continent_code</code></td><td>Two-letter continent code.</td><td>string</td><td>string</td><td>record field</td><td>Derived from country mapping.</td></tr>
+<tr><td><code>continent_name</code></td><td>Continent name.</td><td>string</td><td>string</td><td>record field</td><td>Human-readable continent.</td></tr>
+<tr><td><code>is_in_european_union</code></td><td>EU membership flag for the geolocation country.</td><td>boolean/text</td><td>bool</td><td>record field</td><td>True for EU member states.</td></tr>
+<tr><td><code>country_iso</code></td><td>Geolocation country ISO code.</td><td>string</td><td>string</td><td>record field</td><td>Describes where the IP prefix is geolocated.</td></tr>
+<tr><td><code>country_name</code></td><td>Geolocation country name.</td><td>string</td><td>string</td><td>record field</td><td>Human-readable country.</td></tr>
+<tr><td><code>registered_country_iso</code></td><td>Registered country ISO code.</td><td>string</td><td>string</td><td>record field</td><td>Currently aligned with country-level metadata.</td></tr>
+<tr><td><code>registered_country_name</code></td><td>Registered country name.</td><td>string</td><td>string</td><td>record field</td><td>Human-readable registered country.</td></tr>
+<tr><td><code>region_name</code></td><td>Region or state name.</td><td>string</td><td>string</td><td>record field</td><td>May be empty.</td></tr>
+<tr><td><code>region_name_ascii</code></td><td>ASCII-safe region name.</td><td>string</td><td>string</td><td>record field</td><td>Useful for systems requiring ASCII.</td></tr>
+<tr><td><code>city_name</code></td><td>City name.</td><td>string</td><td>string</td><td>record field</td><td>May be empty.</td></tr>
+<tr><td><code>city_name_ascii</code></td><td>ASCII-safe city name.</td><td>string</td><td>string</td><td>record field</td><td>Useful for systems requiring ASCII.</td></tr>
+<tr><td><code>latitude</code></td><td>Latitude coordinate.</td><td>decimal</td><td>float64</td><td>record field</td><td>Precision depends on geolocation level.</td></tr>
+<tr><td><code>longitude</code></td><td>Longitude coordinate.</td><td>decimal</td><td>float64</td><td>record field</td><td>Precision depends on geolocation level.</td></tr>
+<tr><td><code>timezone</code></td><td>IANA timezone identifier.</td><td>string</td><td>string</td><td>record field</td><td>Usually derived from city geoname where available.</td></tr>
+<tr><td><code>accuracy_radius_km</code></td><td>Estimated accuracy radius in kilometers.</td><td>integer</td><td>int16</td><td>record field</td><td>Typical values reflect city/region/country precision.</td></tr>
+<tr><td><code>geo_precision_level</code></td><td>Precision level of the geolocation.</td><td>string</td><td>string</td><td>record field</td><td>city, region, country, or unknown.</td></tr>
+<tr><td><code>country_geonameid</code></td><td>GeoNames ID for country.</td><td>integer</td><td>int32</td><td>record field</td><td>Reference identifier.</td></tr>
+<tr><td><code>region_geonameid</code></td><td>GeoNames ID for region.</td><td>integer</td><td>int32</td><td>record field</td><td>May be null.</td></tr>
+<tr><td><code>city_geonameid</code></td><td>GeoNames ID for city.</td><td>integer</td><td>int32</td><td>record field</td><td>May be null.</td></tr>
+<tr><td><code>admin1_code</code></td><td>Administrative level 1 code.</td><td>string</td><td>string</td><td>record field</td><td>Useful for regional joins.</td></tr>
+<tr><td><code>feature_code</code></td><td>GeoNames feature code.</td><td>string</td><td>string</td><td>record field</td><td>Indicates location feature type.</td></tr>
+<tr><td><code>asn</code></td><td>Autonomous System Number.</td><td>integer</td><td>int32</td><td>record field</td><td>-1 means n/a; -2 means bogon.</td></tr>
+<tr><td><code>as_name</code></td><td>Autonomous System name or description.</td><td>string</td><td>string</td><td>record field</td><td>Also used in reduced BOG schema.</td></tr>
+<tr><td><code>asn_type</code></td><td>ASN type/classification.</td><td>string</td><td>string</td><td>record field</td><td>Business, Hosting, ISP, Government, etc.</td></tr>
+<tr><td><code>asn_country_iso</code></td><td>ASN registry/owner country ISO code.</td><td>string</td><td>string</td><td>record field</td><td>Not the same as geolocation country.</td></tr>
+<tr><td><code>network_type</code></td><td>Derived network classification.</td><td>string</td><td>string</td><td>record field</td><td>hosting, isp, business, education, government, etc.</td></tr>
+<tr><td><code>company_name</code></td><td>Company alias or owner label where available.</td><td>string</td><td>string</td><td>record field</td><td>May be empty.</td></tr>
+<tr><td><code>rir</code></td><td>Regional Internet Registry derived from ASN context.</td><td>string</td><td>string</td><td>record field</td><td>ASN-derived, not geolocation-derived.</td></tr>
+<tr><td><code>snapshot_month</code></td><td>Monthly release identifier.</td><td>string</td><td>string</td><td>record field</td><td>Format YYYY-MM.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>GeoIP Locations</strong>
+        <p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+      </div>
+      <div>
+        <span>Documentation</span>
+        <a href="../docs.html">Documentation home</a>
+        <a href="../docs/schema.html">Schema reference</a>
+        <a href="../docs/format-comparison.html">Format comparison</a>
+        <a href="../docs/download-workflow.html">Download workflow</a>
+      </div>
+      <div>
+        <span>Formats</span>
+        <a href="../docs/using-csv.html">CSV</a>
+        <a href="../docs/using-parquet.html">Parquet</a>
+        <a href="../docs/using-mmdb.html">MMDB</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

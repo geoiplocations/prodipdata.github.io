@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Using Parquet files | GeoIP Locations Documentation</title>
+  <meta name="description" content="Detailed guidance for Parquet files in GeoIP Locations monthly releases.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://geoiplocations.com/docs/using-parquet-files.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="docs" data-release-month="2026-04">
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar glass">
+        <a class="brand" href="../index.html">
+          <div class="brand-mark">&#9678;</div>
+          <div>
+            GeoIP Locations
+            <small>Powered by ProdIPData</small>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="../platform.html" data-nav="platform">Platform</a>
+          <a href="../coverage.html" data-nav="coverage">Coverage</a>
+          <a href="../methodology.html" data-nav="methodology">Methodology</a>
+          <a href="../downloads.html" data-nav="downloads">Downloads</a>
+          <a href="../docs.html" data-nav="docs">Documentation</a>
+          <a href="../news.html" data-nav="news">News</a>
+          <a href="../contact.html" data-nav="contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a class="btn btn-secondary" href="../downloads.html">Monthly Release</a>
+        </div>
+        <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+      </div>
+      <nav class="mobile-nav glass" data-mobile-nav>
+        <a href="../platform.html" data-nav="platform">Platform</a>
+        <a href="../coverage.html" data-nav="coverage">Coverage</a>
+        <a href="../methodology.html" data-nav="methodology">Methodology</a>
+        <a href="../downloads.html" data-nav="downloads">Downloads</a>
+        <a href="../docs.html" data-nav="docs">Documentation</a>
+        <a href="../news.html" data-nav="news">News</a>
+        <a href="../contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero slim">
+      <div class="container">
+        <div class="eyebrow">Documentation</div>
+        <h1>Using Parquet files</h1>
+        <p class="hero-copy">Parquet packages are optimized for analytics, typed columns, and efficient scans.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container prose">
+        <h2>Origin and purpose</h2>
+        <p>Parquet is a columnar storage format designed for analytical workloads. It stores values by column, enabling tools to read only the fields required by a query.</p>
+        <h2>Why GeoIP Locations publishes Parquet</h2>
+        <p>Parquet is ideal for large-scale analysis such as grouping by country, ASN, RIR, network type, or snapshot month. It keeps typed columns and usually stores data more compactly than CSV.</p>
+        <h2>Recommended tools</h2>
+        <ul>
+          <li>DuckDB for local analytics.</li>
+          <li>Python with pandas and pyarrow.</li>
+          <li>Spark and other distributed processing engines.</li>
+          <li>DBeaver-compatible workflows where Parquet readers are available.</li>
+        </ul>
+        <h2>Example use cases</h2>
+        <ul>
+          <li>Top ASNs by IPv4 footprint.</li>
+          <li>Country-level coverage analytics.</li>
+          <li>Monthly release comparison and trend analysis.</li>
+          <li>Joining GeoIP rows to internal network inventory.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>GeoIP Locations</strong>
+        <p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+      </div>
+      <div>
+        <span>Documentation</span>
+        <a href="../docs.html">Documentation home</a>
+        <a href="../docs/schema.html">Schema reference</a>
+        <a href="../docs/format-comparison.html">Format comparison</a>
+        <a href="../docs/download-workflow.html">Download workflow</a>
+      </div>
+      <div>
+        <span>Formats</span>
+        <a href="../docs/using-csv.html">CSV</a>
+        <a href="../docs/using-parquet.html">Parquet</a>
+        <a href="../docs/using-mmdb.html">MMDB</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
