@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Methodology deep dive | GeoIP Locations Documentation</title>
+<meta name="description" content="Detailed methodology for building monthly GeoIP Locations releases.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://geoiplocations.com/docs/methodology-deep-dive.html">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="docs" data-release-month="2026-04">
+<header class="site-header">
+<div class="container">
+<div class="navbar glass">
+<a class="brand" href="../index.html">
+<div class="brand-mark">&#9678;</div>
+<div>GeoIP Locations<small>Powered by ProdIPData</small></div>
+</a>
+<nav class="nav-links" aria-label="Primary navigation">
+<a href="../platform.html">Platform</a>
+<a href="../coverage.html">Coverage</a>
+<a href="../methodology.html">Methodology</a>
+<a href="../downloads.html">Downloads</a>
+<a href="../docs.html" data-nav="docs">Documentation</a>
+<a href="../news.html">News</a>
+<a href="../contact.html">Contact</a>
+</nav>
+</div>
+</div>
+</header>
+
+<main>
+<section class="hero slim">
+<div class="container">
+<div class="eyebrow">Methodology</div>
+<h1>Methodology deep dive</h1>
+<p class="hero-copy">How ProdIPData reconciles public internet data sources into consistent monthly IPv4 geolocation releases.</p>
+</div>
+</section>
+<section class="section">
+<div class="container prose">
+<h2>Core principle</h2>
+<p>ProdIPData treats the monthly release as a reproducible data product. Each snapshot is built from public source inputs, normalized into a consistent relational model, and exported into CSV, Parquet, and MMDB formats.</p>
+
+<h2>Processing flow</h2>
+<ol>
+<li>Collect public registry, routing, geographic, and reference inputs.</li>
+<li>Normalize identifiers such as country codes, GeoName IDs, ASNs, RIR labels, and prefix ranges.</li>
+<li>Resolve conflicts using deterministic rules and source-specific precedence.</li>
+<li>Build a monthly staging layer at the /24 level.</li>
+<li>Publish aligned release artifacts across CSV, Parquet, and MMDB.</li>
+</ol>
+
+<h2>What ProdIPData adds</h2>
+<p>The value layer is normalization, reconciliation, attribution, classification, and monthly versioning. This is what makes the release useful as a repeatable data engineering asset rather than a loose file collection.</p>
+
+<h2>Related articles</h2>
+<ul>
+<li><a href="source-conflict-resolution.html">Source conflict resolution</a></li>
+<li><a href="asn-classification.html">ASN classification</a></li>
+<li><a href="geolocation-precision.html">Geolocation precision</a></li>
+</ul>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<strong>GeoIP Locations</strong>
+<p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+</div>
+<div>
+<span>Documentation</span>
+<a href="../docs.html">Documentation home</a>
+<a href="data-sources.html">Data sources</a>
+<a href="methodology-deep-dive.html">Methodology deep dive</a>
+<a href="source-conflict-resolution.html">Conflict resolution</a>
+<a href="asn-classification.html">ASN classification</a>
+<a href="geolocation-precision.html">Geolocation precision</a>
+</div>
+</div>
+</footer>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

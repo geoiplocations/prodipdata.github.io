@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Data sources and methodology inputs | GeoIP Locations</title>
-<meta name="description" content="Authoritative data sources used by GeoIP Locations and ProdIPData to build monthly IPv4 datasets.">
+<title>Data sources | GeoIP Locations Documentation</title>
+<meta name="description" content="Public source inputs and processing approach used by GeoIP Locations.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://geoiplocations.com/docs/data-sources.html">
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body>
+<body data-page="docs" data-release-month="2026-04">
 <header class="site-header">
 <div class="container">
 <div class="navbar glass">
@@ -15,12 +16,12 @@
 <div class="brand-mark">&#9678;</div>
 <div>GeoIP Locations<small>Powered by ProdIPData</small></div>
 </a>
-<nav class="nav-links">
+<nav class="nav-links" aria-label="Primary navigation">
 <a href="../platform.html">Platform</a>
 <a href="../coverage.html">Coverage</a>
 <a href="../methodology.html">Methodology</a>
 <a href="../downloads.html">Downloads</a>
-<a href="../docs.html">Documentation</a>
+<a href="../docs.html" data-nav="docs">Documentation</a>
 <a href="../news.html">News</a>
 <a href="../contact.html">Contact</a>
 </nav>
@@ -40,9 +41,8 @@
 
 <section class="section">
 <div class="container prose">
-
 <h2>Authoritative registries</h2>
-<p>Regional Internet Registries provide the foundation for IP allocation and ownership boundaries.</p>
+<p>Regional Internet Registries provide the foundation for allocation, delegation, and registry context.</p>
 <ul>
 <li>RIPE NCC</li>
 <li>ARIN</li>
@@ -52,40 +52,36 @@
 </ul>
 
 <h2>Routing intelligence</h2>
-<p>BGP data reflects actual routing on the internet and enables ASN to prefix relationships.</p>
+<p>BGP data helps identify announced prefixes and ASN-to-prefix relationships.</p>
 <ul>
 <li>RIPE RIS</li>
 <li>RouteViews</li>
 </ul>
 
 <h2>Geolocation reference</h2>
-<p>GeoNames provides hierarchical geographic data including cities, regions, countries, and timezones.</p>
+<p>GeoNames provides normalized geographic hierarchy, including countries, regions, cities, GeoName identifiers, and timezones.</p>
 
 <h2>Standardization</h2>
 <ul>
 <li>ISO country codes</li>
 <li>IANA registries and RIR definitions</li>
-</ul>
-
-<h2>DNS and internet structure</h2>
-<ul>
-<li>IANA Root Zone Database</li>
+<li>IANA Root Zone Database for internet namespace context</li>
 </ul>
 
 <h2>Special datasets</h2>
 <ul>
-<li>Bogon IP ranges, including publicly available bogon reference material such as Team Cymru bogon feeds.</li>
+<li>Bogon and reserved address-space references, including public bogon feeds such as Team Cymru where applicable.</li>
 </ul>
 
 <h2>ProdIPData processing layer</h2>
-<p>The final dataset is not a direct copy of any single source. It is the result of:</p>
+<p>The final dataset is not a direct copy of any single source. It is produced through a controlled processing layer:</p>
 <ul>
 <li>Cross-source reconciliation</li>
 <li>ASN enrichment and classification</li>
 <li>Geolocation normalization</li>
+<li>RIR attribution based on ASN context rather than geolocation country</li>
 <li>Consistency enforcement across monthly snapshots</li>
 </ul>
-
 </div>
 </section>
 </main>
@@ -94,15 +90,19 @@
 <div class="container footer-grid">
 <div>
 <strong>GeoIP Locations</strong>
-<p>Transparent, monthly IPv4 geolocation releases.</p>
+<p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
 </div>
 <div>
 <span>Documentation</span>
 <a href="../docs.html">Documentation home</a>
 <a href="data-sources.html">Data sources</a>
+<a href="methodology-deep-dive.html">Methodology deep dive</a>
+<a href="source-conflict-resolution.html">Conflict resolution</a>
+<a href="asn-classification.html">ASN classification</a>
+<a href="geolocation-precision.html">Geolocation precision</a>
 </div>
 </div>
 </footer>
-
+<script src="../assets/js/site.js"></script>
 </body>
 </html>

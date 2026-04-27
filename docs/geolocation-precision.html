@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Geolocation precision | GeoIP Locations Documentation</title>
+<meta name="description" content="Geo precision methodology for GeoIP Locations release files.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://geoiplocations.com/docs/geolocation-precision.html">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="docs" data-release-month="2026-04">
+<header class="site-header">
+<div class="container">
+<div class="navbar glass">
+<a class="brand" href="../index.html">
+<div class="brand-mark">&#9678;</div>
+<div>GeoIP Locations<small>Powered by ProdIPData</small></div>
+</a>
+<nav class="nav-links" aria-label="Primary navigation">
+<a href="../platform.html">Platform</a>
+<a href="../coverage.html">Coverage</a>
+<a href="../methodology.html">Methodology</a>
+<a href="../downloads.html">Downloads</a>
+<a href="../docs.html" data-nav="docs">Documentation</a>
+<a href="../news.html">News</a>
+<a href="../contact.html">Contact</a>
+</nav>
+</div>
+</div>
+</header>
+
+<main>
+<section class="hero slim">
+<div class="container">
+<div class="eyebrow">Methodology</div>
+<h1>Geolocation precision</h1>
+<p class="hero-copy">How country, region, city, and confidence-style precision signals are represented in the monthly dataset.</p>
+</div>
+</section>
+<section class="section">
+<div class="container prose">
+<h2>Precision levels</h2>
+<p>Geolocation records can be represented at several levels of precision:</p>
+<ul>
+<li><strong>City</strong>: city-level GeoName and coordinates are available.</li>
+<li><strong>Region</strong>: region or state-level attribution is available.</li>
+<li><strong>Country</strong>: only country-level attribution is available.</li>
+<li><strong>Unknown</strong>: no reliable location hierarchy is available.</li>
+</ul>
+
+<h2>Accuracy radius</h2>
+<p>The <code>accuracy_radius_km</code> field provides an approximate radius for the location. Smaller values indicate more specific attribution.</p>
+
+<h2>Coordinates</h2>
+<p>Latitude and longitude should be interpreted together with <code>geo_precision_level</code> and <code>accuracy_radius_km</code>. A coordinate is not a street-level claim.</p>
+
+<h2>Recommended interpretation</h2>
+<p>Use country-level fields for broad classification, region/city fields for enrichment, and precision fields to decide whether a record is suitable for high-confidence analysis.</p>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<strong>GeoIP Locations</strong>
+<p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+</div>
+<div>
+<span>Documentation</span>
+<a href="../docs.html">Documentation home</a>
+<a href="data-sources.html">Data sources</a>
+<a href="methodology-deep-dive.html">Methodology deep dive</a>
+<a href="source-conflict-resolution.html">Conflict resolution</a>
+<a href="asn-classification.html">ASN classification</a>
+<a href="geolocation-precision.html">Geolocation precision</a>
+</div>
+</div>
+</footer>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

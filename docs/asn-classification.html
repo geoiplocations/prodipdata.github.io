@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ASN classification | GeoIP Locations Documentation</title>
+<meta name="description" content="ASN and network type classification methodology for GeoIP Locations releases.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://geoiplocations.com/docs/asn-classification.html">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body data-page="docs" data-release-month="2026-04">
+<header class="site-header">
+<div class="container">
+<div class="navbar glass">
+<a class="brand" href="../index.html">
+<div class="brand-mark">&#9678;</div>
+<div>GeoIP Locations<small>Powered by ProdIPData</small></div>
+</a>
+<nav class="nav-links" aria-label="Primary navigation">
+<a href="../platform.html">Platform</a>
+<a href="../coverage.html">Coverage</a>
+<a href="../methodology.html">Methodology</a>
+<a href="../downloads.html">Downloads</a>
+<a href="../docs.html" data-nav="docs">Documentation</a>
+<a href="../news.html">News</a>
+<a href="../contact.html">Contact</a>
+</nav>
+</div>
+</div>
+</header>
+
+<main>
+<section class="hero slim">
+<div class="container">
+<div class="eyebrow">Methodology</div>
+<h1>ASN classification</h1>
+<p class="hero-copy">How ASN metadata and network-type labels are normalized for monthly release files.</p>
+</div>
+</section>
+<section class="section">
+<div class="container prose">
+<h2>ASN role</h2>
+<p>ASN context explains which autonomous system is associated with a prefix. It provides network ownership, operational, and routing context.</p>
+
+<h2>Classification inputs</h2>
+<ul>
+<li>ASN identifier</li>
+<li>ASN name or description</li>
+<li>ASN country</li>
+<li>ASN type labels</li>
+<li>Company or organization aliases where available</li>
+<li>Routing and prefix footprint behavior</li>
+</ul>
+
+<h2>Network type examples</h2>
+<p>Common labels include hosting, ISP, business, education, government, mobile, bogon, and unknown.</p>
+
+<h2>Special ASN values</h2>
+<ul>
+<li><code>-1</code> represents not available or not applicable.</li>
+<li><code>-2</code> represents bogon scope.</li>
+</ul>
+
+<h2>Why this matters</h2>
+<p>ASN classification allows analysts to understand not only where a prefix is geolocated, but also the type of network operating it.</p>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<strong>GeoIP Locations</strong>
+<p>Transparent, monthly IPv4 geolocation releases from ProdIPData.</p>
+</div>
+<div>
+<span>Documentation</span>
+<a href="../docs.html">Documentation home</a>
+<a href="data-sources.html">Data sources</a>
+<a href="methodology-deep-dive.html">Methodology deep dive</a>
+<a href="source-conflict-resolution.html">Conflict resolution</a>
+<a href="asn-classification.html">ASN classification</a>
+<a href="geolocation-precision.html">Geolocation precision</a>
+</div>
+</div>
+</footer>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>
