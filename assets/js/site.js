@@ -215,7 +215,7 @@ async function renderHomePage(context) {
       <div class="list-row">
         <div>
           <strong>${escapeHtml(item.asnName || `AS${item.asnId}`)}</strong>
-          <small>AS${formatInteger(item.asnId)} · ${escapeHtml(item.countryName || item.countryIso || 'Unknown')} · ${escapeHtml(item.asnType || 'unknown')}</small>
+          <small>AS${formatInteger(item.asnId)} · ${escapeHtml(item.countryName || item.countryIso || 'Unknown')} · ${escapeHtml(formatAsnTypeLabel(item.asnType || 'unknown'))}</small>
         </div>
         <div class="list-metric">
           <strong>${formatInteger(item.prefixCount)}</strong>
@@ -251,7 +251,7 @@ async function renderHomePage(context) {
         </div>
         <div class="list-metric">
           <strong>${escapeHtml(item.created || 'N/A')}</strong>
-          <small>${escapeHtml(item.type || 'Type n/a')}</small>
+          <small>${escapeHtml(formatAsnTypeLabel(item.type || 'unknown'))}</small>
         </div>
       </div>
     `).join('');
@@ -1080,15 +1080,14 @@ function getAsnMixRows(record) {
     { key: 'hosting', label: 'Hosting' },
     { key: 'business', label: 'Business' },
     { key: 'education', label: 'Education' },
-    { key: 'government', label: 'Government' },
-    { key: 'inactive', label: 'Inactive' }
+    { key: 'government', label: 'Government' }
   ].map(item => ({
     key: item.key,
     label: item.label,
     value: numericValue(record[item.key])
   }));
 
-  const total = numericValue(record.total) || ordered.reduce((sum, item) => sum + numericValue(item.value), 0);
+  const total = ordered.reduce((sum, item) => sum + numericValue(item.value), 0);
   return ordered
     .filter(item => numericValue(item.value) > 0)
     .sort((a, b) => numericValue(b.value) - numericValue(a.value))
@@ -1110,9 +1109,12 @@ function formatAsnTypeLabel(value) {
     business: 'Business',
     education: 'Education',
     government: 'Government',
-    inactive: 'Inactive',
     unknown: 'Unknown'
   };
+  if (key === 'inactive') {
+    return 'Type n/a';
+  }
+
   return labels[key] || String(value || '').replace(/[_-]+/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 }
 
@@ -1823,7 +1825,7 @@ function renderRirTypeMixBlock(item) {
       prefixCount: numericValue(entry.prefixCount),
       ipv4Count: numericValue(entry.ipv4Count)
     }))
-    .filter(entry => entry.value > 0)
+    .filter(entry => entry.key !== 'inactive' && entry.value > 0)
     .sort((a, b) => b.value - a.value);
 
   if (!mixRows.length) {

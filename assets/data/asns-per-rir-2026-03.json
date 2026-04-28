@@ -1,57 +1,52 @@
 {
     "snapshotMonth":  "2026-03",
-    "generatedUtc":  "2026-03-22T11:18:25Z",
+    "generatedUtc":  "2026-04-28T17:03:19Z",
     "source":  "ProdIP.asn.stp_WebSite_Build_ASNs_Per_RIR",
     "items":  [
                   {
                       "rir":  "ripe",
-                      "business":  10911,
-                      "education":  686,
-                      "hosting":  7087,
-                      "isp":  10269,
-                      "government":  414,
-                      "inactive":  12177,
-                      "total":  41544
+                      "business":  10576,
+                      "education":  677,
+                      "hosting":  6825,
+                      "isp":  10073,
+                      "government":  411,
+                      "total":  28562
                   },
                   {
                       "rir":  "arin",
-                      "business":  8879,
-                      "education":  1856,
-                      "hosting":  3576,
-                      "isp":  4514,
-                      "government":  1030,
-                      "inactive":  15523,
-                      "total":  35378
+                      "business":  8804,
+                      "education":  1879,
+                      "hosting":  3555,
+                      "isp":  4447,
+                      "government":  1021,
+                      "total":  19706
                   },
                   {
                       "rir":  "apnic",
-                      "business":  4665,
-                      "education":  4582,
-                      "hosting":  2777,
-                      "isp":  7122,
-                      "government":  362,
-                      "inactive":  12384,
-                      "total":  31892
+                      "business":  4444,
+                      "education":  821,
+                      "hosting":  2638,
+                      "isp":  7121,
+                      "government":  365,
+                      "total":  15389
                   },
                   {
                       "rir":  "lacnic",
-                      "business":  1324,
-                      "education":  244,
-                      "hosting":  621,
-                      "isp":  9926,
-                      "government":  211,
-                      "inactive":  3567,
-                      "total":  15893
+                      "business":  1010,
+                      "education":  229,
+                      "hosting":  572,
+                      "isp":  9476,
+                      "government":  178,
+                      "total":  11465
                   },
                   {
                       "rir":  "afrinic",
-                      "business":  454,
-                      "education":  98,
-                      "hosting":  284,
-                      "isp":  1223,
+                      "business":  463,
+                      "education":  101,
+                      "hosting":  280,
+                      "isp":  1239,
                       "government":  39,
-                      "inactive":  1349,
-                      "total":  3447
+                      "total":  2122
                   }
               ]
 }
