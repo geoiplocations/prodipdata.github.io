@@ -1,3 +1,29 @@
+(function loadProdIPQAAccessGate() {
+  if (typeof window === 'undefined' || window.PRODIP_QA_AUTH_LOADER_INITIALIZED) {
+    return;
+  }
+
+  const qaHosts = ['qa.geoiplocations.com', 'www.qa.geoiplocations.com'];
+  const hostname = String(window.location.hostname || '').toLowerCase();
+
+  if (!qaHosts.includes(hostname)) {
+    return;
+  }
+
+  window.PRODIP_QA_AUTH_LOADER_INITIALIZED = true;
+
+  const assetRoot = document.body && document.body.dataset ? (document.body.dataset.assetRoot || '') : '';
+  const script = document.createElement('script');
+  script.src = `${assetRoot}assets/js/qa-auth.js`;
+  script.defer = true;
+  script.onload = function onQAAuthLoaded() {
+    if (window.ProdIPQAAuth && typeof window.ProdIPQAAuth.requireAccess === 'function') {
+      window.ProdIPQAAuth.requireAccess();
+    }
+  };
+  document.head.appendChild(script);
+})();
+
 const PRODIP_ANALYTICS_STREAMS = Object.freeze({
   'qa.geoiplocations.com': 'G-M860EQGN4W',
   'geoiplocations.com': 'G-1DX52Q08X0',

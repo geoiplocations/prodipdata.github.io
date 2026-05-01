@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>QA Access | GeoIP Locations</title>
+  <link rel="canonical" href="https://qa.geoiplocations.com/login.html">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    body.qa-login-page {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at top left, rgba(46, 91, 255, 0.22), transparent 34rem),
+        linear-gradient(135deg, #07111f 0%, #0b1729 48%, #08101d 100%);
+      color: #f8fafc;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .qa-login-shell {
+      width: min(92vw, 440px);
+      padding: 2rem;
+      border: 1px solid rgba(148, 163, 184, 0.26);
+      border-radius: 1.5rem;
+      background: rgba(15, 23, 42, 0.82);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+      backdrop-filter: blur(16px);
+    }
+
+    .qa-login-eyebrow {
+      margin: 0 0 0.5rem;
+      color: #93c5fd;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .qa-login-title {
+      margin: 0;
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      line-height: 1.05;
+    }
+
+    .qa-login-copy {
+      margin: 1rem 0 1.5rem;
+      color: #cbd5e1;
+      line-height: 1.65;
+    }
+
+    .qa-login-form {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .qa-login-label {
+      display: grid;
+      gap: 0.45rem;
+      color: #e2e8f0;
+      font-weight: 700;
+    }
+
+    .qa-login-input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.85rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.38);
+      border-radius: 0.9rem;
+      background: rgba(2, 6, 23, 0.56);
+      color: #ffffff;
+      font: inherit;
+    }
+
+    .qa-login-input:focus {
+      outline: 3px solid rgba(96, 165, 250, 0.35);
+      border-color: #93c5fd;
+    }
+
+    .qa-login-button {
+      cursor: pointer;
+      border: 0;
+      border-radius: 999px;
+      padding: 0.9rem 1.15rem;
+      background: #60a5fa;
+      color: #06101f;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    .qa-login-button:focus-visible {
+      outline: 3px solid rgba(255, 255, 255, 0.72);
+      outline-offset: 3px;
+    }
+
+    .qa-login-status {
+      margin: 0.9rem 0 0;
+      padding: 0.8rem 0.9rem;
+      border-radius: 0.85rem;
+      background: rgba(148, 163, 184, 0.14);
+      color: #dbeafe;
+    }
+
+    .qa-login-status[hidden] {
+      display: none;
+    }
+
+    .qa-login-status[data-variant="error"] {
+      background: rgba(248, 113, 113, 0.16);
+      color: #fecaca;
+    }
+
+    .qa-login-status[data-variant="success"] {
+      background: rgba(74, 222, 128, 0.16);
+      color: #bbf7d0;
+    }
+
+    .qa-login-note {
+      margin: 1.35rem 0 0;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+  </style>
+</head>
+<body class="qa-login-page" data-page="qa-login">
+  <main class="qa-login-shell" aria-labelledby="qa-login-title">
+    <p class="qa-login-eyebrow">QA preview</p>
+    <h1 class="qa-login-title" id="qa-login-title">GeoIP Locations access gate</h1>
+    <p class="qa-login-copy">Enter the QA password to continue to the preview site.</p>
+
+    <form class="qa-login-form" data-qa-auth-form autocomplete="off">
+      <label class="qa-login-label" for="qa-password">
+        Password
+        <input class="qa-login-input" id="qa-password" type="password" data-qa-auth-password autocomplete="current-password" required>
+      </label>
+      <button class="qa-login-button" type="submit">Continue to QA</button>
+    </form>
+
+    <p class="qa-login-status" data-qa-auth-status hidden></p>
+    <p class="qa-login-note">This is a client-side QA convenience gate for static hosting. It is not server-side authentication.</p>
+  </main>
+
+  <script src="assets/js/qa-auth.js"></script>
+</body>
+</html>
