@@ -98,6 +98,110 @@ function assetPath(path) {
   return `${getAssetRoot()}${path}`;
 }
 
+const PRODIP_THEME_STORAGE_KEY = 'prodipdata-theme';
+const PRODIP_THEME_MODES = Object.freeze(['auto', 'light', 'dark']);
+
+applyStoredThemePreference();
+
+function normalizeThemeMode(value) {
+  return PRODIP_THEME_MODES.includes(value) ? value : 'auto';
+}
+
+function readStoredThemeMode() {
+  try {
+    return normalizeThemeMode(window.localStorage.getItem(PRODIP_THEME_STORAGE_KEY));
+  } catch (err) {
+    return 'auto';
+  }
+}
+
+function writeStoredThemeMode(mode) {
+  const normalized = normalizeThemeMode(mode);
+
+  try {
+    if (normalized === 'auto') {
+      window.localStorage.removeItem(PRODIP_THEME_STORAGE_KEY);
+    } else {
+      window.localStorage.setItem(PRODIP_THEME_STORAGE_KEY, normalized);
+    }
+  } catch (err) {
+    // Storage may be unavailable in private or restricted browsing contexts.
+  }
+
+  return normalized;
+}
+
+function applyThemeMode(mode) {
+  const normalized = normalizeThemeMode(mode);
+  const root = document.documentElement;
+
+  if (normalized === 'auto') {
+    root.removeAttribute('data-theme');
+  } else {
+    root.setAttribute('data-theme', normalized);
+  }
+
+  root.setAttribute('data-theme-preference', normalized);
+
+  return normalized;
+}
+
+function applyStoredThemePreference() {
+  applyThemeMode(readStoredThemeMode());
+}
+
+function setThemePreference(mode) {
+  const normalized = writeStoredThemeMode(mode);
+  applyThemeMode(normalized);
+  synchronizeThemeControls(normalized);
+}
+
+function synchronizeThemeControls(mode) {
+  const normalized = normalizeThemeMode(mode);
+
+  document.querySelectorAll('[data-theme-select]').forEach(select => {
+    select.value = normalized;
+  });
+}
+
+function buildThemeControl(idSuffix, extraClass = '') {
+  const control = document.createElement('div');
+  control.className = `theme-control${extraClass ? ` ${extraClass}` : ''}`;
+  control.setAttribute('data-theme-control', '');
+
+  const selectId = `site-theme-${idSuffix}`;
+  control.innerHTML = `
+    <label class="theme-control-label" for="${selectId}">Theme</label>
+    <select class="theme-control-select" id="${selectId}" data-theme-select aria-label="Site theme">
+      <option value="auto">Auto</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  `;
+
+  const select = control.querySelector('[data-theme-select]');
+  select.value = readStoredThemeMode();
+  select.addEventListener('change', () => setThemePreference(select.value));
+
+  return control;
+}
+
+function initializeThemeControls() {
+  const headerCta = document.querySelector('.header-cta');
+  if (headerCta && !headerCta.querySelector('[data-theme-control]')) {
+    headerCta.insertBefore(buildThemeControl('desktop'), headerCta.firstChild);
+  }
+
+  const mobileNav = document.querySelector('[data-mobile-nav]');
+  if (mobileNav && !mobileNav.querySelector('[data-theme-control]')) {
+    mobileNav.appendChild(buildThemeControl('mobile', 'mobile-theme-control'));
+  }
+
+  synchronizeThemeControls(readStoredThemeMode());
+}
+
+
+
 document.addEventListener('DOMContentLoaded', async () => {
   const rawPage = document.body.dataset.page || '';
   const currentPage = rawPage === 'downloads-hub' ? 'downloads' : rawPage;
@@ -108,6 +212,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       link.classList.add('active');
     }
   });
+
+  initializeThemeControls();
 
   const mobileToggle = document.querySelector('[data-menu-toggle]');
   const mobileNav = document.querySelector('[data-mobile-nav]');
