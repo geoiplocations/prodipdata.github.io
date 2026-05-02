@@ -5,7 +5,7 @@
     hosts: ['qa.geoiplocations.com', 'www.qa.geoiplocations.com'],
     password: 'MakePopolGreatAgain',
     storageKey: 'prodipdata.qa.auth',
-    ttlMs: 12 * 60 * 60 * 1000
+    ttlMs: 24 * 60 * 60 * 1000
   });
 
   function now() {

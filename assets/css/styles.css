@@ -2782,3 +2782,33 @@ td,
     color: #0f766e !important;
   }
 }
+
+/* QA Step 1C quick methodology light-theme repair: workflow number badges */
+:root[data-theme="light"] body[data-page="methodology"] .step-num {
+  color: #1e3a8a !important;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+  border-color: rgba(37,99,235,.36) !important;
+  box-shadow: 0 10px 22px rgba(37,99,235,.12) !important;
+  text-shadow: none !important;
+}
+
+:root[data-theme="light"] body[data-page="methodology"] .step-num::selection {
+  color: #ffffff;
+  background: #1d4ed8;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) body[data-page="methodology"] .step-num {
+    color: #1e3a8a !important;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+    border-color: rgba(37,99,235,.36) !important;
+    box-shadow: 0 10px 22px rgba(37,99,235,.12) !important;
+    text-shadow: none !important;
+  }
+
+  :root:not([data-theme="dark"]) body[data-page="methodology"] .step-num::selection {
+    color: #ffffff;
+    background: #1d4ed8;
+  }
+}
+
