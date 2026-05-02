@@ -140,8 +140,9 @@
 
     <section class="section">
       <div class="container">
-        <div class="coverage-map-layout">
-          <div class="coverage-map-panel glass">
+        <div class="coverage-dashboard-layout">
+          <div class="coverage-dashboard-main">
+          <div class="coverage-map-panel coverage-dashboard-map glass">
             <div class="section-head">
               <div>
                 <h2>Country-level registry map</h2>
@@ -186,7 +187,30 @@
             </div>
             <div class="data-note">Countries are colored by regional registry. Small territories are rendered as point markers where a simplified country border is not available in the embedded map layer.</div>
           </div>
-          <aside class="coverage-map-summary glass">
+        <div class="table-wrap coverage-footprint-table glass">
+          <div class="coverage-table-head">
+            <h3>Largest published country footprints</h3>
+            <p class="card-text">Click a row to sync it with the interactive map. The table ranks countries by published /24 footprint in the current monthly release.</p>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Country</th>
+                <th>ISO</th>
+                <th>RIR</th>
+                <th>Prefixes</th>
+                <th>IPv4 Est.</th>
+                <th>Lead ASN Share</th>
+              </tr>
+            </thead>
+            <tbody data-coverage-target>
+              <tr><td colspan="6">Coverage data will appear here from the current monthly JSON files.</td></tr>
+            </tbody>
+          </table>
+        </div>
+          </div>
+          <div class="coverage-dashboard-side">
+          <aside class="coverage-map-summary coverage-dashboard-summary glass">
             <div class="eyebrow">Country focus</div>
             <h3 data-country-map-title>Loading current release map...</h3>
             <p class="card-text" data-country-map-description>Select a country on the map to review its published footprint and registry context.</p>
@@ -231,34 +255,7 @@
             <div class="mix-card" data-country-map-country-mix></div>
             <div class="data-note" data-country-map-note>Click a country on the map to inspect its release profile.</div>
           </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid-2">
-        <div class="table-wrap glass">
-          <div class="coverage-table-head">
-            <h3>Largest published country footprints</h3>
-            <p class="card-text">Click a row to sync it with the interactive map. The table ranks countries by published /24 footprint in the current monthly release.</p>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Country</th>
-                <th>ISO</th>
-                <th>RIR</th>
-                <th>Prefixes</th>
-                <th>IPv4 Est.</th>
-                <th>Lead ASN Share</th>
-              </tr>
-            </thead>
-            <tbody data-coverage-target>
-              <tr><td colspan="6">Coverage data will appear here from the current monthly JSON files.</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="split-panel glass">
+        <div class="split-panel coverage-concentration-panel glass">
           <h3>Most concentrated countries</h3>
           <p class="card-text">
             Countries where one ASN accounts for the largest share of the published IPv4 footprint. This leaderboard only includes countries with at least 5 ASNs, so the result is not dominated by very small markets.
@@ -273,6 +270,8 @@
           <div class="kpi-bar-stack" data-coverage-rir-target></div>
           <div class="data-note" data-coverage-note-target>
             Coverage notes will appear here from the current monthly JSON files.
+          </div>
+        </div>
           </div>
         </div>
       </div>

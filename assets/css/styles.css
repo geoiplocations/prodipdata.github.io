@@ -3335,3 +3335,46 @@ body[data-page="methodology"] .step-num {
     box-shadow: none !important;
   }
 }
+
+/* QA Coverage dashboard restructuring: map and country footprint table share the left rail; summary and concentration panels share the right rail. */
+.coverage-dashboard-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, .85fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.coverage-dashboard-main,
+.coverage-dashboard-side {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  align-items: start;
+  min-width: 0;
+}
+
+.coverage-dashboard-map,
+.coverage-dashboard-summary,
+.coverage-footprint-table,
+.coverage-concentration-panel {
+  align-self: start;
+  width: 100%;
+}
+
+.coverage-dashboard-main .country-map-shell {
+  margin-bottom: 14px;
+}
+
+.coverage-footprint-table {
+  overflow-x: auto;
+}
+
+.coverage-concentration-panel .panel-subtitle {
+  margin-top: 28px;
+}
+
+@media (max-width: 1100px) {
+  .coverage-dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}
