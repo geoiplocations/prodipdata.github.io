@@ -3378,3 +3378,55 @@ body[data-page="methodology"] .step-num {
     grid-template-columns: 1fr;
   }
 }
+
+/* QA Coverage footprint table header alignment repair */
+.coverage-footprint-table {
+  overflow: hidden;
+}
+
+.coverage-footprint-table .coverage-table-head {
+  margin: 0;
+  padding: 28px 30px 18px;
+  border-bottom: 1px solid var(--theme-border);
+}
+
+.coverage-footprint-table .coverage-table-head h3 {
+  margin: 0 0 10px;
+  line-height: 1.14;
+  letter-spacing: -0.35px;
+}
+
+.coverage-footprint-table .coverage-table-head .card-text {
+  margin: 0;
+  max-width: 780px;
+}
+
+.coverage-footprint-table table {
+  margin: 0;
+}
+
+.coverage-footprint-table th:first-child,
+.coverage-footprint-table td:first-child {
+  padding-left: 30px;
+}
+
+.coverage-footprint-table th:last-child,
+.coverage-footprint-table td:last-child {
+  padding-right: 30px;
+}
+
+@media (max-width: 760px) {
+  .coverage-footprint-table .coverage-table-head {
+    padding: 24px 20px 16px;
+  }
+
+  .coverage-footprint-table th:first-child,
+  .coverage-footprint-table td:first-child {
+    padding-left: 20px;
+  }
+
+  .coverage-footprint-table th:last-child,
+  .coverage-footprint-table td:last-child {
+    padding-right: 20px;
+  }
+}
