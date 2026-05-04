@@ -201,7 +201,6 @@ function initializeThemeControls() {
 }
 
 
-
 document.addEventListener('DOMContentLoaded', async () => {
   const rawPage = document.body.dataset.page || '';
   const currentPage = rawPage === 'downloads-hub' ? 'downloads' : rawPage;
@@ -1644,6 +1643,137 @@ async function renderDownloadsPage(context) {
       <li>Expose reference catalogs through dedicated browser pages so the published rows themselves are visible on the website.</li>
     `;
   }
+
+  await renderMonthlyAsnMovementsPanel(context);
+}
+
+async function renderMonthlyAsnMovementsPanel(context = {}) {
+  const sectionNode = document.querySelector('[data-monthly-asn-movement-section]');
+  if (!sectionNode) {
+    return;
+  }
+
+  const configuredMonth = sectionNode.dataset.monthlyAsnMovementMonth || context.releaseMonth || document.body.dataset.releaseMonth || '2026-05';
+  const month = /^\d{4}-\d{2}$/.test(configuredMonth) ? configuredMonth : '2026-05';
+  const dataPath = `assets/data/monthly-delta-asn-movements-${month}.json`;
+
+  const metricsNode = document.querySelector('[data-monthly-asn-movement-metrics]');
+  const targetNode = document.querySelector('[data-monthly-asn-movement-target]');
+  const statusNode = document.querySelector('[data-monthly-asn-movement-status]');
+  const monthLabelNode = document.querySelector('[data-monthly-asn-movement-month-label]');
+
+  if (monthLabelNode) {
+    monthLabelNode.textContent = month;
+  }
+
+  try {
+    const payload = await fetchJson(assetPath(dataPath));
+    const rows = getItems(payload)
+      .map(normalizeAsnMovementRow)
+      .filter(row => row.prefixesMoved > 0)
+      .sort((a, b) => b.prefixesMoved - a.prefixesMoved || a.fromAsn.localeCompare(b.fromAsn) || a.toAsn.localeCompare(b.toAsn));
+
+    renderAsnMovementMetrics(metricsNode, rows);
+    renderAsnMovementRows(targetNode, rows, month);
+
+    if (statusNode) {
+      statusNode.textContent = rows.length ? `${formatInteger(rows.length)} grouped movements` : 'No movement rows';
+      statusNode.className = rows.length ? 'badge success' : 'badge warning';
+    }
+  } catch (err) {
+    console.warn(`Monthly ASN movement data could not be loaded for ${month}.`, err);
+    renderAsnMovementMetrics(metricsNode, []);
+
+    if (targetNode) {
+      targetNode.innerHTML = renderSimpleEmptyState(
+        'ASN movement JSON is not published yet',
+        `Run tools/Export-MonthlyDeltaAsnMovementsJson.ps1 for ${month}, then publish ${dataPath}.`
+      );
+    }
+
+    if (statusNode) {
+      statusNode.textContent = 'JSON not published yet';
+      statusNode.className = 'badge warning';
+    }
+  }
+}
+
+function renderAsnMovementRows(targetNode, rows, month) {
+  if (!targetNode) {
+    return;
+  }
+
+  targetNode.innerHTML = rows.length
+    ? rows.slice(0, 10).map(row => `
+      <div class="list-row list-row-actions">
+        <div>
+          <strong>${escapeHtml(row.fromAsn)} → ${escapeHtml(row.toAsn)}</strong>
+          <small>${escapeHtml(row.firstIp || 'n/a')} to ${escapeHtml(row.lastIp || 'n/a')} · ${formatCompact(row.ipv4AddressesMoved)} IPv4 addresses moved</small>
+        </div>
+        <div class="list-metric">
+          <strong>${formatInteger(row.prefixesMoved)}</strong>
+          <small>/24 prefixes moved</small>
+        </div>
+      </div>
+    `).join('')
+    : renderSimpleEmptyState('No ASN movements found', `No grouped ASN prefix movements were published for ${month}.`);
+}
+
+function renderAsnMovementMetrics(metricsNode, rows) {
+  if (!metricsNode) {
+    return;
+  }
+
+  const totalMovements = rows.length;
+  const totalPrefixes = rows.reduce((sum, row) => sum + numericValue(row.prefixesMoved), 0);
+  const totalIpv4 = rows.reduce((sum, row) => sum + numericValue(row.ipv4AddressesMoved), 0);
+  const largest = rows[0] || null;
+
+  metricsNode.innerHTML = `
+    <div class="metric-card glass">
+      <div class="muted">ASN movements</div>
+      <div class="metric-value">${formatInteger(totalMovements)}</div>
+      <div class="card-text">Distinct directional From ASN → To ASN transitions in the monthly ASN delta.</div>
+    </div>
+    <div class="metric-card glass">
+      <div class="muted">Prefixes moved</div>
+      <div class="metric-value">${formatInteger(totalPrefixes)}</div>
+      <div class="card-text">Aggregated /24 prefixes moved across all grouped ASN transitions.</div>
+    </div>
+    <div class="metric-card glass">
+      <div class="muted">IPv4 addresses moved</div>
+      <div class="metric-value">${formatCompact(totalIpv4)}</div>
+      <div class="card-text">Estimated IPv4 footprint represented by moved /24 prefixes.</div>
+    </div>
+    <div class="metric-card glass">
+      <div class="muted">Largest movement</div>
+      <div class="metric-value">${largest ? formatInteger(largest.prefixesMoved) : '0'}</div>
+      <div class="card-text">${largest ? `${escapeHtml(largest.fromAsn)} → ${escapeHtml(largest.toAsn)}` : 'No grouped movement data is available yet.'}</div>
+    </div>
+  `;
+}
+
+function normalizeAsnMovementRow(item) {
+  const fromAsn = item.from_asn || item.fromAsn || item.prior || 'n/a';
+  const toAsn = item.to_asn || item.toAsn || item.current || 'n/a';
+  const prefixesMoved = numericValue(item.prefixes_moved ?? item.prefixesMoved ?? item.prefixCount ?? item.count);
+  const ipv4AddressesMoved = numericValue(item.ipv4_addresses_moved ?? item.ipv4AddressesMoved) || prefixesMoved * 256;
+
+  return {
+    snapshot: item.snapshot || item.snapshotMonth || '',
+    fromAsnId: item.from_asn_id ?? item.fromAsnId ?? null,
+    fromAsn,
+    toAsnId: item.to_asn_id ?? item.toAsnId ?? null,
+    toAsn,
+    prefixesMoved,
+    ipv4AddressesMoved,
+    firstIpnumeric: item.first_ipnumeric ?? item.firstIpnumeric ?? null,
+    firstIp: item.first_ip || item.firstIp || '',
+    lastIpnumeric: item.last_ipnumeric ?? item.lastIpnumeric ?? null,
+    lastIp: item.last_ip || item.lastIp || '',
+    movement: item.movement || `${fromAsn} -> ${toAsn}`,
+    movementSummary: item.movement_summary || item.movementSummary || ''
+  };
 }
 
 async function renderReferencePage(context) {
