@@ -14,7 +14,7 @@
         {
           "format": "CSV",
           "status": "available",
-          "packageRows": 251,
+          "packageRows": 252,
           "indexPage": "/downloads-csv-2026-09.html",
           "storagePath": "Export/release_2026-09/CSV/",
           "passwordLocation": "Request by email: contact@prodipdata.com"
@@ -22,7 +22,7 @@
         {
           "format": "Parquet",
           "status": "available",
-          "packageRows": 251,
+          "packageRows": 252,
           "indexPage": "/downloads-parquet-2026-09.html",
           "storagePath": "Export/release_2026-09/PARQUET/",
           "passwordLocation": "Request by email: contact@prodipdata.com"
