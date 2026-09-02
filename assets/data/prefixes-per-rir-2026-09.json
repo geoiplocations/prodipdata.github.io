@@ -8,7 +8,7 @@
   },
   {
     "rir": "apnic",
-    "countryCount": 147,
+    "countryCount": 148,
     "asnCount": 16769,
     "prefixCount": 3485640,
     "ipv4Count": 892323840
@@ -29,7 +29,7 @@
   },
   {
     "rir": "ripe",
-    "countryCount": 232,
+    "countryCount": 233,
     "asnCount": 32011,
     "prefixCount": 3342135,
     "ipv4Count": 855586560

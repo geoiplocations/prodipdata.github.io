@@ -1,41 +1,41 @@
 {
   "snapshotMonth": "2026-09",
-  "generatedUtc": "2026-09-02T06:20:24Z",
+  "generatedUtc": "2026-09-02T08:05:01Z",
   "source": "ProdIP Parquet pipeline (GOLD + ASN dimension)",
   "items": [
     {
       "rir": "ripe",
       "business": 21166,
       "education": 424,
-      "hosting": 2052,
-      "isp": 6812,
+      "hosting": 2054,
+      "isp": 6810,
       "government": 56,
       "total": 30510
     },
     {
       "rir": "arin",
-      "business": 16431,
-      "education": 612,
+      "business": 16433,
+      "education": 611,
       "hosting": 961,
-      "isp": 2368,
+      "isp": 2366,
       "government": 69,
-      "total": 20441
+      "total": 20440
     },
     {
       "rir": "apnic",
-      "business": 10806,
+      "business": 10808,
       "education": 229,
-      "hosting": 684,
+      "hosting": 683,
       "isp": 4466,
       "government": 53,
-      "total": 16238
+      "total": 16239
     },
     {
       "rir": "lacnic",
-      "business": 4559,
-      "education": 98,
+      "business": 4560,
+      "education": 99,
       "hosting": 254,
-      "isp": 6568,
+      "isp": 6566,
       "government": 106,
       "total": 11585
     },

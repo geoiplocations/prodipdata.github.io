@@ -1,13 +1,46 @@
 {
-  "currentRelease": "2026-08",
-  "generatedOn": "2026-08-05",
+  "currentRelease": "2026-09",
+  "generatedOn": "2026-09-02",
   "storageRepository": "https://github.com/ProdIPData/ProdIP_Files",
   "repositoryBranch": "main",
   "governanceNote": "Monthly release artifacts are stored permanently under ProdIP_Files/Export/release_YYYY-MM/. The website repository is the catalog/navigation layer.",
   "releases": [
     {
-      "releaseMonth": "2026-08",
+      "releaseMonth": "2026-09",
       "status": "current",
+      "releasePage": "/releases/2026-09/index.html",
+      "snapshotMonth": "2026-09",
+      "formats": [
+        {
+          "format": "CSV",
+          "status": "available",
+          "packageRows": 251,
+          "indexPage": "/downloads-csv-2026-09.html",
+          "storagePath": "Export/release_2026-09/CSV/",
+          "passwordLocation": "Request by email: contact@prodipdata.com"
+        },
+        {
+          "format": "Parquet",
+          "status": "available",
+          "packageRows": 251,
+          "indexPage": "/downloads-parquet-2026-09.html",
+          "storagePath": "Export/release_2026-09/PARQUET/",
+          "passwordLocation": "Request by email: contact@prodipdata.com"
+        },
+        {
+          "format": "MMDB",
+          "status": "available",
+          "packageRows": 1,
+          "indexPage": "/downloads-mmdb-2026-09.html",
+          "storagePath": "GitHub Release prodip-2026-09 (single global asset)",
+          "passwordLocation": "Request by email: contact@prodipdata.com"
+        }
+      ],
+      "machineReadableInventory": "/assets/data/release-2026-09-package-inventory.json"
+    },
+    {
+      "releaseMonth": "2026-08",
+      "status": "archived",
       "releasePage": "/releases/2026-08/index.html",
       "snapshotMonth": "2026-08",
       "formats": [
