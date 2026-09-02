@@ -1,0 +1,2477 @@
+{
+  "snapshotMonth": "2026-09",
+  "generatedUtc": "2026-09-02T06:20:24Z",
+  "source": "ProdIP Parquet pipeline (GOLD + ASN dimension)",
+  "items": [
+    {
+      "iso2": "US",
+      "countryName": "United States",
+      "rir": "arin",
+      "prefixCount": 8709604,
+      "ipv4Count": 2229658624,
+      "asnCount": 19076,
+      "population": 327167434,
+      "prefixesPerMillionPeople": 26621.2437
+    },
+    {
+      "iso2": "CN",
+      "countryName": "China",
+      "rir": "apnic",
+      "prefixCount": 1162408,
+      "ipv4Count": 297576448,
+      "asnCount": 680,
+      "population": 1411778724,
+      "prefixesPerMillionPeople": 823.3642
+    },
+    {
+      "iso2": "JP",
+      "countryName": "Japan",
+      "rir": "apnic",
+      "prefixCount": 621157,
+      "ipv4Count": 159016192,
+      "asnCount": 735,
+      "population": 126529100,
+      "prefixesPerMillionPeople": 4909.2027
+    },
+    {
+      "iso2": "DE",
+      "countryName": "Germany",
+      "rir": "ripe",
+      "prefixCount": 510044,
+      "ipv4Count": 130571264,
+      "asnCount": 2329,
+      "population": 82927922,
+      "prefixesPerMillionPeople": 6150.4495
+    },
+    {
+      "iso2": "GB",
+      "countryName": "United Kingdom",
+      "rir": "ripe",
+      "prefixCount": 493060,
+      "ipv4Count": 126223360,
+      "asnCount": 2117,
+      "population": 66488991,
+      "prefixesPerMillionPeople": 7415.6637
+    },
+    {
+      "iso2": "KR",
+      "countryName": "South Korea",
+      "rir": "apnic",
+      "prefixCount": 353236,
+      "ipv4Count": 90428416,
+      "asnCount": 859,
+      "population": 51635256,
+      "prefixesPerMillionPeople": 6840.9848
+    },
+    {
+      "iso2": "BR",
+      "countryName": "Brazil",
+      "rir": "lacnic",
+      "prefixCount": 335189,
+      "ipv4Count": 85808384,
+      "asnCount": 7968,
+      "population": 209469333,
+      "prefixesPerMillionPeople": 1600.1817
+    },
+    {
+      "iso2": "FR",
+      "countryName": "France",
+      "rir": "ripe",
+      "prefixCount": 316058,
+      "ipv4Count": 80910848,
+      "asnCount": 1381,
+      "population": 66987244,
+      "prefixesPerMillionPeople": 4718.1819
+    },
+    {
+      "iso2": "CA",
+      "countryName": "Canada",
+      "rir": "arin",
+      "prefixCount": 264425,
+      "ipv4Count": 67692800,
+      "asnCount": 1635,
+      "population": 37058856,
+      "prefixesPerMillionPeople": 7135.2715
+    },
+    {
+      "iso2": "IT",
+      "countryName": "Italy",
+      "rir": "ripe",
+      "prefixCount": 215132,
+      "ipv4Count": 55073792,
+      "asnCount": 1084,
+      "population": 60431283,
+      "prefixesPerMillionPeople": 3559.9443
+    },
+    {
+      "iso2": "AU",
+      "countryName": "Australia",
+      "rir": "apnic",
+      "prefixCount": 208792,
+      "ipv4Count": 53450752,
+      "asnCount": 1725,
+      "population": 24992369,
+      "prefixesPerMillionPeople": 8354.23
+    },
+    {
+      "iso2": "NL",
+      "countryName": "The Netherlands",
+      "rir": "ripe",
+      "prefixCount": 200151,
+      "ipv4Count": 51238656,
+      "asnCount": 1049,
+      "population": 17231017,
+      "prefixesPerMillionPeople": 11615.7392
+    },
+    {
+      "iso2": "IN",
+      "countryName": "India",
+      "rir": "apnic",
+      "prefixCount": 184028,
+      "ipv4Count": 47111168,
+      "asnCount": 3076,
+      "population": 1352617328,
+      "prefixesPerMillionPeople": 136.0533
+    },
+    {
+      "iso2": "RU",
+      "countryName": "Russia",
+      "rir": "ripe",
+      "prefixCount": 166485,
+      "ipv4Count": 42620160,
+      "asnCount": 4990,
+      "population": 144478050,
+      "prefixesPerMillionPeople": 1152.3204
+    },
+    {
+      "iso2": "ES",
+      "countryName": "Spain",
+      "rir": "ripe",
+      "prefixCount": 129540,
+      "ipv4Count": 33162240,
+      "asnCount": 949,
+      "population": 46723749,
+      "prefixesPerMillionPeople": 2772.4659
+    },
+    {
+      "iso2": "MX",
+      "countryName": "Mexico",
+      "rir": "lacnic",
+      "prefixCount": 121580,
+      "ipv4Count": 31124480,
+      "asnCount": 492,
+      "population": 126190788,
+      "prefixesPerMillionPeople": 963.4618
+    },
+    {
+      "iso2": "TW",
+      "countryName": "Taiwan",
+      "rir": "apnic",
+      "prefixCount": 119490,
+      "ipv4Count": 30589440,
+      "asnCount": 270,
+      "population": 23451837,
+      "prefixesPerMillionPeople": 5095.1233
+    },
+    {
+      "iso2": "SE",
+      "countryName": "Sweden",
+      "rir": "ripe",
+      "prefixCount": 117918,
+      "ipv4Count": 30187008,
+      "asnCount": 624,
+      "population": 10183175,
+      "prefixesPerMillionPeople": 11579.689
+    },
+    {
+      "iso2": "ZA",
+      "countryName": "South Africa",
+      "rir": "afrinic",
+      "prefixCount": 117465,
+      "ipv4Count": 30071040,
+      "asnCount": 657,
+      "population": 57779622,
+      "prefixesPerMillionPeople": 2032.9832
+    },
+    {
+      "iso2": "SG",
+      "countryName": "Singapore",
+      "rir": "apnic",
+      "prefixCount": 105837,
+      "ipv4Count": 27094272,
+      "asnCount": 466,
+      "population": 5638676,
+      "prefixesPerMillionPeople": 18769.8318
+    },
+    {
+      "iso2": "CH",
+      "countryName": "Switzerland",
+      "rir": "ripe",
+      "prefixCount": 93444,
+      "ipv4Count": 23921664,
+      "asnCount": 760,
+      "population": 8516543,
+      "prefixesPerMillionPeople": 10972.0576
+    },
+    {
+      "iso2": "EG",
+      "countryName": "Egypt",
+      "rir": "afrinic",
+      "prefixCount": 93231,
+      "ipv4Count": 23867136,
+      "asnCount": 72,
+      "population": 98423595,
+      "prefixesPerMillionPeople": 947.2424
+    },
+    {
+      "iso2": "ID",
+      "countryName": "Indonesia",
+      "rir": "apnic",
+      "prefixCount": 83823,
+      "ipv4Count": 21458688,
+      "asnCount": 2955,
+      "population": 267663435,
+      "prefixesPerMillionPeople": 313.1657
+    },
+    {
+      "iso2": "HK",
+      "countryName": "Hong Kong",
+      "rir": "apnic",
+      "prefixCount": 82710,
+      "ipv4Count": 21173760,
+      "asnCount": 772,
+      "population": 7396076,
+      "prefixesPerMillionPeople": 11182.957
+    },
+    {
+      "iso2": "PL",
+      "countryName": "Poland",
+      "rir": "ripe",
+      "prefixCount": 76556,
+      "ipv4Count": 19598336,
+      "asnCount": 2122,
+      "population": 37978548,
+      "prefixesPerMillionPeople": 2015.7695
+    },
+    {
+      "iso2": "AR",
+      "countryName": "Argentina",
+      "rir": "lacnic",
+      "prefixCount": 76357,
+      "ipv4Count": 19547392,
+      "asnCount": 1088,
+      "population": 44494502,
+      "prefixesPerMillionPeople": 1716.0997
+    },
+    {
+      "iso2": "IE",
+      "countryName": "Ireland",
+      "rir": "ripe",
+      "prefixCount": 72519,
+      "ipv4Count": 18564864,
+      "asnCount": 196,
+      "population": 4853506,
+      "prefixesPerMillionPeople": 14941.5701
+    },
+    {
+      "iso2": "CO",
+      "countryName": "Colombia",
+      "rir": "lacnic",
+      "prefixCount": 70031,
+      "ipv4Count": 17927936,
+      "asnCount": 342,
+      "population": 49648685,
+      "prefixesPerMillionPeople": 1410.5308
+    },
+    {
+      "iso2": "VN",
+      "countryName": "Vietnam",
+      "rir": "apnic",
+      "prefixCount": 63905,
+      "ipv4Count": 16359680,
+      "asnCount": 569,
+      "population": 95540395,
+      "prefixesPerMillionPeople": 668.8794
+    },
+    {
+      "iso2": "TR",
+      "countryName": "Turkey",
+      "rir": "ripe",
+      "prefixCount": 63443,
+      "ipv4Count": 16241408,
+      "asnCount": 841,
+      "population": 82319724,
+      "prefixesPerMillionPeople": 770.6901
+    },
+    {
+      "iso2": "NO",
+      "countryName": "Norway",
+      "rir": "ripe",
+      "prefixCount": 61767,
+      "ipv4Count": 15812352,
+      "asnCount": 287,
+      "population": 5314336,
+      "prefixesPerMillionPeople": 11622.7126
+    },
+    {
+      "iso2": "FI",
+      "countryName": "Finland",
+      "rir": "ripe",
+      "prefixCount": 55163,
+      "ipv4Count": 14121728,
+      "asnCount": 291,
+      "population": 5518050,
+      "prefixesPerMillionPeople": 9996.8286
+    },
+    {
+      "iso2": "BE",
+      "countryName": "Belgium",
+      "rir": "ripe",
+      "prefixCount": 52520,
+      "ipv4Count": 13445120,
+      "asnCount": 276,
+      "population": 11422068,
+      "prefixesPerMillionPeople": 4598.1166
+    },
+    {
+      "iso2": "MA",
+      "countryName": "Morocco",
+      "rir": "afrinic",
+      "prefixCount": 47981,
+      "ipv4Count": 12283136,
+      "asnCount": 29,
+      "population": 36029138,
+      "prefixesPerMillionPeople": 1331.7277
+    },
+    {
+      "iso2": "DK",
+      "countryName": "Denmark",
+      "rir": "ripe",
+      "prefixCount": 47411,
+      "ipv4Count": 12137216,
+      "asnCount": 337,
+      "population": 5797446,
+      "prefixesPerMillionPeople": 8177.9114
+    },
+    {
+      "iso2": "SA",
+      "countryName": "Saudi Arabia",
+      "rir": "ripe",
+      "prefixCount": 46748,
+      "ipv4Count": 11967488,
+      "asnCount": 163,
+      "population": 33699947,
+      "prefixesPerMillionPeople": 1387.1832
+    },
+    {
+      "iso2": "CL",
+      "countryName": "Chile",
+      "rir": "lacnic",
+      "prefixCount": 41877,
+      "ipv4Count": 10720512,
+      "asnCount": 321,
+      "population": 18729160,
+      "prefixesPerMillionPeople": 2235.9252
+    },
+    {
+      "iso2": "IR",
+      "countryName": "Iran",
+      "rir": "ripe",
+      "prefixCount": 41662,
+      "ipv4Count": 10665472,
+      "asnCount": 609,
+      "population": 81800269,
+      "prefixesPerMillionPeople": 509.3137
+    },
+    {
+      "iso2": "AT",
+      "countryName": "Austria",
+      "rir": "ripe",
+      "prefixCount": 41318,
+      "ipv4Count": 10577408,
+      "asnCount": 619,
+      "population": 8847037,
+      "prefixesPerMillionPeople": 4670.2642
+    },
+    {
+      "iso2": "TH",
+      "countryName": "Thailand",
+      "rir": "apnic",
+      "prefixCount": 41160,
+      "ipv4Count": 10536960,
+      "asnCount": 501,
+      "population": 69428524,
+      "prefixesPerMillionPeople": 592.8399
+    },
+    {
+      "iso2": "IL",
+      "countryName": "Israel",
+      "rir": "ripe",
+      "prefixCount": 34907,
+      "ipv4Count": 8936192,
+      "asnCount": 309,
+      "population": 8883800,
+      "prefixesPerMillionPeople": 3929.287
+    },
+    {
+      "iso2": "UA",
+      "countryName": "Ukraine",
+      "rir": "ripe",
+      "prefixCount": 34200,
+      "ipv4Count": 8755200,
+      "asnCount": 1574,
+      "population": 44622516,
+      "prefixesPerMillionPeople": 766.4292
+    },
+    {
+      "iso2": "MY",
+      "countryName": "Malaysia",
+      "rir": "apnic",
+      "prefixCount": 31344,
+      "ipv4Count": 8024064,
+      "asnCount": 290,
+      "population": 31528585,
+      "prefixesPerMillionPeople": 994.1455
+    },
+    {
+      "iso2": "CZ",
+      "countryName": "Czechia",
+      "rir": "ripe",
+      "prefixCount": 31329,
+      "ipv4Count": 8020224,
+      "asnCount": 580,
+      "population": 10625695,
+      "prefixesPerMillionPeople": 2948.4189
+    },
+    {
+      "iso2": "TN",
+      "countryName": "Tunisia",
+      "rir": "afrinic",
+      "prefixCount": 30764,
+      "ipv4Count": 7875584,
+      "asnCount": 25,
+      "population": 11565204,
+      "prefixesPerMillionPeople": 2660.0482
+    },
+    {
+      "iso2": "VE",
+      "countryName": "Venezuela",
+      "rir": "lacnic",
+      "prefixCount": 30334,
+      "ipv4Count": 7765504,
+      "asnCount": 203,
+      "population": 28870195,
+      "prefixesPerMillionPeople": 1050.703
+    },
+    {
+      "iso2": "RO",
+      "countryName": "Romania",
+      "rir": "ripe",
+      "prefixCount": 27794,
+      "ipv4Count": 7115264,
+      "asnCount": 948,
+      "population": 19473936,
+      "prefixesPerMillionPeople": 1427.241
+    },
+    {
+      "iso2": "NZ",
+      "countryName": "New Zealand",
+      "rir": "apnic",
+      "prefixCount": 26588,
+      "ipv4Count": 6806528,
+      "asnCount": 425,
+      "population": 4885500,
+      "prefixesPerMillionPeople": 5442.227
+    },
+    {
+      "iso2": "PH",
+      "countryName": "Philippines",
+      "rir": "apnic",
+      "prefixCount": 25235,
+      "ipv4Count": 6460160,
+      "asnCount": 494,
+      "population": 106651922,
+      "prefixesPerMillionPeople": 236.6108
+    },
+    {
+      "iso2": "PT",
+      "countryName": "Portugal",
+      "rir": "ripe",
+      "prefixCount": 25180,
+      "ipv4Count": 6446080,
+      "asnCount": 128,
+      "population": 10281762,
+      "prefixesPerMillionPeople": 2448.9966
+    },
+    {
+      "iso2": "KE",
+      "countryName": "Kenya",
+      "rir": "afrinic",
+      "prefixCount": 24989,
+      "ipv4Count": 6397184,
+      "asnCount": 220,
+      "population": 51393010,
+      "prefixesPerMillionPeople": 486.2334
+    },
+    {
+      "iso2": "AE",
+      "countryName": "United Arab Emirates",
+      "rir": "ripe",
+      "prefixCount": 24737,
+      "ipv4Count": 6332672,
+      "asnCount": 156,
+      "population": 9630959,
+      "prefixesPerMillionPeople": 2568.4877
+    },
+    {
+      "iso2": "MU",
+      "countryName": "Mauritius",
+      "rir": "afrinic",
+      "prefixCount": 24349,
+      "ipv4Count": 6233344,
+      "asnCount": 45,
+      "population": 1265303,
+      "prefixesPerMillionPeople": 19243.612
+    },
+    {
+      "iso2": "PK",
+      "countryName": "Pakistan",
+      "rir": "apnic",
+      "prefixCount": 22673,
+      "ipv4Count": 5804288,
+      "asnCount": 311,
+      "population": 212215030,
+      "prefixesPerMillionPeople": 106.8397
+    },
+    {
+      "iso2": "GR",
+      "countryName": "Greece",
+      "rir": "ripe",
+      "prefixCount": 22346,
+      "ipv4Count": 5720576,
+      "asnCount": 228,
+      "population": 10727668,
+      "prefixesPerMillionPeople": 2083.0249
+    },
+    {
+      "iso2": "HU",
+      "countryName": "Hungary",
+      "rir": "ripe",
+      "prefixCount": 22273,
+      "ipv4Count": 5701888,
+      "asnCount": 240,
+      "population": 9768785,
+      "prefixesPerMillionPeople": 2280.0174
+    },
+    {
+      "iso2": "DZ",
+      "countryName": "Algeria",
+      "rir": "afrinic",
+      "prefixCount": 18686,
+      "ipv4Count": 4783616,
+      "asnCount": 11,
+      "population": 42228429,
+      "prefixesPerMillionPeople": 442.4981
+    },
+    {
+      "iso2": "BG",
+      "countryName": "Bulgaria",
+      "rir": "ripe",
+      "prefixCount": 15238,
+      "ipv4Count": 3900928,
+      "asnCount": 670,
+      "population": 7000039,
+      "prefixesPerMillionPeople": 2176.845
+    },
+    {
+      "iso2": "PE",
+      "countryName": "Peru",
+      "rir": "lacnic",
+      "prefixCount": 14470,
+      "ipv4Count": 3704320,
+      "asnCount": 174,
+      "population": 31989256,
+      "prefixesPerMillionPeople": 452.3394
+    },
+    {
+      "iso2": "KZ",
+      "countryName": "Kazakhstan",
+      "rir": "ripe",
+      "prefixCount": 13251,
+      "ipv4Count": 3392256,
+      "asnCount": 221,
+      "population": 18276499,
+      "prefixesPerMillionPeople": 725.0294
+    },
+    {
+      "iso2": "NG",
+      "countryName": "Nigeria",
+      "rir": "afrinic",
+      "prefixCount": 12775,
+      "ipv4Count": 3270400,
+      "asnCount": 232,
+      "population": 195874740,
+      "prefixesPerMillionPeople": 65.2203
+    },
+    {
+      "iso2": "EC",
+      "countryName": "Ecuador",
+      "rir": "lacnic",
+      "prefixCount": 11294,
+      "ipv4Count": 2891264,
+      "asnCount": 194,
+      "population": 17084357,
+      "prefixesPerMillionPeople": 661.0726
+    },
+    {
+      "iso2": "LT",
+      "countryName": "Lithuania",
+      "rir": "ripe",
+      "prefixCount": 11154,
+      "ipv4Count": 2855424,
+      "asnCount": 175,
+      "population": 2789533,
+      "prefixesPerMillionPeople": 3998.5187
+    },
+    {
+      "iso2": "UY",
+      "countryName": "Uruguay",
+      "rir": "lacnic",
+      "prefixCount": 10432,
+      "ipv4Count": 2670592,
+      "asnCount": 32,
+      "population": 3449299,
+      "prefixesPerMillionPeople": 3024.3826
+    },
+    {
+      "iso2": "SK",
+      "countryName": "Slovakia",
+      "rir": "ripe",
+      "prefixCount": 10257,
+      "ipv4Count": 2625792,
+      "asnCount": 192,
+      "population": 5447011,
+      "prefixesPerMillionPeople": 1883.0511
+    },
+    {
+      "iso2": "SI",
+      "countryName": "Slovenia",
+      "rir": "ripe",
+      "prefixCount": 9458,
+      "ipv4Count": 2421248,
+      "asnCount": 263,
+      "population": 2067372,
+      "prefixesPerMillionPeople": 4574.8902
+    },
+    {
+      "iso2": "HR",
+      "countryName": "Croatia",
+      "rir": "ripe",
+      "prefixCount": 9305,
+      "ipv4Count": 2382080,
+      "asnCount": 151,
+      "population": 3871833,
+      "prefixesPerMillionPeople": 2403.2545
+    },
+    {
+      "iso2": "CR",
+      "countryName": "Costa Rica",
+      "rir": "lacnic",
+      "prefixCount": 9147,
+      "ipv4Count": 2341632,
+      "asnCount": 82,
+      "population": 4999441,
+      "prefixesPerMillionPeople": 1829.6045
+    },
+    {
+      "iso2": "GH",
+      "countryName": "Ghana",
+      "rir": "afrinic",
+      "prefixCount": 8883,
+      "ipv4Count": 2274048,
+      "asnCount": 94,
+      "population": 29767108,
+      "prefixesPerMillionPeople": 298.4166
+    },
+    {
+      "iso2": "RS",
+      "countryName": "Serbia",
+      "rir": "ripe",
+      "prefixCount": 8394,
+      "ipv4Count": 2148864,
+      "asnCount": 166,
+      "population": 6982084,
+      "prefixesPerMillionPeople": 1202.2199
+    },
+    {
+      "iso2": "BD",
+      "countryName": "Bangladesh",
+      "rir": "apnic",
+      "prefixCount": 8102,
+      "ipv4Count": 2074112,
+      "asnCount": 1580,
+      "population": 161356039,
+      "prefixesPerMillionPeople": 50.2119
+    },
+    {
+      "iso2": "DO",
+      "countryName": "Dominican Republic",
+      "rir": "lacnic",
+      "prefixCount": 8061,
+      "ipv4Count": 2063616,
+      "asnCount": 192,
+      "population": 10627165,
+      "prefixesPerMillionPeople": 758.5278
+    },
+    {
+      "iso2": "LV",
+      "countryName": "Latvia",
+      "rir": "ripe",
+      "prefixCount": 7754,
+      "ipv4Count": 1985024,
+      "asnCount": 256,
+      "population": 1926542,
+      "prefixesPerMillionPeople": 4024.8279
+    },
+    {
+      "iso2": "KW",
+      "countryName": "Kuwait",
+      "rir": "ripe",
+      "prefixCount": 7421,
+      "ipv4Count": 1899776,
+      "asnCount": 74,
+      "population": 4137309,
+      "prefixesPerMillionPeople": 1793.678
+    },
+    {
+      "iso2": "SD",
+      "countryName": "Sudan",
+      "rir": "afrinic",
+      "prefixCount": 7388,
+      "ipv4Count": 1891328,
+      "asnCount": 9,
+      "population": 41801533,
+      "prefixesPerMillionPeople": 176.7399
+    },
+    {
+      "iso2": "BY",
+      "countryName": "Belarus",
+      "rir": "ripe",
+      "prefixCount": 7304,
+      "ipv4Count": 1869824,
+      "asnCount": 106,
+      "population": 9485386,
+      "prefixesPerMillionPeople": 770.0266
+    },
+    {
+      "iso2": "PA",
+      "countryName": "Panama",
+      "rir": "lacnic",
+      "prefixCount": 7192,
+      "ipv4Count": 1841152,
+      "asnCount": 102,
+      "population": 4176873,
+      "prefixesPerMillionPeople": 1721.8623
+    },
+    {
+      "iso2": "CI",
+      "countryName": "Ivory Coast",
+      "rir": "afrinic",
+      "prefixCount": 6898,
+      "ipv4Count": 1765888,
+      "asnCount": 18,
+      "population": 25069229,
+      "prefixesPerMillionPeople": 275.158
+    },
+    {
+      "iso2": "ZM",
+      "countryName": "Zambia",
+      "rir": "afrinic",
+      "prefixCount": 6498,
+      "ipv4Count": 1663488,
+      "asnCount": 19,
+      "population": 17351822,
+      "prefixesPerMillionPeople": 374.4852
+    },
+    {
+      "iso2": "LU",
+      "countryName": "Luxembourg",
+      "rir": "ripe",
+      "prefixCount": 6192,
+      "ipv4Count": 1585152,
+      "asnCount": 103,
+      "population": 607728,
+      "prefixesPerMillionPeople": 10188.7687
+    },
+    {
+      "iso2": "EE",
+      "countryName": "Estonia",
+      "rir": "ripe",
+      "prefixCount": 5776,
+      "ipv4Count": 1478656,
+      "asnCount": 183,
+      "population": 1320884,
+      "prefixesPerMillionPeople": 4372.8291
+    },
+    {
+      "iso2": "UG",
+      "countryName": "Uganda",
+      "rir": "afrinic",
+      "prefixCount": 5725,
+      "ipv4Count": 1465600,
+      "asnCount": 55,
+      "population": 42723139,
+      "prefixesPerMillionPeople": 134.0023
+    },
+    {
+      "iso2": "BH",
+      "countryName": "Bahrain",
+      "rir": "arin",
+      "prefixCount": 5174,
+      "ipv4Count": 1324544,
+      "asnCount": 17,
+      "population": 1569439,
+      "prefixesPerMillionPeople": 3296.7194
+    },
+    {
+      "iso2": "AO",
+      "countryName": "Angola",
+      "rir": "afrinic",
+      "prefixCount": 5162,
+      "ipv4Count": 1321472,
+      "asnCount": 65,
+      "population": 30809762,
+      "prefixesPerMillionPeople": 167.5443
+    },
+    {
+      "iso2": "PY",
+      "countryName": "Paraguay",
+      "rir": "lacnic",
+      "prefixCount": 5055,
+      "ipv4Count": 1294080,
+      "asnCount": 94,
+      "population": 6956071,
+      "prefixesPerMillionPeople": 726.7033
+    },
+    {
+      "iso2": "SY",
+      "countryName": "Syria",
+      "rir": "ripe",
+      "prefixCount": 5045,
+      "ipv4Count": 1291520,
+      "asnCount": 9,
+      "population": 16906283,
+      "prefixesPerMillionPeople": 298.4098
+    },
+    {
+      "iso2": "QA",
+      "countryName": "Qatar",
+      "rir": "ripe",
+      "prefixCount": 4996,
+      "ipv4Count": 1278976,
+      "asnCount": 13,
+      "population": 2781677,
+      "prefixesPerMillionPeople": 1796.0389
+    },
+    {
+      "iso2": "GE",
+      "countryName": "Georgia",
+      "rir": "ripe",
+      "prefixCount": 4902,
+      "ipv4Count": 1254912,
+      "asnCount": 152,
+      "population": 3704500,
+      "prefixesPerMillionPeople": 1323.2555
+    },
+    {
+      "iso2": "MD",
+      "countryName": "Moldova",
+      "rir": "ripe",
+      "prefixCount": 4765,
+      "ipv4Count": 1219840,
+      "asnCount": 134,
+      "population": 3545883,
+      "prefixesPerMillionPeople": 1343.812
+    },
+    {
+      "iso2": "BO",
+      "countryName": "Bolivia",
+      "rir": "lacnic",
+      "prefixCount": 4758,
+      "ipv4Count": 1218048,
+      "asnCount": 54,
+      "population": 11353142,
+      "prefixesPerMillionPeople": 419.091
+    },
+    {
+      "iso2": "TZ",
+      "countryName": "Tanzania",
+      "rir": "afrinic",
+      "prefixCount": 4545,
+      "ipv4Count": 1163520,
+      "asnCount": 105,
+      "population": 56318348,
+      "prefixesPerMillionPeople": 80.7019
+    },
+    {
+      "iso2": "PR",
+      "countryName": "Puerto Rico",
+      "rir": "arin",
+      "prefixCount": 4398,
+      "ipv4Count": 1125888,
+      "asnCount": 103,
+      "population": 3195153,
+      "prefixesPerMillionPeople": 1376.4599
+    },
+    {
+      "iso2": "OM",
+      "countryName": "Oman",
+      "rir": "ripe",
+      "prefixCount": 4268,
+      "ipv4Count": 1092608,
+      "asnCount": 16,
+      "population": 4829483,
+      "prefixesPerMillionPeople": 883.7385
+    },
+    {
+      "iso2": "CY",
+      "countryName": "Cyprus",
+      "rir": "ripe",
+      "prefixCount": 3648,
+      "ipv4Count": 933888,
+      "asnCount": 146,
+      "population": 1189265,
+      "prefixesPerMillionPeople": 3067.4408
+    },
+    {
+      "iso2": "IS",
+      "countryName": "Iceland",
+      "rir": "ripe",
+      "prefixCount": 3229,
+      "ipv4Count": 826624,
+      "asnCount": 70,
+      "population": 353574,
+      "prefixesPerMillionPeople": 9132.4588
+    },
+    {
+      "iso2": "IQ",
+      "countryName": "Iraq",
+      "rir": "ripe",
+      "prefixCount": 3214,
+      "ipv4Count": 822784,
+      "asnCount": 128,
+      "population": 38433600,
+      "prefixesPerMillionPeople": 83.6247
+    },
+    {
+      "iso2": "BA",
+      "countryName": "Bosnia and Herzegovina",
+      "rir": "ripe",
+      "prefixCount": 3051,
+      "ipv4Count": 781056,
+      "asnCount": 46,
+      "population": 3323929,
+      "prefixesPerMillionPeople": 917.8896
+    },
+    {
+      "iso2": "SC",
+      "countryName": "Seychelles",
+      "rir": "afrinic",
+      "prefixCount": 3023,
+      "ipv4Count": 773888,
+      "asnCount": 61,
+      "population": 96762,
+      "prefixesPerMillionPeople": 31241.6031
+    },
+    {
+      "iso2": "AZ",
+      "countryName": "Azerbaijan",
+      "rir": "ripe",
+      "prefixCount": 2911,
+      "ipv4Count": 745216,
+      "asnCount": 96,
+      "population": 10224900,
+      "prefixesPerMillionPeople": 284.6972
+    },
+    {
+      "iso2": "PS",
+      "countryName": "Palestinian Territory",
+      "rir": "ripe",
+      "prefixCount": 2833,
+      "ipv4Count": 725248,
+      "asnCount": 56,
+      "population": 4569087,
+      "prefixesPerMillionPeople": 620.0363
+    },
+    {
+      "iso2": "GT",
+      "countryName": "Guatemala",
+      "rir": "lacnic",
+      "prefixCount": 2820,
+      "ipv4Count": 721920,
+      "asnCount": 63,
+      "population": 17247807,
+      "prefixesPerMillionPeople": 163.499
+    },
+    {
+      "iso2": "SV",
+      "countryName": "El Salvador",
+      "rir": "lacnic",
+      "prefixCount": 2741,
+      "ipv4Count": 701696,
+      "asnCount": 37,
+      "population": 6420744,
+      "prefixesPerMillionPeople": 426.8976
+    },
+    {
+      "iso2": "MK",
+      "countryName": "North Macedonia",
+      "rir": "ripe",
+      "prefixCount": 2590,
+      "ipv4Count": 663040,
+      "asnCount": 62,
+      "population": 2082958,
+      "prefixesPerMillionPeople": 1243.424
+    },
+    {
+      "iso2": "CM",
+      "countryName": "Cameroon",
+      "rir": "afrinic",
+      "prefixCount": 2438,
+      "ipv4Count": 624128,
+      "asnCount": 21,
+      "population": 25216237,
+      "prefixesPerMillionPeople": 96.6837
+    },
+    {
+      "iso2": "MT",
+      "countryName": "Malta",
+      "rir": "ripe",
+      "prefixCount": 2425,
+      "ipv4Count": 620800,
+      "asnCount": 43,
+      "population": 483530,
+      "prefixesPerMillionPeople": 5015.2007
+    },
+    {
+      "iso2": "JO",
+      "countryName": "Jordan",
+      "rir": "ripe",
+      "prefixCount": 2394,
+      "ipv4Count": 612864,
+      "asnCount": 46,
+      "population": 9956011,
+      "prefixesPerMillionPeople": 240.4577
+    },
+    {
+      "iso2": "RE",
+      "countryName": "Reunion",
+      "rir": "afrinic",
+      "prefixCount": 2393,
+      "ipv4Count": 612608,
+      "asnCount": 4,
+      "population": 776948,
+      "prefixesPerMillionPeople": 3080.0002
+    },
+    {
+      "iso2": "NP",
+      "countryName": "Nepal",
+      "rir": "apnic",
+      "prefixCount": 2368,
+      "ipv4Count": 606208,
+      "asnCount": 149,
+      "population": 28087871,
+      "prefixesPerMillionPeople": 84.3069
+    },
+    {
+      "iso2": "MG",
+      "countryName": "Madagascar",
+      "rir": "afrinic",
+      "prefixCount": 2307,
+      "ipv4Count": 590592,
+      "asnCount": 7,
+      "population": 26262368,
+      "prefixesPerMillionPeople": 87.8443
+    },
+    {
+      "iso2": "AM",
+      "countryName": "Armenia",
+      "rir": "ripe",
+      "prefixCount": 2206,
+      "ipv4Count": 564736,
+      "asnCount": 132,
+      "population": 3090500,
+      "prefixesPerMillionPeople": 713.8004
+    },
+    {
+      "iso2": "MW",
+      "countryName": "Malawi",
+      "rir": "afrinic",
+      "prefixCount": 2196,
+      "ipv4Count": 562176,
+      "asnCount": 26,
+      "population": 17563749,
+      "prefixesPerMillionPeople": 125.0303
+    },
+    {
+      "iso2": "TT",
+      "countryName": "Trinidad and Tobago",
+      "rir": "lacnic",
+      "prefixCount": 2194,
+      "ipv4Count": 561664,
+      "asnCount": 15,
+      "population": 1389858,
+      "prefixesPerMillionPeople": 1578.5785
+    },
+    {
+      "iso2": "KH",
+      "countryName": "Cambodia",
+      "rir": "apnic",
+      "prefixCount": 2180,
+      "ipv4Count": 558080,
+      "asnCount": 101,
+      "population": 16249798,
+      "prefixesPerMillionPeople": 134.1555
+    },
+    {
+      "iso2": "LK",
+      "countryName": "Sri Lanka",
+      "rir": "apnic",
+      "prefixCount": 2157,
+      "ipv4Count": 552192,
+      "asnCount": 26,
+      "population": 21670000,
+      "prefixesPerMillionPeople": 99.5385
+    },
+    {
+      "iso2": "LB",
+      "countryName": "Lebanon",
+      "rir": "ripe",
+      "prefixCount": 2075,
+      "ipv4Count": 531200,
+      "asnCount": 144,
+      "population": 6848925,
+      "prefixesPerMillionPeople": 302.9673
+    },
+    {
+      "iso2": "HN",
+      "countryName": "Honduras",
+      "rir": "lacnic",
+      "prefixCount": 1972,
+      "ipv4Count": 504832,
+      "asnCount": 90,
+      "population": 9587522,
+      "prefixesPerMillionPeople": 205.684
+    },
+    {
+      "iso2": "LY",
+      "countryName": "Libya",
+      "rir": "afrinic",
+      "prefixCount": 1904,
+      "ipv4Count": 487424,
+      "asnCount": 25,
+      "population": 6678567,
+      "prefixesPerMillionPeople": 285.0911
+    },
+    {
+      "iso2": "MZ",
+      "countryName": "Mozambique",
+      "rir": "afrinic",
+      "prefixCount": 1900,
+      "ipv4Count": 486400,
+      "asnCount": 30,
+      "population": 29495962,
+      "prefixesPerMillionPeople": 64.4156
+    },
+    {
+      "iso2": "NA",
+      "countryName": "Namibia",
+      "rir": "afrinic",
+      "prefixCount": 1830,
+      "ipv4Count": 468480,
+      "asnCount": 15,
+      "population": 2448255,
+      "prefixesPerMillionPeople": 747.4712
+    },
+    {
+      "iso2": "NI",
+      "countryName": "Nicaragua",
+      "rir": "lacnic",
+      "prefixCount": 1719,
+      "ipv4Count": 440064,
+      "asnCount": 24,
+      "population": 6465513,
+      "prefixesPerMillionPeople": 265.8722
+    },
+    {
+      "iso2": "SN",
+      "countryName": "Senegal",
+      "rir": "afrinic",
+      "prefixCount": 1607,
+      "ipv4Count": 411392,
+      "asnCount": 14,
+      "population": 15854360,
+      "prefixesPerMillionPeople": 101.3601
+    },
+    {
+      "iso2": "BF",
+      "countryName": "Burkina Faso",
+      "rir": "afrinic",
+      "prefixCount": 1605,
+      "ipv4Count": 410880,
+      "asnCount": 30,
+      "population": 19751535,
+      "prefixesPerMillionPeople": 81.2595
+    },
+    {
+      "iso2": "GA",
+      "countryName": "Gabon",
+      "rir": "afrinic",
+      "prefixCount": 1536,
+      "ipv4Count": 393216,
+      "asnCount": 9,
+      "population": 2119275,
+      "prefixesPerMillionPeople": 724.7762
+    },
+    {
+      "iso2": "MO",
+      "countryName": "Macao",
+      "rir": "apnic",
+      "prefixCount": 1499,
+      "ipv4Count": 383744,
+      "asnCount": 11,
+      "population": 631636,
+      "prefixesPerMillionPeople": 2373.2023
+    },
+    {
+      "iso2": "UZ",
+      "countryName": "Uzbekistan",
+      "rir": "ripe",
+      "prefixCount": 1484,
+      "ipv4Count": 379904,
+      "asnCount": 116,
+      "population": 32955400,
+      "prefixesPerMillionPeople": 45.0306
+    },
+    {
+      "iso2": "ET",
+      "countryName": "Ethiopia",
+      "rir": "afrinic",
+      "prefixCount": 1413,
+      "ipv4Count": 361728,
+      "asnCount": 7,
+      "population": 109224559,
+      "prefixesPerMillionPeople": 12.9367
+    },
+    {
+      "iso2": "TG",
+      "countryName": "Togo",
+      "rir": "afrinic",
+      "prefixCount": 1402,
+      "ipv4Count": 358912,
+      "asnCount": 8,
+      "population": 7889094,
+      "prefixesPerMillionPeople": 177.7137
+    },
+    {
+      "iso2": "AL",
+      "countryName": "Albania",
+      "rir": "ripe",
+      "prefixCount": 1291,
+      "ipv4Count": 330496,
+      "asnCount": 124,
+      "population": 2866376,
+      "prefixesPerMillionPeople": 450.3945
+    },
+    {
+      "iso2": "RW",
+      "countryName": "Rwanda",
+      "rir": "afrinic",
+      "prefixCount": 1256,
+      "ipv4Count": 321536,
+      "asnCount": 23,
+      "population": 12301939,
+      "prefixesPerMillionPeople": 102.0977
+    },
+    {
+      "iso2": "MM",
+      "countryName": "Myanmar",
+      "rir": "apnic",
+      "prefixCount": 1123,
+      "ipv4Count": 287488,
+      "asnCount": 134,
+      "population": 53708395,
+      "prefixesPerMillionPeople": 20.9092
+    },
+    {
+      "iso2": "GM",
+      "countryName": "Gambia",
+      "rir": "afrinic",
+      "prefixCount": 1068,
+      "ipv4Count": 273408,
+      "asnCount": 9,
+      "population": 2280102,
+      "prefixesPerMillionPeople": 468.4001
+    },
+    {
+      "iso2": "CU",
+      "countryName": "Cuba",
+      "rir": "lacnic",
+      "prefixCount": 1024,
+      "ipv4Count": 262144,
+      "asnCount": 3,
+      "population": 11338138,
+      "prefixesPerMillionPeople": 90.3147
+    },
+    {
+      "iso2": "GU",
+      "countryName": "Guam",
+      "rir": "apnic",
+      "prefixCount": 985,
+      "ipv4Count": 252160,
+      "asnCount": 6,
+      "population": 165768,
+      "prefixesPerMillionPeople": 5942.0395
+    },
+    {
+      "iso2": "KG",
+      "countryName": "Kyrgyzstan",
+      "rir": "ripe",
+      "prefixCount": 980,
+      "ipv4Count": 250880,
+      "asnCount": 63,
+      "population": 6315800,
+      "prefixesPerMillionPeople": 155.1664
+    },
+    {
+      "iso2": "ZW",
+      "countryName": "Zimbabwe",
+      "rir": "afrinic",
+      "prefixCount": 978,
+      "ipv4Count": 250368,
+      "asnCount": 27,
+      "population": 16868409,
+      "prefixesPerMillionPeople": 57.9782
+    },
+    {
+      "iso2": "YE",
+      "countryName": "Yemen",
+      "rir": "ripe",
+      "prefixCount": 922,
+      "ipv4Count": 236032,
+      "asnCount": 3,
+      "population": 28498687,
+      "prefixesPerMillionPeople": 32.3524
+    },
+    {
+      "iso2": "CD",
+      "countryName": "Democratic Republic of the Congo",
+      "rir": "afrinic",
+      "prefixCount": 898,
+      "ipv4Count": 229888,
+      "asnCount": 39,
+      "population": 84068091,
+      "prefixesPerMillionPeople": 10.6818
+    },
+    {
+      "iso2": "BN",
+      "countryName": "Brunei",
+      "rir": "apnic",
+      "prefixCount": 880,
+      "ipv4Count": 225280,
+      "asnCount": 6,
+      "population": 428962,
+      "prefixesPerMillionPeople": 2051.4638
+    },
+    {
+      "iso2": "JM",
+      "countryName": "Jamaica",
+      "rir": "arin",
+      "prefixCount": 875,
+      "ipv4Count": 224000,
+      "asnCount": 10,
+      "population": 2934855,
+      "prefixesPerMillionPeople": 298.1408
+    },
+    {
+      "iso2": "MQ",
+      "countryName": "Martinique",
+      "rir": "ripe",
+      "prefixCount": 874,
+      "ipv4Count": 223744,
+      "asnCount": 7,
+      "population": 432900,
+      "prefixesPerMillionPeople": 2018.942
+    },
+    {
+      "iso2": "GP",
+      "countryName": "Guadeloupe",
+      "rir": "ripe",
+      "prefixCount": 864,
+      "ipv4Count": 221184,
+      "asnCount": 3,
+      "population": 443000,
+      "prefixesPerMillionPeople": 1950.3386
+    },
+    {
+      "iso2": "AF",
+      "countryName": "Afghanistan",
+      "rir": "apnic",
+      "prefixCount": 752,
+      "ipv4Count": 192512,
+      "asnCount": 64,
+      "population": 37172386,
+      "prefixesPerMillionPeople": 20.2301
+    },
+    {
+      "iso2": "MN",
+      "countryName": "Mongolia",
+      "rir": "apnic",
+      "prefixCount": 739,
+      "ipv4Count": 189184,
+      "asnCount": 53,
+      "population": 3170208,
+      "prefixesPerMillionPeople": 233.1077
+    },
+    {
+      "iso2": "ME",
+      "countryName": "Montenegro",
+      "rir": "ripe",
+      "prefixCount": 723,
+      "ipv4Count": 185088,
+      "asnCount": 20,
+      "population": 622345,
+      "prefixesPerMillionPeople": 1161.7351
+    },
+    {
+      "iso2": "CW",
+      "countryName": "Curacao",
+      "rir": "lacnic",
+      "prefixCount": 710,
+      "ipv4Count": 181760,
+      "asnCount": 20,
+      "population": 159849,
+      "prefixesPerMillionPeople": 4441.6918
+    },
+    {
+      "iso2": "BW",
+      "countryName": "Botswana",
+      "rir": "afrinic",
+      "prefixCount": 702,
+      "ipv4Count": 179712,
+      "asnCount": 31,
+      "population": 2254126,
+      "prefixesPerMillionPeople": 311.4289
+    },
+    {
+      "iso2": "BJ",
+      "countryName": "Benin",
+      "rir": "afrinic",
+      "prefixCount": 628,
+      "ipv4Count": 160768,
+      "asnCount": 16,
+      "population": 11485048,
+      "prefixesPerMillionPeople": 54.6798
+    },
+    {
+      "iso2": "HT",
+      "countryName": "Haiti",
+      "rir": "lacnic",
+      "prefixCount": 625,
+      "ipv4Count": 160000,
+      "asnCount": 8,
+      "population": 11123176,
+      "prefixesPerMillionPeople": 56.189
+    },
+    {
+      "iso2": "XK",
+      "countryName": "Kosovo",
+      "rir": "ripe",
+      "prefixCount": 617,
+      "ipv4Count": 157952,
+      "asnCount": 0,
+      "population": 1845300,
+      "prefixesPerMillionPeople": 334.363
+    },
+    {
+      "iso2": "BS",
+      "countryName": "Bahamas",
+      "rir": "arin",
+      "prefixCount": 615,
+      "ipv4Count": 157440,
+      "asnCount": 9,
+      "population": 385640,
+      "prefixesPerMillionPeople": 1594.7516
+    },
+    {
+      "iso2": "CG",
+      "countryName": "Republic of the Congo",
+      "rir": "afrinic",
+      "prefixCount": 598,
+      "ipv4Count": 153088,
+      "asnCount": 10,
+      "population": 5244363,
+      "prefixesPerMillionPeople": 114.0272
+    },
+    {
+      "iso2": "FJ",
+      "countryName": "Fiji",
+      "rir": "apnic",
+      "prefixCount": 557,
+      "ipv4Count": 142592,
+      "asnCount": 15,
+      "population": 883483,
+      "prefixesPerMillionPeople": 630.4592
+    },
+    {
+      "iso2": "NC",
+      "countryName": "New Caledonia",
+      "rir": "apnic",
+      "prefixCount": 553,
+      "ipv4Count": 141568,
+      "asnCount": 13,
+      "population": 284060,
+      "prefixesPerMillionPeople": 1946.7718
+    },
+    {
+      "iso2": "JE",
+      "countryName": "Jersey",
+      "rir": "ripe",
+      "prefixCount": 550,
+      "ipv4Count": 140800,
+      "asnCount": 9,
+      "population": 90812,
+      "prefixesPerMillionPeople": 6056.4683
+    },
+    {
+      "iso2": "VG",
+      "countryName": "British Virgin Islands",
+      "rir": "ripe",
+      "prefixCount": 536,
+      "ipv4Count": 137216,
+      "asnCount": 35,
+      "population": 29802,
+      "prefixesPerMillionPeople": 17985.3701
+    },
+    {
+      "iso2": "VI",
+      "countryName": "U.S. Virgin Islands",
+      "rir": "arin",
+      "prefixCount": 509,
+      "ipv4Count": 130304,
+      "asnCount": 7,
+      "population": 106977,
+      "prefixesPerMillionPeople": 4758.0321
+    },
+    {
+      "iso2": "LS",
+      "countryName": "Lesotho",
+      "rir": "afrinic",
+      "prefixCount": 504,
+      "ipv4Count": 129024,
+      "asnCount": 7,
+      "population": 2108132,
+      "prefixesPerMillionPeople": 239.0742
+    },
+    {
+      "iso2": "BB",
+      "countryName": "Barbados",
+      "rir": "arin",
+      "prefixCount": 493,
+      "ipv4Count": 126208,
+      "asnCount": 7,
+      "population": 286641,
+      "prefixesPerMillionPeople": 1719.9214
+    },
+    {
+      "iso2": "BZ",
+      "countryName": "Belize",
+      "rir": "lacnic",
+      "prefixCount": 490,
+      "ipv4Count": 125440,
+      "asnCount": 21,
+      "population": 383071,
+      "prefixesPerMillionPeople": 1279.1362
+    },
+    {
+      "iso2": "AW",
+      "countryName": "Aruba",
+      "rir": "lacnic",
+      "prefixCount": 449,
+      "ipv4Count": 114944,
+      "asnCount": 3,
+      "population": 105845,
+      "prefixesPerMillionPeople": 4242.0521
+    },
+    {
+      "iso2": "IM",
+      "countryName": "Isle of Man",
+      "rir": "ripe",
+      "prefixCount": 437,
+      "ipv4Count": 111872,
+      "asnCount": 20,
+      "population": 84077,
+      "prefixesPerMillionPeople": 5197.6165
+    },
+    {
+      "iso2": "LA",
+      "countryName": "Laos",
+      "rir": "apnic",
+      "prefixCount": 435,
+      "ipv4Count": 111360,
+      "asnCount": 28,
+      "population": 7061507,
+      "prefixesPerMillionPeople": 61.6016
+    },
+    {
+      "iso2": "LR",
+      "countryName": "Liberia",
+      "rir": "afrinic",
+      "prefixCount": 434,
+      "ipv4Count": 111104,
+      "asnCount": 15,
+      "population": 4818977,
+      "prefixesPerMillionPeople": 90.0606
+    },
+    {
+      "iso2": "LI",
+      "countryName": "Liechtenstein",
+      "rir": "ripe",
+      "prefixCount": 408,
+      "ipv4Count": 104448,
+      "asnCount": 24,
+      "population": 37910,
+      "prefixesPerMillionPeople": 10762.3318
+    },
+    {
+      "iso2": "GF",
+      "countryName": "French Guiana",
+      "rir": "ripe",
+      "prefixCount": 362,
+      "ipv4Count": 92672,
+      "asnCount": 3,
+      "population": 195506,
+      "prefixesPerMillionPeople": 1851.6056
+    },
+    {
+      "iso2": "SL",
+      "countryName": "Sierra Leone",
+      "rir": "afrinic",
+      "prefixCount": 359,
+      "ipv4Count": 91904,
+      "asnCount": 16,
+      "population": 7650154,
+      "prefixesPerMillionPeople": 46.9272
+    },
+    {
+      "iso2": "ML",
+      "countryName": "Mali",
+      "rir": "afrinic",
+      "prefixCount": 356,
+      "ipv4Count": 91136,
+      "asnCount": 6,
+      "population": 19077690,
+      "prefixesPerMillionPeople": 18.6605
+    },
+    {
+      "iso2": "MV",
+      "countryName": "Maldives",
+      "rir": "apnic",
+      "prefixCount": 353,
+      "ipv4Count": 90368,
+      "asnCount": 15,
+      "population": 515696,
+      "prefixesPerMillionPeople": 684.5118
+    },
+    {
+      "iso2": "TJ",
+      "countryName": "Tajikistan",
+      "rir": "ripe",
+      "prefixCount": 349,
+      "ipv4Count": 89344,
+      "asnCount": 38,
+      "population": 9100837,
+      "prefixesPerMillionPeople": 38.3481
+    },
+    {
+      "iso2": "BM",
+      "countryName": "Bermuda",
+      "rir": "arin",
+      "prefixCount": 346,
+      "ipv4Count": 88576,
+      "asnCount": 14,
+      "population": 63968,
+      "prefixesPerMillionPeople": 5408.9545
+    },
+    {
+      "iso2": "SR",
+      "countryName": "Suriname",
+      "rir": "lacnic",
+      "prefixCount": 345,
+      "ipv4Count": 88320,
+      "asnCount": 4,
+      "population": 575991,
+      "prefixesPerMillionPeople": 598.9677
+    },
+    {
+      "iso2": "PG",
+      "countryName": "Papua New Guinea",
+      "rir": "apnic",
+      "prefixCount": 327,
+      "ipv4Count": 83712,
+      "asnCount": 29,
+      "population": 8606316,
+      "prefixesPerMillionPeople": 37.9954
+    },
+    {
+      "iso2": "KY",
+      "countryName": "Cayman Islands",
+      "rir": "arin",
+      "prefixCount": 320,
+      "ipv4Count": 81920,
+      "asnCount": 11,
+      "population": 64174,
+      "prefixesPerMillionPeople": 4986.4431
+    },
+    {
+      "iso2": "AD",
+      "countryName": "Andorra",
+      "rir": "ripe",
+      "prefixCount": 315,
+      "ipv4Count": 80640,
+      "asnCount": 3,
+      "population": 77006,
+      "prefixesPerMillionPeople": 4090.5903
+    },
+    {
+      "iso2": "AG",
+      "countryName": "Antigua and Barbuda",
+      "rir": "ripe",
+      "prefixCount": 313,
+      "ipv4Count": 80128,
+      "asnCount": 10,
+      "population": 96286,
+      "prefixesPerMillionPeople": 3250.7322
+    },
+    {
+      "iso2": "PF",
+      "countryName": "French Polynesia",
+      "rir": "apnic",
+      "prefixCount": 309,
+      "ipv4Count": 79104,
+      "asnCount": 5,
+      "population": 277679,
+      "prefixesPerMillionPeople": 1112.7957
+    },
+    {
+      "iso2": "GY",
+      "countryName": "Guyana",
+      "rir": "lacnic",
+      "prefixCount": 295,
+      "ipv4Count": 75520,
+      "asnCount": 5,
+      "population": 779004,
+      "prefixesPerMillionPeople": 378.6887
+    },
+    {
+      "iso2": "MC",
+      "countryName": "Monaco",
+      "rir": "ripe",
+      "prefixCount": 287,
+      "ipv4Count": 73472,
+      "asnCount": 4,
+      "population": 38682,
+      "prefixesPerMillionPeople": 7419.4716
+    },
+    {
+      "iso2": "GI",
+      "countryName": "Gibraltar",
+      "rir": "ripe",
+      "prefixCount": 272,
+      "ipv4Count": 69632,
+      "asnCount": 18,
+      "population": 33718,
+      "prefixesPerMillionPeople": 8066.9079
+    },
+    {
+      "iso2": "DJ",
+      "countryName": "Djibouti",
+      "rir": "afrinic",
+      "prefixCount": 238,
+      "ipv4Count": 60928,
+      "asnCount": 3,
+      "population": 958920,
+      "prefixesPerMillionPeople": 248.1959
+    },
+    {
+      "iso2": "SZ",
+      "countryName": "Eswatini",
+      "rir": "afrinic",
+      "prefixCount": 236,
+      "ipv4Count": 60416,
+      "asnCount": 10,
+      "population": 1136191,
+      "prefixesPerMillionPeople": 207.7116
+    },
+    {
+      "iso2": "CV",
+      "countryName": "Cabo Verde",
+      "rir": "afrinic",
+      "prefixCount": 233,
+      "ipv4Count": 59648,
+      "asnCount": 7,
+      "population": 543767,
+      "prefixesPerMillionPeople": 428.4924
+    },
+    {
+      "iso2": "MR",
+      "countryName": "Mauritania",
+      "rir": "afrinic",
+      "prefixCount": 223,
+      "ipv4Count": 57088,
+      "asnCount": 7,
+      "population": 4403319,
+      "prefixesPerMillionPeople": 50.6436
+    },
+    {
+      "iso2": "BT",
+      "countryName": "Bhutan",
+      "rir": "apnic",
+      "prefixCount": 221,
+      "ipv4Count": 56576,
+      "asnCount": 28,
+      "population": 754394,
+      "prefixesPerMillionPeople": 292.9504
+    },
+    {
+      "iso2": "SO",
+      "countryName": "Somalia",
+      "rir": "afrinic",
+      "prefixCount": 221,
+      "ipv4Count": 56576,
+      "asnCount": 20,
+      "population": 15008154,
+      "prefixesPerMillionPeople": 14.7253
+    },
+    {
+      "iso2": "NE",
+      "countryName": "Niger",
+      "rir": "afrinic",
+      "prefixCount": 212,
+      "ipv4Count": 54272,
+      "asnCount": 7,
+      "population": 22442948,
+      "prefixesPerMillionPeople": 9.4462
+    },
+    {
+      "iso2": "GG",
+      "countryName": "Guernsey",
+      "rir": "ripe",
+      "prefixCount": 210,
+      "ipv4Count": 53760,
+      "asnCount": 7,
+      "population": 65228,
+      "prefixesPerMillionPeople": 3219.4763
+    },
+    {
+      "iso2": "GN",
+      "countryName": "Guinea",
+      "rir": "afrinic",
+      "prefixCount": 169,
+      "ipv4Count": 43264,
+      "asnCount": 14,
+      "population": 12414318,
+      "prefixesPerMillionPeople": 13.6133
+    },
+    {
+      "iso2": "SM",
+      "countryName": "San Marino",
+      "rir": "ripe",
+      "prefixCount": 167,
+      "ipv4Count": 42752,
+      "asnCount": 10,
+      "population": 33785,
+      "prefixesPerMillionPeople": 4943.0221
+    },
+    {
+      "iso2": "BI",
+      "countryName": "Burundi",
+      "rir": "afrinic",
+      "prefixCount": 163,
+      "ipv4Count": 41728,
+      "asnCount": 7,
+      "population": 11175378,
+      "prefixesPerMillionPeople": 14.5856
+    },
+    {
+      "iso2": "YT",
+      "countryName": "Mayotte",
+      "rir": "afrinic",
+      "prefixCount": 147,
+      "ipv4Count": 37632,
+      "asnCount": 1,
+      "population": 279471,
+      "prefixesPerMillionPeople": 525.9938
+    },
+    {
+      "iso2": "GL",
+      "countryName": "Greenland",
+      "rir": "ripe",
+      "prefixCount": 144,
+      "ipv4Count": 36864,
+      "asnCount": 1,
+      "population": 56025,
+      "prefixesPerMillionPeople": 2570.2811
+    },
+    {
+      "iso2": "LC",
+      "countryName": "Saint Lucia",
+      "rir": "arin",
+      "prefixCount": 140,
+      "ipv4Count": 35840,
+      "asnCount": 6,
+      "population": 181889,
+      "prefixesPerMillionPeople": 769.7002
+    },
+    {
+      "iso2": "SX",
+      "countryName": "Sint Maarten",
+      "rir": "lacnic",
+      "prefixCount": 139,
+      "ipv4Count": 35584,
+      "asnCount": 3,
+      "population": 40654,
+      "prefixesPerMillionPeople": 3419.0978
+    },
+    {
+      "iso2": "TD",
+      "countryName": "Chad",
+      "rir": "afrinic",
+      "prefixCount": 138,
+      "ipv4Count": 35328,
+      "asnCount": 11,
+      "population": 15477751,
+      "prefixesPerMillionPeople": 8.916
+    },
+    {
+      "iso2": "FO",
+      "countryName": "Faroe Islands",
+      "rir": "ripe",
+      "prefixCount": 135,
+      "ipv4Count": 34560,
+      "asnCount": 4,
+      "population": 48497,
+      "prefixesPerMillionPeople": 2783.6773
+    },
+    {
+      "iso2": "SS",
+      "countryName": "South Sudan",
+      "rir": "afrinic",
+      "prefixCount": 132,
+      "ipv4Count": 33792,
+      "asnCount": 18,
+      "population": 8260490,
+      "prefixesPerMillionPeople": 15.9797
+    },
+    {
+      "iso2": "TL",
+      "countryName": "Timor Leste",
+      "rir": "apnic",
+      "prefixCount": 118,
+      "ipv4Count": 30208,
+      "asnCount": 14,
+      "population": 1267972,
+      "prefixesPerMillionPeople": 93.062
+    },
+    {
+      "iso2": "GD",
+      "countryName": "Grenada",
+      "rir": "arin",
+      "prefixCount": 117,
+      "ipv4Count": 29952,
+      "asnCount": 9,
+      "population": 111454,
+      "prefixesPerMillionPeople": 1049.7604
+    },
+    {
+      "iso2": "MH",
+      "countryName": "Marshall Islands",
+      "rir": "ripe",
+      "prefixCount": 108,
+      "ipv4Count": 27648,
+      "asnCount": 8,
+      "population": 58413,
+      "prefixesPerMillionPeople": 1848.9035
+    },
+    {
+      "iso2": "KN",
+      "countryName": "Saint Kitts and Nevis",
+      "rir": "arin",
+      "prefixCount": 99,
+      "ipv4Count": 25344,
+      "asnCount": 8,
+      "population": 52441,
+      "prefixesPerMillionPeople": 1887.8359
+    },
+    {
+      "iso2": "AX",
+      "countryName": "Aland Islands",
+      "rir": "ripe",
+      "prefixCount": 98,
+      "ipv4Count": 25088,
+      "asnCount": 1,
+      "population": 26711,
+      "prefixesPerMillionPeople": 3668.9005
+    },
+    {
+      "iso2": "BQ",
+      "countryName": "Bonaire, Saint Eustatius and Saba ",
+      "rir": "lacnic",
+      "prefixCount": 98,
+      "ipv4Count": 25088,
+      "asnCount": 5,
+      "population": 18012,
+      "prefixesPerMillionPeople": 5440.8172
+    },
+    {
+      "iso2": "WS",
+      "countryName": "Samoa",
+      "rir": "apnic",
+      "prefixCount": 97,
+      "ipv4Count": 24832,
+      "asnCount": 7,
+      "population": 196130,
+      "prefixesPerMillionPeople": 494.5699
+    },
+    {
+      "iso2": "GQ",
+      "countryName": "Equatorial Guinea",
+      "rir": "afrinic",
+      "prefixCount": 94,
+      "ipv4Count": 24064,
+      "asnCount": 7,
+      "population": 1308974,
+      "prefixesPerMillionPeople": 71.812
+    },
+    {
+      "iso2": "VU",
+      "countryName": "Vanuatu",
+      "rir": "apnic",
+      "prefixCount": 86,
+      "ipv4Count": 22016,
+      "asnCount": 11,
+      "population": 292680,
+      "prefixesPerMillionPeople": 293.8363
+    },
+    {
+      "iso2": "TM",
+      "countryName": "Turkmenistan",
+      "rir": "ripe",
+      "prefixCount": 83,
+      "ipv4Count": 21248,
+      "asnCount": 7,
+      "population": 5850908,
+      "prefixesPerMillionPeople": 14.1858
+    },
+    {
+      "iso2": "VC",
+      "countryName": "Saint Vincent and the Grenadines",
+      "rir": "arin",
+      "prefixCount": 81,
+      "ipv4Count": 20736,
+      "asnCount": 4,
+      "population": 110211,
+      "prefixesPerMillionPeople": 734.9539
+    },
+    {
+      "iso2": "AS",
+      "countryName": "American Samoa",
+      "rir": "arin",
+      "prefixCount": 74,
+      "ipv4Count": 18944,
+      "asnCount": 2,
+      "population": 55465,
+      "prefixesPerMillionPeople": 1334.1747
+    },
+    {
+      "iso2": "DM",
+      "countryName": "Dominica",
+      "rir": "arin",
+      "prefixCount": 74,
+      "ipv4Count": 18944,
+      "asnCount": 4,
+      "population": 71625,
+      "prefixesPerMillionPeople": 1033.1588
+    },
+    {
+      "iso2": "MF",
+      "countryName": "Saint Martin",
+      "rir": "ripe",
+      "prefixCount": 74,
+      "ipv4Count": 18944,
+      "asnCount": 5,
+      "population": 37264,
+      "prefixesPerMillionPeople": 1985.8308
+    },
+    {
+      "iso2": "SB",
+      "countryName": "Solomon Islands",
+      "rir": "apnic",
+      "prefixCount": 70,
+      "ipv4Count": 17920,
+      "asnCount": 11,
+      "population": 652858,
+      "prefixesPerMillionPeople": 107.2209
+    },
+    {
+      "iso2": "ST",
+      "countryName": "Sao Tome and Principe",
+      "rir": "afrinic",
+      "prefixCount": 56,
+      "ipv4Count": 14336,
+      "asnCount": 2,
+      "population": 197700,
+      "prefixesPerMillionPeople": 283.2575
+    },
+    {
+      "iso2": "TO",
+      "countryName": "Tonga",
+      "rir": "apnic",
+      "prefixCount": 56,
+      "ipv4Count": 14336,
+      "asnCount": 4,
+      "population": 103197,
+      "prefixesPerMillionPeople": 542.6514
+    },
+    {
+      "iso2": "PW",
+      "countryName": "Palau",
+      "rir": "apnic",
+      "prefixCount": 53,
+      "ipv4Count": 13568,
+      "asnCount": 3,
+      "population": 17907,
+      "prefixesPerMillionPeople": 2959.7364
+    },
+    {
+      "iso2": "NR",
+      "countryName": "Nauru",
+      "rir": "apnic",
+      "prefixCount": 52,
+      "ipv4Count": 13312,
+      "asnCount": 4,
+      "population": 12704,
+      "prefixesPerMillionPeople": 4093.199
+    },
+    {
+      "iso2": "KM",
+      "countryName": "Comoros",
+      "rir": "afrinic",
+      "prefixCount": 50,
+      "ipv4Count": 12800,
+      "asnCount": 4,
+      "population": 832322,
+      "prefixesPerMillionPeople": 60.0729
+    },
+    {
+      "iso2": "TC",
+      "countryName": "Turks and Caicos Islands",
+      "rir": "arin",
+      "prefixCount": 50,
+      "ipv4Count": 12800,
+      "asnCount": 2,
+      "population": 37665,
+      "prefixesPerMillionPeople": 1327.4924
+    },
+    {
+      "iso2": "FM",
+      "countryName": "Micronesia",
+      "rir": "apnic",
+      "prefixCount": 48,
+      "ipv4Count": 12288,
+      "asnCount": 5,
+      "population": 112640,
+      "prefixesPerMillionPeople": 426.1364
+    },
+    {
+      "iso2": "TV",
+      "countryName": "Tuvalu",
+      "rir": "apnic",
+      "prefixCount": 45,
+      "ipv4Count": 11520,
+      "asnCount": 1,
+      "population": 11508,
+      "prefixesPerMillionPeople": 3910.3233
+    },
+    {
+      "iso2": "GW",
+      "countryName": "Guinea-Bissau",
+      "rir": "afrinic",
+      "prefixCount": 41,
+      "ipv4Count": 10496,
+      "asnCount": 2,
+      "population": 1874309,
+      "prefixesPerMillionPeople": 21.8747
+    },
+    {
+      "iso2": "CK",
+      "countryName": "Cook Islands",
+      "rir": "apnic",
+      "prefixCount": 40,
+      "ipv4Count": 10240,
+      "asnCount": 2,
+      "population": 21388,
+      "prefixesPerMillionPeople": 1870.2076
+    },
+    {
+      "iso2": "CF",
+      "countryName": "Central African Republic",
+      "rir": "afrinic",
+      "prefixCount": 36,
+      "ipv4Count": 9216,
+      "asnCount": 4,
+      "population": 4666377,
+      "prefixesPerMillionPeople": 7.7148
+    },
+    {
+      "iso2": "KI",
+      "countryName": "Kiribati",
+      "rir": "apnic",
+      "prefixCount": 34,
+      "ipv4Count": 8704,
+      "asnCount": 3,
+      "population": 115847,
+      "prefixesPerMillionPeople": 293.4906
+    },
+    {
+      "iso2": "AI",
+      "countryName": "Anguilla",
+      "rir": "arin",
+      "prefixCount": 31,
+      "ipv4Count": 7936,
+      "asnCount": 4,
+      "population": 13254,
+      "prefixesPerMillionPeople": 2338.9166
+    },
+    {
+      "iso2": "ER",
+      "countryName": "Eritrea",
+      "rir": "afrinic",
+      "prefixCount": 28,
+      "ipv4Count": 7168,
+      "asnCount": 1,
+      "population": 6209262,
+      "prefixesPerMillionPeople": 4.5094
+    },
+    {
+      "iso2": "PM",
+      "countryName": "Saint Pierre and Miquelon",
+      "rir": "arin",
+      "prefixCount": 26,
+      "ipv4Count": 6656,
+      "asnCount": 1,
+      "population": 7012,
+      "prefixesPerMillionPeople": 3707.9293
+    },
+    {
+      "iso2": "FK",
+      "countryName": "Falkland Islands",
+      "rir": "ripe",
+      "prefixCount": 22,
+      "ipv4Count": 5632,
+      "asnCount": 2,
+      "population": 2638,
+      "prefixesPerMillionPeople": 8339.6513
+    },
+    {
+      "iso2": "VA",
+      "countryName": "Vatican",
+      "rir": "ripe",
+      "prefixCount": 18,
+      "ipv4Count": 4608,
+      "asnCount": 4,
+      "population": 921,
+      "prefixesPerMillionPeople": 19543.9739
+    },
+    {
+      "iso2": "WF",
+      "countryName": "Wallis and Futuna",
+      "rir": "apnic",
+      "prefixCount": 17,
+      "ipv4Count": 4352,
+      "asnCount": 1,
+      "population": 16025,
+      "prefixesPerMillionPeople": 1060.8424
+    },
+    {
+      "iso2": "TK",
+      "countryName": "Tokelau",
+      "rir": "apnic",
+      "prefixCount": 15,
+      "ipv4Count": 3840,
+      "asnCount": 3,
+      "population": 1466,
+      "prefixesPerMillionPeople": 10231.9236
+    },
+    {
+      "iso2": "MP",
+      "countryName": "Northern Mariana Islands",
+      "rir": "apnic",
+      "prefixCount": 14,
+      "ipv4Count": 3584,
+      "asnCount": 1,
+      "population": 56882,
+      "prefixesPerMillionPeople": 246.1236
+    },
+    {
+      "iso2": "IO",
+      "countryName": "British Indian Ocean Territory",
+      "rir": "apnic",
+      "prefixCount": 14,
+      "ipv4Count": 3584,
+      "asnCount": 1,
+      "population": 4000,
+      "prefixesPerMillionPeople": 3500.0
+    },
+    {
+      "iso2": "NU",
+      "countryName": "Niue",
+      "rir": "apnic",
+      "prefixCount": 12,
+      "ipv4Count": 3072,
+      "asnCount": 1,
+      "population": 2166,
+      "prefixesPerMillionPeople": 5540.1662
+    },
+    {
+      "iso2": "KP",
+      "countryName": "North Korea",
+      "rir": "afrinic",
+      "prefixCount": 12,
+      "ipv4Count": 3072,
+      "asnCount": 1,
+      "population": 25549819,
+      "prefixesPerMillionPeople": 0.4697
+    },
+    {
+      "iso2": "BL",
+      "countryName": "Saint Barthelemy",
+      "rir": "arin",
+      "prefixCount": 12,
+      "ipv4Count": 3072,
+      "asnCount": 2,
+      "population": 8450,
+      "prefixesPerMillionPeople": 1420.1183
+    },
+    {
+      "iso2": "AQ",
+      "countryName": "Antarctica",
+      "rir": "ripe",
+      "prefixCount": 8,
+      "ipv4Count": 2048,
+      "asnCount": 1,
+      "population": 0,
+      "prefixesPerMillionPeople": null
+    },
+    {
+      "iso2": "MS",
+      "countryName": "Montserrat",
+      "rir": "arin",
+      "prefixCount": 8,
+      "ipv4Count": 2048,
+      "asnCount": 1,
+      "population": 9341,
+      "prefixesPerMillionPeople": 856.4394
+    },
+    {
+      "iso2": "NF",
+      "countryName": "Norfolk Island",
+      "rir": "apnic",
+      "prefixCount": 4,
+      "ipv4Count": 1024,
+      "asnCount": 1,
+      "population": 1828,
+      "prefixesPerMillionPeople": 2188.1838
+    },
+    {
+      "iso2": "SH",
+      "countryName": "Saint Helena",
+      "rir": "arin",
+      "prefixCount": 3,
+      "ipv4Count": 768,
+      "asnCount": 0,
+      "population": 7460,
+      "prefixesPerMillionPeople": 402.1448
+    },
+    {
+      "iso2": "PN",
+      "countryName": "Pitcairn",
+      "rir": "apnic",
+      "prefixCount": 2,
+      "ipv4Count": 512,
+      "asnCount": 0,
+      "population": 46,
+      "prefixesPerMillionPeople": 43478.2609
+    },
+    {
+      "iso2": "HM",
+      "countryName": "Heard Island and McDonald Islands",
+      "rir": "arin",
+      "prefixCount": 2,
+      "ipv4Count": 512,
+      "asnCount": 0,
+      "population": 0,
+      "prefixesPerMillionPeople": null
+    },
+    {
+      "iso2": "UM",
+      "countryName": "United States Minor Outlying Islands",
+      "rir": "arin",
+      "prefixCount": 2,
+      "ipv4Count": 512,
+      "asnCount": 0,
+      "population": 0,
+      "prefixesPerMillionPeople": null
+    },
+    {
+      "iso2": "GS",
+      "countryName": "South Georgia and the South Sandwich Islands",
+      "rir": "arin",
+      "prefixCount": 2,
+      "ipv4Count": 512,
+      "asnCount": 1,
+      "population": 30,
+      "prefixesPerMillionPeople": 66666.6667
+    },
+    {
+      "iso2": "CC",
+      "countryName": "Cocos Islands",
+      "rir": "arin",
+      "prefixCount": 1,
+      "ipv4Count": 256,
+      "asnCount": 0,
+      "population": 628,
+      "prefixesPerMillionPeople": 1592.3567
+    },
+    {
+      "iso2": "CX",
+      "countryName": "Christmas Island",
+      "rir": "apnic",
+      "prefixCount": 1,
+      "ipv4Count": 256,
+      "asnCount": 0,
+      "population": 1500,
+      "prefixesPerMillionPeople": 666.6667
+    },
+    {
+      "iso2": "BV",
+      "countryName": "Bouvet Island",
+      "rir": "ripe",
+      "prefixCount": 1,
+      "ipv4Count": 256,
+      "asnCount": 0,
+      "population": 0,
+      "prefixesPerMillionPeople": null
+    }
+  ]
+}

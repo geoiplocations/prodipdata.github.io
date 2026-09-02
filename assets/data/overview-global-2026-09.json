@@ -1,0 +1,11 @@
+{
+  "snapshotMonth": "2026-09",
+  "generatedOnUtc": "2026-09-02T06:20:24Z",
+  "totalAsns": 80932,
+  "activeAsns": 80932,
+  "totalCountriesRepresented": 247,
+  "totalRirsRepresented": 5,
+  "totalPrefixes": 16777216,
+  "totalIpv4": 4294967296,
+  "source": "ProdIP Parquet pipeline (GOLD + ASN dimension)"
+}

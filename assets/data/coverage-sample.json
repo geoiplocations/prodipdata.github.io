@@ -1,6 +1,6 @@
 {
   "summary": {
-    "release": "2026-08",
+    "release": "2026-09",
     "isoBuckets": "255+",
     "formats": "CSV / Parquet / MMDB",
     "model": "Static"
@@ -9,359 +9,359 @@
     {
       "country": "United States",
       "iso": "US",
-      "prefixes": "5,859,621",
-      "ipv4": "1.50B",
+      "prefixes": "8,709,604",
+      "ipv4": "2.23B",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "China",
       "iso": "CN",
-      "prefixes": "1,348,718",
-      "ipv4": "345.27M",
+      "prefixes": "1,162,408",
+      "ipv4": "297.58M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Japan",
       "iso": "JP",
-      "prefixes": "782,390",
-      "ipv4": "200.29M",
+      "prefixes": "621,157",
+      "ipv4": "159.02M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Germany",
       "iso": "DE",
-      "prefixes": "546,423",
-      "ipv4": "139.88M",
+      "prefixes": "510,044",
+      "ipv4": "130.57M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "United Kingdom",
       "iso": "GB",
-      "prefixes": "520,522",
-      "ipv4": "133.25M",
+      "prefixes": "493,060",
+      "ipv4": "126.22M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "South Korea",
       "iso": "KR",
-      "prefixes": "456,346",
-      "ipv4": "116.82M",
+      "prefixes": "353,236",
+      "ipv4": "90.43M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Brazil",
       "iso": "BR",
-      "prefixes": "336,053",
-      "ipv4": "86.03M",
+      "prefixes": "335,189",
+      "ipv4": "85.81M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "France",
       "iso": "FR",
-      "prefixes": "324,685",
-      "ipv4": "83.12M",
+      "prefixes": "316,058",
+      "ipv4": "80.91M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Canada",
       "iso": "CA",
-      "prefixes": "286,686",
-      "ipv4": "73.39M",
+      "prefixes": "264,425",
+      "ipv4": "67.69M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Italy",
       "iso": "IT",
-      "prefixes": "227,228",
-      "ipv4": "58.17M",
+      "prefixes": "215,132",
+      "ipv4": "55.07M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Australia",
       "iso": "AU",
-      "prefixes": "217,879",
-      "ipv4": "55.78M",
+      "prefixes": "208,792",
+      "ipv4": "53.45M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "The Netherlands",
       "iso": "NL",
-      "prefixes": "214,331",
-      "ipv4": "54.87M",
+      "prefixes": "200,151",
+      "ipv4": "51.24M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "India",
       "iso": "IN",
-      "prefixes": "196,595",
-      "ipv4": "50.33M",
+      "prefixes": "184,028",
+      "ipv4": "47.11M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Russia",
       "iso": "RU",
-      "prefixes": "179,674",
-      "ipv4": "46.00M",
-      "status": "Published",
-      "statusClass": "success"
-    },
-    {
-      "country": "Taiwan",
-      "iso": "TW",
-      "prefixes": "147,711",
-      "ipv4": "37.81M",
+      "prefixes": "166,485",
+      "ipv4": "42.62M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Spain",
       "iso": "ES",
-      "prefixes": "139,657",
-      "ipv4": "35.75M",
-      "status": "Published",
-      "statusClass": "success"
-    },
-    {
-      "country": "Sweden",
-      "iso": "SE",
-      "prefixes": "128,376",
-      "ipv4": "32.86M",
+      "prefixes": "129,540",
+      "ipv4": "33.16M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Mexico",
       "iso": "MX",
-      "prefixes": "122,309",
-      "ipv4": "31.31M",
+      "prefixes": "121,580",
+      "ipv4": "31.12M",
+      "status": "Published",
+      "statusClass": "success"
+    },
+    {
+      "country": "Taiwan",
+      "iso": "TW",
+      "prefixes": "119,490",
+      "ipv4": "30.59M",
+      "status": "Published",
+      "statusClass": "success"
+    },
+    {
+      "country": "Sweden",
+      "iso": "SE",
+      "prefixes": "117,918",
+      "ipv4": "30.19M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "South Africa",
       "iso": "ZA",
-      "prefixes": "117,876",
-      "ipv4": "30.18M",
+      "prefixes": "117,465",
+      "ipv4": "30.07M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Singapore",
       "iso": "SG",
-      "prefixes": "109,253",
-      "ipv4": "27.97M",
+      "prefixes": "105,837",
+      "ipv4": "27.09M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Switzerland",
       "iso": "CH",
-      "prefixes": "98,542",
-      "ipv4": "25.23M",
+      "prefixes": "93,444",
+      "ipv4": "23.92M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Egypt",
       "iso": "EG",
-      "prefixes": "94,837",
-      "ipv4": "24.28M",
-      "status": "Published",
-      "statusClass": "success"
-    },
-    {
-      "country": "Hong Kong",
-      "iso": "HK",
-      "prefixes": "94,392",
-      "ipv4": "24.16M",
+      "prefixes": "93,231",
+      "ipv4": "23.87M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Indonesia",
       "iso": "ID",
-      "prefixes": "84,807",
-      "ipv4": "21.71M",
+      "prefixes": "83,823",
+      "ipv4": "21.46M",
+      "status": "Published",
+      "statusClass": "success"
+    },
+    {
+      "country": "Hong Kong",
+      "iso": "HK",
+      "prefixes": "82,710",
+      "ipv4": "21.17M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Poland",
       "iso": "PL",
-      "prefixes": "82,894",
-      "ipv4": "21.22M",
+      "prefixes": "76,556",
+      "ipv4": "19.60M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Argentina",
       "iso": "AR",
-      "prefixes": "76,715",
-      "ipv4": "19.64M",
+      "prefixes": "76,357",
+      "ipv4": "19.55M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Ireland",
       "iso": "IE",
-      "prefixes": "74,520",
-      "ipv4": "19.08M",
+      "prefixes": "72,519",
+      "ipv4": "18.56M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Colombia",
       "iso": "CO",
-      "prefixes": "70,125",
-      "ipv4": "17.95M",
-      "status": "Published",
-      "statusClass": "success"
-    },
-    {
-      "country": "Turkey",
-      "iso": "TR",
-      "prefixes": "67,852",
-      "ipv4": "17.37M",
+      "prefixes": "70,031",
+      "ipv4": "17.93M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Vietnam",
       "iso": "VN",
-      "prefixes": "65,411",
-      "ipv4": "16.75M",
+      "prefixes": "63,905",
+      "ipv4": "16.36M",
+      "status": "Published",
+      "statusClass": "success"
+    },
+    {
+      "country": "Turkey",
+      "iso": "TR",
+      "prefixes": "63,443",
+      "ipv4": "16.24M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Norway",
       "iso": "NO",
-      "prefixes": "64,138",
-      "ipv4": "16.42M",
+      "prefixes": "61,767",
+      "ipv4": "15.81M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Finland",
       "iso": "FI",
-      "prefixes": "58,652",
-      "ipv4": "15.01M",
+      "prefixes": "55,163",
+      "ipv4": "14.12M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Belgium",
       "iso": "BE",
-      "prefixes": "56,555",
-      "ipv4": "14.48M",
-      "status": "Published",
-      "statusClass": "success"
-    },
-    {
-      "country": "Denmark",
-      "iso": "DK",
-      "prefixes": "49,906",
-      "ipv4": "12.78M",
-      "status": "Published",
-      "statusClass": "success"
-    },
-    {
-      "country": "Saudi Arabia",
-      "iso": "SA",
-      "prefixes": "48,658",
-      "ipv4": "12.46M",
+      "prefixes": "52,520",
+      "ipv4": "13.45M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Morocco",
       "iso": "MA",
-      "prefixes": "48,111",
-      "ipv4": "12.32M",
+      "prefixes": "47,981",
+      "ipv4": "12.28M",
       "status": "Published",
       "statusClass": "success"
     },
     {
-      "country": "Austria",
-      "iso": "AT",
-      "prefixes": "44,696",
-      "ipv4": "11.44M",
+      "country": "Denmark",
+      "iso": "DK",
+      "prefixes": "47,411",
+      "ipv4": "12.14M",
       "status": "Published",
       "statusClass": "success"
     },
     {
-      "country": "Thailand",
-      "iso": "TH",
-      "prefixes": "43,387",
-      "ipv4": "11.11M",
-      "status": "Published",
-      "statusClass": "success"
-    },
-    {
-      "country": "Iran",
-      "iso": "IR",
-      "prefixes": "42,752",
-      "ipv4": "10.94M",
+      "country": "Saudi Arabia",
+      "iso": "SA",
+      "prefixes": "46,748",
+      "ipv4": "11.97M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Chile",
       "iso": "CL",
-      "prefixes": "42,226",
-      "ipv4": "10.81M",
+      "prefixes": "41,877",
+      "ipv4": "10.72M",
+      "status": "Published",
+      "statusClass": "success"
+    },
+    {
+      "country": "Iran",
+      "iso": "IR",
+      "prefixes": "41,662",
+      "ipv4": "10.67M",
+      "status": "Published",
+      "statusClass": "success"
+    },
+    {
+      "country": "Austria",
+      "iso": "AT",
+      "prefixes": "41,318",
+      "ipv4": "10.58M",
+      "status": "Published",
+      "statusClass": "success"
+    },
+    {
+      "country": "Thailand",
+      "iso": "TH",
+      "prefixes": "41,160",
+      "ipv4": "10.54M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Israel",
       "iso": "IL",
-      "prefixes": "37,282",
-      "ipv4": "9.54M",
+      "prefixes": "34,907",
+      "ipv4": "8.94M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Ukraine",
       "iso": "UA",
-      "prefixes": "36,175",
-      "ipv4": "9.26M",
+      "prefixes": "34,200",
+      "ipv4": "8.76M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Malaysia",
       "iso": "MY",
-      "prefixes": "34,549",
-      "ipv4": "8.84M",
+      "prefixes": "31,344",
+      "ipv4": "8.02M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Czechia",
       "iso": "CZ",
-      "prefixes": "33,649",
-      "ipv4": "8.61M",
+      "prefixes": "31,329",
+      "ipv4": "8.02M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Tunisia",
       "iso": "TN",
-      "prefixes": "30,797",
+      "prefixes": "30,764",
       "ipv4": "7.88M",
       "status": "Published",
       "statusClass": "success"
@@ -369,40 +369,40 @@
     {
       "country": "Venezuela",
       "iso": "VE",
-      "prefixes": "30,233",
-      "ipv4": "7.74M",
-      "status": "Published",
-      "statusClass": "success"
-    },
-    {
-      "country": "New Zealand",
-      "iso": "NZ",
-      "prefixes": "29,363",
-      "ipv4": "7.52M",
+      "prefixes": "30,334",
+      "ipv4": "7.77M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Romania",
       "iso": "RO",
-      "prefixes": "28,488",
-      "ipv4": "7.29M",
+      "prefixes": "27,794",
+      "ipv4": "7.12M",
       "status": "Published",
       "statusClass": "success"
     },
     {
-      "country": "Portugal",
-      "iso": "PT",
-      "prefixes": "27,047",
-      "ipv4": "6.92M",
+      "country": "New Zealand",
+      "iso": "NZ",
+      "prefixes": "26,588",
+      "ipv4": "6.81M",
       "status": "Published",
       "statusClass": "success"
     },
     {
       "country": "Philippines",
       "iso": "PH",
-      "prefixes": "26,891",
-      "ipv4": "6.88M",
+      "prefixes": "25,235",
+      "ipv4": "6.46M",
+      "status": "Published",
+      "statusClass": "success"
+    },
+    {
+      "country": "Portugal",
+      "iso": "PT",
+      "prefixes": "25,180",
+      "ipv4": "6.45M",
       "status": "Published",
       "statusClass": "success"
     }
