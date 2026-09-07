@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-09-02",
+    "category": "Release",
+    "title": "September 2026 release is live",
+    "summary": "The September 2026 monthly IP geolocation dataset is published across CSV, Parquet, and MMDB: 14,461,947 routed /24 prefixes across 248 countries and 80,932 autonomous systems, with per-country packages plus ALL, bogon, government, and education special editions. Christmas Island (CX) appears for the first time.",
+    "link": "downloads.html"
+  },
+  {
+    "date": "2026-09-02",
+    "category": "Data quality",
+    "title": "Operator geofeeds are validated, and every release now passes a sanity gate",
+    "summary": "RFC 8805 geofeeds are the highest-precedence geolocation source we use, so they are now checked before they are trusted: a prefix whose host bits are not zero is rejected as malformed. Every release must also clear a pre-publication gate - no country may claim 0/8, 10/8, 127/8, 224/4 or 240/4, geofeed-derived coverage is bounded, and total country coverage is compared against the previous month before anything is exported.",
+    "link": "methodology.html"
+  },
+  {
+    "date": "2026-08-05",
+    "category": "Release",
+    "title": "August 2026 release is live",
+    "summary": "The August 2026 monthly IP geolocation dataset is published across CSV, Parquet, and MMDB: 14,461,947 routed /24 prefixes across 247 countries and 80,778 autonomous systems, with per-country packages plus ALL, bogon, government, and education special editions.",
+    "link": "downloads.html"
+  },
+  {
     "date": "2026-07-01",
     "category": "Release",
     "title": "July 2026 release is live",
@@ -32,7 +53,7 @@
     "category": "Open data",
     "title": "Open Parquet dataset on Hugging Face",
     "summary": "The full geolocated /24 set is published as an open, no-password Parquet dataset on Hugging Face under CC BY 4.0, refreshed every month alongside the site packages.",
-    "link": "https://huggingface.co/datasets/ProdIPData/geoip-locations"
+    "link": "https://huggingface.co/datasets/ProdIPData/ip-locations"
   },
   {
     "date": "2026-04-26",
