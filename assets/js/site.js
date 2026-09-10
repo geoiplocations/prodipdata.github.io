@@ -1,7 +1,28 @@
-const PRODIP_ANALYTICS_STREAMS = Object.freeze({
-  'qa.prodipdata.com': 'G-M860EQGN4W',
-  'prodipdata.com': 'G-1DX52Q08X0',
-  'www.prodipdata.com': 'G-1DX52Q08X0'
+// Cloudflare Web Analytics. It replaced Google Analytics 4 on 2026-09-10 --
+// streams G-1DX52Q08X0 (prodipdata.com, www) and G-M860EQGN4W (qa).
+//
+// GA4 set cookies at page load, before the visitor had agreed to anything, on a
+// site with no consent gate and no privacy notice. This beacon sets no cookies,
+// stores no device identifier and does no fingerprinting, so there is nothing to
+// ask consent for and no banner to build or maintain. That is also what lets
+// privacy.astro say, truthfully and checkably, that the site sets no cookies at
+// all -- nothing else in site.js or correction.js touches document.cookie or any
+// storage API. Verify that is still true before adding anything here, and update
+// privacy.astro in the same commit if it stops being true.
+//
+// TOKEN: Cloudflare dashboard > Analytics & Logs > Web Analytics > Add a site,
+// then paste the beacon token below. One token per hostname; www shares the apex
+// token. Until a token is filled in the beacon does not load and nothing else
+// changes -- it fails closed, the way the old block did on an unknown host.
+//
+// QA has NO token on purpose. site.js keys the beacon by hostname, so
+// qa.prodipdata.com reports nothing at all and production's numbers stay clean
+// without a second Cloudflare site to maintain. Add one only if QA traffic ever
+// becomes worth counting in its own right.
+const PRODIP_BEACON_TOKENS = Object.freeze({
+  'qa.prodipdata.com': '',
+  'prodipdata.com': 'a3cbf8964df546c1a300056f71931a02',
+  'www.prodipdata.com': 'a3cbf8964df546c1a300056f71931a02'
 });
 
 initializeAnalytics();
@@ -12,24 +33,23 @@ function initializeAnalytics() {
   }
 
   const hostname = String(window.location.hostname || '').toLowerCase();
-  const measurementId = PRODIP_ANALYTICS_STREAMS[hostname];
+  const token = PRODIP_BEACON_TOKENS[hostname];
 
-  if (!measurementId) {
+  if (!token) {
     return;
   }
 
   window.PRODIP_ANALYTICS_INITIALIZED = true;
-  window.PRODIP_ANALYTICS_MEASUREMENT_ID = measurementId;
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function gtag(){ window.dataLayer.push(arguments); };
 
-  const googleTag = document.createElement('script');
-  googleTag.async = true;
-  googleTag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
-  document.head.appendChild(googleTag);
-
-  window.gtag('js', new Date());
-  window.gtag('config', measurementId);
+  // type='module' mirrors the snippet Cloudflare hands out. beacon.min.js is
+  // shipped as an ES module, so loading it as a classic script can fail
+  // silently -- and a beacon that fails silently looks exactly like a site
+  // nobody visits. Modules defer by default, so no defer attribute is needed.
+  const beacon = document.createElement('script');
+  beacon.type = 'module';
+  beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  beacon.setAttribute('data-cf-beacon', JSON.stringify({ token: token }));
+  document.head.appendChild(beacon);
 }
 
 // A Microsoft session recorder was loaded here and was removed on 2026-09-10.

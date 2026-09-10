@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prodipdata.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Privacy', item: 'https://prodipdata.com/privacy.html' },
+  ],
+};
+
+const effective = '10 September 2026';
+---
+<BaseLayout
+  title="Privacy | ProdIPData"
+  description="What ProdIPData collects, what it does not, and who else sees a request. No cookies, no accounts, no tracking scripts."
+  ogTitle="ProdIPData Privacy"
+  canonicalPath="/privacy.html"
+  page="privacy"
+>
+  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumb)} />
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-panel glass">
+          <div class="eyebrow page-kicker">Privacy</div>
+          <h1>This site sets no cookies and asks you for nothing.</h1>
+          <p class="page-intro">ProdIPData is a set of static files. There are no accounts, no sign-in, no forms that submit anything to us, and no tracking scripts. You can read every page and download every dataset without telling us who you are. This notice sets out the little that does happen, and who else is involved when you load a page.</p>
+          <p class="page-intro seo-links">See also the <a href="licensing.html">dataset licence</a>, the <a href="methodology.html">publication methodology</a>, or <a href="contact.html">how to reach us</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-3">
+        <article class="section-card glass">
+          <h3>No cookies</h3>
+          <p class="card-text">This site sets no cookies of any kind, and uses no local storage. There is nothing to consent to, which is why you are not being asked.</p>
+        </article>
+        <article class="section-card glass">
+          <h3>No accounts</h3>
+          <p class="card-text">Nothing on this site requires registration. Dataset packages are password-protected, and the password is sent by email on request — that request is the only thing we ever ask you for.</p>
+        </article>
+        <article class="section-card glass">
+          <h3>No advertising</h3>
+          <p class="card-text">Nothing here is monetised. No advertising networks, no data brokers, no third-party marketing tags, and nothing about you is sold or shared for anyone else's marketing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container story-grid">
+        <div class="split-panel glass content">
+          <h2>Visitor measurement</h2>
+          <p>We use <a href="https://www.cloudflare.com/web-analytics/" target="_blank" rel="noopener">Cloudflare Web Analytics</a> to count page views. It is cookieless: it sets nothing on your device, stores no identifier for you, and does not fingerprint your browser. It reports aggregates only — how many people opened a page, roughly where in the world, which referrer sent them, which browser they used.</p>
+          <p>We cannot single you out in it, follow you between visits, or match you to anything else. If you block it, everything on the site still works exactly the same.</p>
+          <p>Until 10 September 2026 this site used Google Analytics and, from around April 2026, Microsoft Clarity session recording. Both loaded before you had agreed to anything, and this notice did not exist. Both have been removed.</p>
+        </div>
+        <div class="split-panel glass content">
+          <h2>If you email us</h2>
+          <p><a href="mailto:contact@prodipdata.com">contact@prodipdata.com</a> is a forwarding address, not a mailbox. Cloudflare Email Routing passes messages to a personal inbox; Cloudflare stores nothing beyond a short activity log of the forwarding itself.</p>
+          <p>We use what you send only to reply — most often to send the release password for a dataset package. We do not add you to a mailing list, and there is no mailing list to add you to. Messages stay in that inbox unless you ask us to delete them.</p>
+          <p>The data correction form does not submit anything to us. It assembles a message and opens it in your own email client, so nothing leaves your machine until you press send, and you can see exactly what it says first.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container story-grid">
+        <div class="split-panel glass content">
+          <h2>Who else sees a request</h2>
+          <p>Loading a page here necessarily involves other companies, each under its own privacy terms rather than ours:</p>
+          <ul>
+            <li><strong>GitHub Pages</strong> serves the site. Like any web server it receives your IP address and request details.</li>
+            <li><strong>Cloudflare</strong> provides DNS, the analytics beacon, and the email forwarding described above.</li>
+            <li><strong>jsDelivr</strong> serves the Prefix Lookup data shards, so opening that page fetches files from their CDN.</li>
+            <li><strong>Hugging Face</strong> and <strong>GitHub Releases</strong> host the downloadable datasets. Following a download link takes you to them.</li>
+          </ul>
+          <p>We receive nothing from any of them beyond the aggregate counts described above.</p>
+        </div>
+        <div class="split-panel glass content">
+          <h2>Your choices</h2>
+          <p>Because we hold nothing tied to you, there is usually nothing for us to look up, correct or erase. The exception is email you have sent us.</p>
+          <ul>
+            <li>Ask what we hold from your correspondence, and we will tell you.</li>
+            <li>Ask us to delete it, and we will delete it.</li>
+            <li>Ask how a dataset figure was derived — the <a href="methodology.html">methodology</a> is public, and we will answer specifics.</li>
+          </ul>
+          <p>Write to <a href="mailto:contact@prodipdata.com">contact@prodipdata.com</a>. One person reads it, so please allow a few days.</p>
+          <p class="muted">Our datasets describe the ownership and approximate location of IP address ranges, not the people using them. They are built from public registry and routing data. If you believe a record about your own network is wrong, please <a href="submit-data-correction.html?source=privacy">submit a correction</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="split-panel glass content">
+          <h2>Changes to this notice</h2>
+          <p>Effective {effective}. If what we collect changes, this page changes in the same commit as the code that changes it — and the change is visible in the site's public repository history, not only here.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
