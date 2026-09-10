@@ -66,6 +66,51 @@ function initializeAnalytics() {
 // do not get built, GA4 should follow this out. Do not re-add any recorder
 // without both of them in place first.
 
+// Clear cookies left behind by the trackers that used to run here.
+//
+// Removing the tags on 2026-09-10 stopped NEW cookies being set. It did nothing
+// about the ones already on people's machines: Google's _ga lives two years and
+// Clarity's _clck one, so anyone who visited before that date still carries
+// _ga, _ga_<stream> and _clck on this domain. They would open the privacy page,
+// read that the site sets no cookies, check, and find three -- and be right to
+// distrust everything else on the page.
+//
+// This deletes them once, on the visitor's next page load. The site is not
+// setting them any more; this clears what is already there, so the claim holds
+// for returning visitors and not only for new ones. Harmless when there is
+// nothing to remove. It can be deleted from this file once enough time has
+// passed that no live browser still holds one -- 2028 at the outside.
+removeLegacyTrackerCookies();
+
+function removeLegacyTrackerCookies() {
+  if (typeof document === 'undefined' || !document.cookie) {
+    return;
+  }
+
+  const host = String(window.location.hostname || '');
+  const scopes = ['', host, '.' + host];
+  const labels = host.split('.');
+
+  if (labels.length > 2) {
+    const apex = labels.slice(-2).join('.');
+    scopes.push(apex, '.' + apex);
+  }
+
+  document.cookie.split(';').forEach(function (pair) {
+    const name = pair.split('=')[0].trim();
+
+    // _ga and _ga_<stream> (Google), _gid/_gat (Google), _clck/_clsk (Clarity)
+    if (!/^(_ga|_gid|_gat|_clck|_clsk)/.test(name)) {
+      return;
+    }
+
+    scopes.forEach(function (scope) {
+      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' +
+        (scope ? '; domain=' + scope : '');
+    });
+  });
+}
+
 const PRODIP_PRODUCTION_HOSTS = Object.freeze(['prodipdata.com', 'www.prodipdata.com']);
 
 applyStagingNoindex();
