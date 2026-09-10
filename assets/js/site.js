@@ -32,37 +32,19 @@ function initializeAnalytics() {
   window.gtag('config', measurementId);
 }
 
-const PRODIP_CLARITY_PROJECTS = Object.freeze({
-  'qa.prodipdata.com': 'wej20e55tp',
-  'prodipdata.com': 'weja58sdv1',
-  'www.prodipdata.com': 'weja58sdv1'
-});
-
-initializeClarity();
-
-function initializeClarity() {
-  if (typeof window === 'undefined' || window.PRODIP_CLARITY_INITIALIZED) {
-    return;
-  }
-
-  const hostname = String(window.location.hostname || '').toLowerCase();
-  const projectId = PRODIP_CLARITY_PROJECTS[hostname];
-
-  if (!projectId) {
-    return;
-  }
-
-  window.PRODIP_CLARITY_INITIALIZED = true;
-
-  (function(c, l, a, r, i, t, y) {
-    c[a] = c[a] || function() { (c[a].q = c[a].q || []).push(arguments); };
-    t = l.createElement(r);
-    t.async = 1;
-    t.src = 'https://www.clarity.ms/tag/' + i;
-    y = l.getElementsByTagName(r)[0];
-    y.parentNode.insertBefore(t, y);
-  })(window, document, 'clarity', 'script', projectId);
-}
+// A Microsoft session recorder was loaded here and was removed on 2026-09-10.
+// It captured mouse movement, clicks, scrolling and page content, and it started
+// on page load, before the visitor had agreed to anything. There was no consent
+// gate and no privacy page saying it was happening -- stackscope.dev had already
+// published that as a finding in April 2026 and it was still true five months
+// later. For an audience that downloads IP geolocation data and opens devtools
+// before it reads the copy, recording sessions was never worth what it cost in
+// credibility, and no decision here was ever made from a recording.
+//
+// GA4 above stays for now, and that is the next question rather than a settled
+// one: it also sets cookies before consent. If a privacy page and a consent gate
+// do not get built, GA4 should follow this out. Do not re-add any recorder
+// without both of them in place first.
 
 const PRODIP_PRODUCTION_HOSTS = Object.freeze(['prodipdata.com', 'www.prodipdata.com']);
 
